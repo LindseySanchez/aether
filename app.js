@@ -392,27 +392,27 @@ function renderEntries(filter = 'all', searchTerm = '') {
     const isViewed = viewedEntries.has(entry.id);
     
     card.innerHTML = `
-      <div class="relative overflow-hidden aspect-[4/3] bg/black">
+      <div class="relative overflow-hidden aspect-[4/3] bg-black">
         <img src="${entry.image}" alt="${entry.name}" 
-             class="entry-card-image w/full h/full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700"
+             class="entry-card-image w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700"
              onerror="this.src='assets/images/zeus.jpg'">
-        ${isViewed ? `<div class="absolute top-3 right-3 px-2.5 py-0.5 bg/black/70 text/[10px] tracking-widest rounded">VIEWED</div>` : ''}
-        <div class="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from/black/80 to/transparent"></div>
+        ${isViewed ? `<div class="absolute top-3 right-3 px-2.5 py-0.5 bg-black/70 text-[10px] tracking-widest rounded">VIEWED</div>` : ''}
+        <div class="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-black/80 to-transparent"></div>
       </div>
       <div class="p-5 flex-1 flex flex-col">
         <div class="flex items-center gap-x-2 mb-1.5">
-          <span class="text-xs px-2.5 py-px rounded bg/white/5 text-[#C5A46E]/80 tracking-wider">${entry.type.toUpperCase()}</span>
+          <span class="text-xs px-2.5 py-px rounded bg-white/5 text-[#C5A46E]/80 tracking-wider">${entry.type.toUpperCase()}</span>
         </div>
         <h3 class="heading-serif text-3xl leading-none tracking-[-1.2px]">${entry.name}</h3>
         <p class="text-xs text-[#E8D9B5]/90 mt-1 line-clamp-1">${entry.epithet}</p>
         
         <p class="mt-4 text-sm text-[#F5F0E6]/70 flex-1 line-clamp-3">${entry.hook}</p>
         
-        <div class="mt-5 pt-4 border-t border/white/10 flex items-center justify-between text-xs">
+        <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-xs">
           <span class="text-[#C5A46E] group-hover:text-[#E8D9B5] transition flex items-center gap-x-1">
             FOLLOW THE THREAD <span class="text-base leading-none">→</span>
           </span>
-          ${isViewed ? '<span class="text-emerald-400/70 text/[10px]">IN YOUR TAPESTRY</span>' : ''}
+          ${isViewed ? '<span class="text-emerald-400/70 text-[10px]">IN YOUR TAPESTRY</span>' : ''}
         </div>
       </div>
     `;
@@ -460,18 +460,25 @@ function openEntry(id) {
   // Populate modal
   const modal = document.getElementById('entry-modal');
   
-  // Hero image area
+  // Hero image area - clean structure so the image stays strictly inside the fixed-height box
   const hero = document.getElementById('modal-hero');
   hero.innerHTML = `
-    <img src="${entry.image}" alt="${entry.name}" class="absolute inset-0 w/full h/full object-cover opacity-95"
+    <img src="${entry.image}" alt="${entry.name}" 
+         class="w-full h-full object-cover opacity-95"
          onerror="this.src='assets/images/zeus.jpg'">
-    <div class="absolute inset-0 bg-gradient-to-b from/black/30 via/black/60 to-[#05080F]"></div>
-    <button onclick="closeModal()" class="absolute top-6 right-6 bg/black/60 hover:bg/black/80 transition text-sm px-5 py-2 rounded/full border border/white/20 flex items-center gap-x-1.5">
+    
+    <!-- Gradient overlay for text readability -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/55 to-[#05080F]"></div>
+    
+    <!-- Close button -->
+    <button onclick="closeModal()" class="absolute top-6 right-6 bg-black/60 hover:bg/black/80 transition text-sm px-5 py-2 rounded-full border border/white/20 flex items-center gap-x-1.5 z-10">
       <span>ESC</span>
     </button>
-    <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+    
+    <!-- Type badge at bottom of image -->
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
       <div class="max-w-3xl">
-        <span class="text-xs tracking/[3px] px-4 py-1 rounded/full bg/black/60 border border/white/20">${entry.type}</span>
+        <span class="text-xs tracking-[3px] px-4 py-1 rounded-full bg-black/60 border border/white/20">${entry.type}</span>
       </div>
     </div>
   `;
@@ -484,7 +491,7 @@ function openEntry(id) {
   // Symbols
   const symContainer = document.getElementById('modal-symbols');
   symContainer.innerHTML = entry.symbols.map(s => 
-    `<span class="px-4 py-1 text-sm bg-[#0A0F1E] border border-[#C5A46E]/20 rounded/full">${s}</span>`
+    `<span class="px-4 py-1 text-sm bg-[#0A0F1E] border border-[#C5A46E]/20 rounded-full">${s}</span>`
   ).join('');
 
   // Relations (clickable threads)
@@ -494,9 +501,10 @@ function openEntry(id) {
   if (entry.relations && entry.relations.length > 0) {
     entry.relations.forEach(rel => {
       const btn = document.createElement('button');
-      btn.className = 'thread-link px-4 py-1.5 text-sm rounded/full bg-[#0A0F1E] border border-[#C5A46E]/30 hover:border-[#C5A46E] flex items-center gap-x-2';
+      btn.className = 'thread-link px-4 py-1.5 text-sm rounded-full bg-[#0A0F1E] border border-[#C5A46E]/30 hover:border-[#C5A46E] flex items-center gap-x-2';
       btn.innerHTML = `
-        <span>${rel.label}</span> <span class="font-medium text-[#E8D9B5]">${entries.find(e => e.id === rel.id)?.name || rel.id}</span>
+        <span>${rel.label}</span> 
+        <span class="font-medium text-[#E8D9B5]">${entries.find(e => e.id === rel.id)?.name || rel.id}</span>
       `;
       btn.onclick = () => {
         closeModal();
