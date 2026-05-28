@@ -179,7 +179,6 @@
                 </div>
 
                 <div class="flex items-center gap-x-3">
-                    <!-- Global Search -->
                     <div class="relative w-72 hidden lg:block">
                         <input 
                             id="global-search"
@@ -205,7 +204,6 @@
 
     <!-- HERO -->
     <header class="relative h-[92vh] min-h-[680px] flex items-center justify-center overflow-hidden">
-        <!-- Video Background -->
         <div class="absolute inset-0 bg-black">
             <video 
                 id="hero-video"
@@ -293,7 +291,6 @@
             </div>
         </div>
 
-        <!-- Filters -->
         <div class="flex flex-wrap items-center gap-2 mb-8" id="filters">
             <button data-filter="all" onclick="filterEntries('all')" class="active-filter px-5 py-1.5 rounded-full text-sm border border-[#C5A46E] bg-[#C5A46E] text-[#05080F] font-medium">All Threads</button>
             <button data-filter="Olympian" onclick="filterEntries('Olympian')" class="px-5 py-1.5 rounded-full text-sm border border-white/10 hover:border-white/30 transition-colors">Olympians</button>
@@ -303,9 +300,7 @@
             <button data-filter="Myth" onclick="filterEntries('Myth')" class="px-5 py-1.5 rounded-full text-sm border border-white/10 hover:border-white/30 transition-colors">Myths</button>
         </div>
 
-        <!-- Cards Grid -->
         <div id="entries-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
-            <!-- Populated dynamically by JavaScript -->
         </div>
         
         <div class="mt-6 text-center">
@@ -349,12 +344,11 @@
 
         <div class="relative">
             <div class="flex overflow-x-auto pb-8 gap-5 snap-x snap-mandatory scrollbar-hide">
-                <!-- Timeline items populated by JS -->
             </div>
         </div>
     </div>
 
-    <!-- THE TRIALS (Quiz) -->
+    <!-- THE TRIALS -->
     <div id="trials" class="bg-[#0A0F1E] border-y border-white/10 py-20">
         <div class="max-w-screen-2xl mx-auto px-8">
             <div class="max-w-3xl mx-auto text-center">
@@ -371,16 +365,25 @@
         </div>
     </div>
 
-    <!-- WHY THIS MATTERS -->
-    <div class="max-w-screen-2xl mx-auto px-8 py-20 border-b border-white/10">
+    <!-- IMPROVEMENTS WHILE WAITING -->
+    <div class="max-w-screen-2xl mx-auto px-8 py-12 border-b border-white/10">
         <div class="max-w-3xl mx-auto text-center">
-            <div class="greek-key h-px w-12 mx-auto mb-8"></div>
-            <h3 class="section-header text-4xl tracking-tight">Why these stories still matter.</h3>
-            <p class="mt-6 text-xl leading-tight text-[#F5F0E6]/80">
-                Greek mythology is not a collection of quaint fairy tales. It is humanity’s first attempt to understand power, love, 
-                fate, hubris, justice, and what it means to be alive in a world full of forces larger than ourselves.
-            </p>
-            <p class="mt-4 text-[#F5F0E6]/60">Every modern story you love — from Star Wars to superhero films to the very idea of tragedy — owes a debt to these ancient voices.</p>
+            <div class="text-[#C5A46E] text-sm tracking-[3px] mb-2">SOURCE &amp; OFFLINE VERSION</div>
+            <h3 class="section-header text-3xl tracking-tight mb-4">Want the full experience or to explore the code?</h3>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+                <a href="https://github.com/LindseySanchez/aether" target="_blank"
+                   class="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-2xl border border-[#C5A46E]/40 hover:bg-[#C5A46E]/10 transition text-[#E8D9B5]">
+                    <span>View Source on GitHub</span>
+                </a>
+                
+                <a href="https://github.com/LindseySanchez/aether/releases" target="_blank"
+                   class="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-2xl border border-white/20 hover:bg-white/5 transition">
+                    <span>Download Full ZIP (with videos)</span>
+                </a>
+            </div>
+            
+            <p class="mt-4 text-xs text-[#C5A46E]/50">This project was created during the "Outside the Box" session.</p>
         </div>
     </div>
 
@@ -392,19 +395,16 @@
             </div>
             <div class="flex gap-x-6 text-xs tracking-wider">
                 <a href="https://www.theoi.com/" target="_blank" class="hover:text-[#C5A46E] transition">Theoi Project</a>
-                <a href="#" class="hover:text-[#C5A46E] transition">Further Reading</a>
+                <a href="https://github.com/LindseySanchez/aether" target="_blank" class="hover:text-[#C5A46E] transition">GitHub</a>
                 <button onclick="resetAllProgress()" class="hover:text-[#C5A46E] transition">Clear Journey</button>
             </div>
         </div>
     </footer>
 
-    <!-- ENTRY MODAL -->
+    <!-- Modals (same as before) -->
     <div id="entry-modal" onclick="if (event.target.id === 'entry-modal') closeModal()" class="hidden fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 md:p-8">
         <div onclick="event.stopImmediatePropagation()" class="modal w-full max-w-5xl bg-[#05080F] border border-[#C5A46E]/20 rounded-3xl overflow-hidden max-h-[94vh] flex flex-col">
-            
-            <!-- Modal Header Image -->
             <div id="modal-hero" class="relative h-80 md:h-96 w-full flex-shrink-0">
-                <!-- Populated by JS -->
                 <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-[#05080F]"></div>
                 <button onclick="closeModal()" class="absolute top-6 right-6 bg-black/60 hover:bg-black/80 transition text-sm px-4 py-1.5 rounded-full border border-white/20">Close</button>
             </div>
@@ -412,28 +412,21 @@
             <div class="p-9 md:p-12 flex-1 overflow-y-auto">
                 <div class="max-w-3xl">
                     <div id="modal-meta" class="flex items-center gap-x-3 text-sm mb-3 text-[#C5A46E]"></div>
-                    
                     <h2 id="modal-name" class="heading-serif text-7xl tracking-[-2.5px] leading-none"></h2>
                     <p id="modal-epithet" class="text-[#E8D9B5] text-2xl mt-1 tracking-tight"></p>
-                    
                     <div class="elegant-divider my-8"></div>
-
-                    <!-- Story -->
                     <div id="modal-story" class="prose prose-invert max-w-none text-[15.2px] leading-relaxed text-[#F5F0E6]/90"></div>
 
-                    <!-- Symbols -->
                     <div class="mt-10">
                         <div class="uppercase text-xs tracking-[2px] text-[#C5A46E]/70 mb-3">SYMBOLS &amp; ATTRIBUTES</div>
                         <div id="modal-symbols" class="flex flex-wrap gap-2"></div>
                     </div>
 
-                    <!-- Relations -->
                     <div class="mt-9">
                         <div class="uppercase text-xs tracking-[2px] text-[#C5A46E]/70 mb-3">THREADS IN THE TAPESTRY</div>
                         <div id="modal-relations" class="flex flex-wrap gap-2"></div>
                     </div>
 
-                    <!-- Modern Echo -->
                     <div class="mt-9 bg-[#0A0F1E] border border-white/10 rounded-2xl p-7">
                         <div class="uppercase text-xs tracking-[2px] text-[#C5A46E]/70 mb-2">ECHOES IN OUR WORLD</div>
                         <div id="modal-modern" class="text-[#F5F0E6]/85 leading-relaxed"></div>
@@ -441,7 +434,6 @@
                 </div>
             </div>
             
-            <!-- Footer actions in modal -->
             <div class="px-9 md:px-12 py-5 border-t border-white/10 bg-[#0A0F1E]/80 flex items-center gap-3 flex-shrink-0">
                 <button onclick="addToJourneyFromModal()" class="text-sm flex-1 md:flex-none px-6 py-3 rounded-2xl border border-[#C5A46E]/30 hover:bg-[#C5A46E]/5 transition">Add to My Journey</button>
                 <button onclick="closeModal()" class="text-sm flex-1 md:flex-none px-6 py-3 rounded-2xl border border-white/15 hover:bg-white/5 transition">Return to the Tapestry</button>
@@ -449,16 +441,12 @@
         </div>
     </div>
 
-    <!-- Oracle Modal -->
     <div id="oracle-modal" onclick="if (event.target.id === 'oracle-modal') closeOracle()" class="hidden fixed inset-0 bg-black/80 z-[110] flex items-center justify-center p-6">
         <div onclick="event.stopImmediatePropagation()" class="oracle-card max-w-lg w-full rounded-3xl p-9 md:p-11 text-center border border-[#C5A46E]/20">
             <div class="text-[#C5A46E] text-xs tracking-[4px] mb-1">THE PYTHIA SPEAKS</div>
             <h3 class="heading-serif text-4xl tracking-tight mb-6">The Oracle at Delphi</h3>
-            
             <div id="oracle-text" class="min-h-[110px] text-xl leading-tight text-[#E8D9B5] italic px-3"></div>
-            
             <div id="oracle-suggestion" class="mt-8 text-sm"></div>
-            
             <div class="flex gap-3 mt-9">
                 <button onclick="getNewOracle()" class="flex-1 py-3.5 text-sm rounded-2xl border border-[#C5A46E]/40 hover:bg-[#C5A46E]/5 transition">Receive Another Sign</button>
                 <button onclick="closeOracle()" class="flex-1 py-3.5 text-sm rounded-2xl bg-[#C5A46E] text-[#05080F] font-medium">Return to the World</button>
@@ -466,7 +454,6 @@
         </div>
     </div>
 
-    <!-- Journey Panel -->
     <div id="journey-panel" onclick="if (event.target.id === 'journey-panel') hideJourneyPanel()" class="hidden fixed inset-0 bg-black/70 z-[120] flex justify-end">
         <div onclick="event.stopImmediatePropagation()" class="w-full max-w-md bg-[#05080F] h-full border-l border-[#C5A46E]/20 p-8 overflow-y-auto">
             <div class="flex justify-between items-center mb-8">
@@ -476,11 +463,9 @@
                 </div>
                 <button onclick="hideJourneyPanel()" class="text-2xl leading-none text-[#C5A46E]/50 hover:text-[#C5A46E]">×</button>
             </div>
-            
             <div id="journey-content" class="space-y-3"></div>
-            
             <div class="mt-10 pt-8 border-t border-white/10 text-xs text-[#C5A46E]/60">
-                The more you explore, the richer your personal tapestry becomes. Return anytime.
+                The more you explore, the richer your personal tapestry becomes.
             </div>
         </div>
     </div>

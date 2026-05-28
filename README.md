@@ -4,35 +4,32 @@
 
 > Built during the "Outside the Box" creative session.
 
-AETHER is not a traditional reference site. It is a living digital tapestry designed to spark wonder, curiosity, and a genuine love of exploration.
+AETHER is a living, breathing digital tapestry of Greek mythology designed for wonder and exploration.
 
-## Live Site
+## Live Demo
 
-Once GitHub Pages is enabled, view it here:
-→ https://lindseysanchez.github.io/aether
+https://lindseysanchez.github.io/aether
 
 ## Features
 
-- **The Living Tapestry** — Beautiful searchable & filterable entries
-- **Follow the Threads** — Clickable connections between myths
-- **The Great Tree** — Interactive family tree of the gods
-- **The Oracle** — Random profound wisdom with suggested paths
-- **The Ages** — Mythic timeline
-- **The Trials** — Elegant knowledge ritual (quiz)
-- **Your Journey** — Personal exploration tracker
+- Beautiful searchable & filterable entries
+- Clickable connections between gods, heroes, and myths
+- Interactive SVG family tree
+- The Oracle (random profound wisdom)
+- Mythic timeline
+- Elegant knowledge ritual (quiz)
+- Personal exploration tracker
 
 ## How to Run Locally
 
-1. Clone or download this repo
-2. Open `index.html` in any browser
+1. Clone or download this repository
+2. Open `index.html` in any modern browser
 
-No build tools or dependencies needed.
+No build step or dependencies required.
 
 ## Full Experience (Images + Videos)
 
-The media assets live in the `assets/` folder. For the complete version with all custom art and videos:
-- Download the zip from the Releases tab, or
-- Use the original shared zip from OneDrive
+All custom artwork and videos live in the `assets/` folder. For the complete offline version, download the zip from the [Releases](https://github.com/LindseySanchez/aether/releases) tab (once created) or use the original shared package.
 
 ## Session
 
