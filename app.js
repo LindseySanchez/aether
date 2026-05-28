@@ -1,6 +1,6 @@
 // =====================================================
-// AETHER — Greek Mythology
-// Focused on historical depth and interpretive clarity
+// AETHER
+// Greek Mythology — Explorative & Historically Grounded
 // Session: "Outside the Box"
 // =====================================================
 
@@ -9,105 +9,131 @@ const entries = [
     id: "zeus",
     name: "Zeus",
     type: "Olympian",
+    cycle: "Cosmic Order",
     epithet: "King of the Gods, Lord of Sky and Thunder",
-    hook: "The thunderer whose will shapes the fate of gods and mortals alike.",
+    hook: "The thunderer who established the current order of the cosmos.",
     image: "assets/images/zeus.jpg",
-    story: "Zeus overthrew his father Cronus and divided the cosmos with his brothers Poseidon and Hades. In Hesiod's Theogony and the Homeric poems he appears as the supreme ruler who maintains order through a combination of force, cunning, and the threat of the thunderbolt. His many affairs and resulting children are central to the mythic genealogies, yet he is also repeatedly shown as bound by larger forces of fate and the expectations of hospitality and oath-keeping.",
-    sources: [
-      "Hesiod, Theogony (esp. 453–506, 617–735)",
-      "Homer, Iliad (esp. Book 1, 8, 15)",
-      "Homer, Odyssey (esp. Book 1)"
-    ],
-    variants: "The extent of Zeus's power and the degree to which he is subject to fate varies across authors. In some traditions he appears more limited; in others (particularly later philosophical receptions) he is identified with cosmic order itself.",
-    symbols: ["Thunderbolt", "Eagle", "Oak Tree", "Scepter", "Bull"],
+    story: "Zeus led the rebellion against the Titans and divided the world with his brothers. He became the supreme ruler, associated with justice, hospitality, and the maintenance of cosmic order, though often through complex and sometimes ruthless means.",
+    sources: ["Hesiod, Theogony", "Homer, Iliad"],
+    symbols: ["Thunderbolt", "Eagle", "Oak"],
     relations: [
       { id: "hera", label: "Wife and Queen" },
       { id: "poseidon", label: "Brother" },
-      { id: "hades", label: "Brother" },
-      { id: "athena", label: "Daughter" }
-    ],
-    interpretiveHorizons: "Zeus has long served as a figure through which later cultures have thought about sovereignty, patriarchy, and the relationship between power and justice. In the 20th century he was frequently read as an archetype of the 'sky father' in psychological and comparative religious studies. Such readings can be suggestive but often flatten the significant differences between how Zeus functions in Archaic Greek poetry versus later philosophical or psychoanalytic frameworks."
+      { id: "hades", label: "Brother" }
+    ]
   },
-
+  {
+    id: "hera",
+    name: "Hera",
+    type: "Olympian",
+    cycle: "Cosmic Order",
+    epithet: "Queen of the Gods, Guardian of Marriage",
+    hook: "The powerful and often wrathful protector of marital bonds and the established order.",
+    image: "assets/images/hera.jpg",
+    story: "As wife of Zeus and queen of the gods, Hera plays a central role in enforcing the social and cosmic order. Her frequent conflicts with Zeus and persecution of his offspring reveal deep tensions within the divine hierarchy.",
+    sources: ["Hesiod, Theogony", "Homer, Iliad"],
+    symbols: ["Peacock", "Pomegranate"],
+    relations: [
+      { id: "zeus", label: "Husband and King" }
+    ]
+  },
+  {
+    id: "prometheus",
+    name: "Prometheus",
+    type: "Titan",
+    cycle: "Transgression",
+    epithet: "The Fire-Bringer, Champion of Humanity",
+    hook: "The Titan who defied the gods to give humanity the gift of civilization.",
+    image: "assets/images/prometheus.jpg",
+    story: "Prometheus stole fire from the gods and gave it to humans, along with many other arts and skills. For this act he was brutally punished by Zeus, bound to a rock where an eagle ate his liver daily. He represents the archetype of the rebel who suffers for bringing knowledge to humanity.",
+    sources: ["Hesiod, Theogony and Works and Days", "Aeschylus, Prometheus Bound"],
+    symbols: ["Fire", "Chains"],
+    relations: [
+      { id: "zeus", label: "Punisher" }
+    ]
+  },
   {
     id: "dionysus",
     name: "Dionysus",
     type: "Olympian",
+    cycle: "Ecstatic Traditions",
     epithet: "God of Wine, Ecstasy, and Theatre",
-    hook: "The god who dissolves boundaries — between man and god, sanity and madness, civilization and wildness.",
+    hook: "The god who brings both liberation and destruction through ecstasy and the breakdown of boundaries.",
     image: "assets/images/dionysus.jpg",
-    story: "Son of Zeus and the mortal Semele, Dionysus is repeatedly associated with the arrival of something foreign and disruptive. In Euripides' Bacchae (one of the richest surviving sources) he returns to Thebes, his mother's city, and brings about the destruction of the royal house through ritual ecstasy and the collapse of social order. His cults involved wine, music, dance, and states of altered consciousness that were simultaneously celebrated and feared.",
-    sources: [
-      "Euripides, Bacchae",
-      "Homer, Iliad (Book 6, the Lycurgus episode)",
-      "Hesiod, Theogony (940–942)",
-      "Homeric Hymn to Dionysus"
-    ],
-    variants: "Dionysus appears in widely varying forms across time and place. In some Archaic contexts he is a relatively marginal figure; in others (especially in Macedonia and Asia Minor) his worship was central to royal ideology. The degree to which his cults involved actual violence or 'madness' remains debated among historians of religion.",
-    symbols: ["Thyrsus", "Grapevine", "Leopard", "Theatre Mask", "Bull"],
+    story: "Son of Zeus and Semele, Dionysus represents the arrival of something wild and transformative. His worship involved altered states of consciousness, the blurring of social roles, and a direct encounter with the divine that could be both ecstatic and terrifying.",
+    sources: ["Euripides, Bacchae", "Homeric Hymn to Dionysus"],
+    symbols: ["Thyrsus", "Grapevine", "Leopard"],
     relations: [
-      { id: "zeus", label: "Father" },
-      { id: "hera", label: "Persecutor" }
-    ],
-    interpretiveHorizons: "Dionysus has been one of the most productive figures for later philosophical and psychological thought. Friedrich Nietzsche's opposition between the Apollonian and Dionysian in The Birth of Tragedy remains enormously influential, though it is a distinctly modern construction rather than a direct reflection of ancient categories. In psychology, Dionysiac themes have been used to explore ego dissolution, the return of the repressed, and the psychological function of ritual. These interpretations can be powerful, but they frequently project 19th- and 20th-century concerns onto ancient religious experience. Readers should distinguish between what the ancient evidence actually supports and the creative uses later thinkers have made of the god."
+      { id: "zeus", label: "Father" }
+    ]
   },
-
+  {
+    id: "heracles",
+    name: "Heracles",
+    type: "Hero",
+    cycle: "The Heroic Age",
+    epithet: "The Greatest of Heroes",
+    hook: "The son of Zeus who achieved immortality through immense suffering and impossible labors.",
+    image: "assets/images/heracles.jpg",
+    story: "Born to Zeus and the mortal Alcmene, Heracles was forced to perform twelve labors as penance. Through superhuman strength and endurance, he completed tasks that no ordinary mortal could achieve, eventually ascending to Olympus.",
+    sources: ["Apollodorus, Library", "Euripides, Heracles"],
+    symbols: ["Lion Skin", "Club"],
+    relations: [
+      { id: "zeus", label: "Father" }
+    ]
+  },
   {
     id: "medusa",
     name: "Medusa",
     type: "Monster",
+    cycle: "The Heroic Age",
     epithet: "The Gorgon",
-    hook: "A figure who is simultaneously victim, monster, and weapon.",
+    hook: "A woman transformed into a monster, whose head became one of the most powerful weapons in the Greek world.",
     image: "assets/images/medusa.jpg",
-    story: "In Hesiod she appears as one of the Gorgons, monstrous daughters of sea deities. Later traditions, most famously in Ovid, present her as a beautiful woman raped by Poseidon in Athena's temple; Athena then transforms her into a monster whose gaze turns men to stone. Perseus eventually beheads her, and her head is used by Athena as a weapon on the aegis. Even after death, Medusa continues to generate powerful new beings (Pegasus and Chrysaor).",
-    sources: [
-      "Hesiod, Theogony (270–283)",
-      "Homer, Iliad (Book 5, reference to the Gorgon on Athena's aegis)",
-      "Ovid, Metamorphoses (Book 4)"
-    ],
-    variants: "The rape narrative is absent from our earliest sources. Hesiod presents Medusa as a monster from the beginning. The version that emphasizes her victimization and transformation becomes dominant only in later Roman poetry. This shift in emphasis has significant implications for how the story is read.",
-    symbols: ["Serpents", "Gaze", "Decapitation"],
+    story: "Originally a beautiful woman, Medusa was transformed into a Gorgon. Her gaze turned men to stone. After being slain by Perseus, her head was given to Athena and retained its petrifying power.",
+    sources: ["Hesiod, Theogony", "Ovid, Metamorphoses"],
+    symbols: ["Serpents", "Gaze"],
     relations: [
-      { id: "athena", label: "Curse-giver / User of her head" },
       { id: "perseus", label: "Slayer" }
-    ],
-    interpretiveHorizons: "Medusa has been heavily used in modern psychological and feminist thought. Sigmund Freud's 1922 reading of the decapitated Gorgon as a symbol of castration anxiety is one of the most famous — and also one of the most clearly anachronistic — interpretations. More recent feminist work has productively explored the story in terms of the male gaze, the transformation of victims into monsters, and the weaponization of female rage. These readings have real interpretive power, yet they also risk retrofitting ancient narratives with contemporary political and psychological categories. The ancient sources themselves are inconsistent about whether Medusa is primarily a monster or a victim, and this inconsistency is worth preserving rather than smoothing over in the service of any single modern theory."
-  }
-];
-
-// Random Ancient Testimony (formerly "The Oracle")
-const oracles = [
-  {
-    text: "Euripides, Bacchae 860–861: 'The god is a prophet, and the madness he brings is the most terrible and the most wise.'",
-    suggestion: "dionysus"
+    ]
   },
   {
-    text: "Hesiod, Theogony 270–283: Description of the Gorgons and Medusa's offspring.",
-    suggestion: "medusa"
+    id: "odysseus",
+    name: "Odysseus",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "The Man of Many Turns",
+    hook: "The cleverest of the Greek heroes, whose long journey home became one of the defining stories of Western literature.",
+    image: "assets/images/heracles.jpg",
+    story: "King of Ithaca and hero of the Trojan War. After the fall of Troy, it took him ten years to return home due to the anger of Poseidon. His story explores cunning, endurance, identity, and the longing for home.",
+    sources: ["Homer, Odyssey"],
+    symbols: ["Bow", "Oar"],
+    relations: []
   }
 ];
 
-// Timeline remains similar but can be expanded later
-const timeline = [
-  { era: "Archaic Period", year: "c. 750–480 BCE", event: "Major poetic treatments: Hesiod's Theogony and Homer's epics establish core genealogies and narratives." },
-  { era: "Classical Period", year: "c. 480–323 BCE", event: "Tragedy (especially Euripides) explores psychological and political dimensions of myth with great intensity." },
-  { era: "Hellenistic & Roman", year: "c. 323 BCE – 400 CE", event: "Myth becomes increasingly systematized (Apollodorus) and allegorized; Roman poets (Ovid) reshape Greek stories for new audiences." }
+// Mythic Cycles for exploration
+const cycles = [
+  "Cosmic Order",
+  "The Heroic Age",
+  "The Trojan War",
+  "Transgression",
+  "Ecstatic Traditions"
 ];
 
 // State
-let currentFilter = 'all';
+let currentCycle = 'all';
 let viewedEntries = new Set(JSON.parse(localStorage.getItem('aether_viewed') || '[]'));
-let journeyEntries = JSON.parse(localStorage.getItem('aether_journey') || '[]');
 
-// Render entries (updated to show sources & variants when available)
-function renderEntries(filter = 'all', searchTerm = '') {
+// Render entries with cycle filtering
+function renderEntries(cycle = 'all', searchTerm = '') {
   const grid = document.getElementById('entries-grid');
   grid.innerHTML = '';
 
   let filtered = entries;
 
-  if (filter !== 'all') {
-    filtered = filtered.filter(e => e.type === filter);
+  if (cycle !== 'all') {
+    filtered = filtered.filter(e => e.cycle === cycle);
   }
 
   if (searchTerm) {
@@ -122,24 +148,19 @@ function renderEntries(filter = 'all', searchTerm = '') {
     const card = document.createElement('div');
     card.className = `myth-card group bg-[#0A0F1E] rounded-2xl overflow-hidden cursor-pointer border border-white/10 flex flex-col`;
     
-    const isViewed = viewedEntries.has(entry.id);
-    
     card.innerHTML = `
       <div class="relative overflow-hidden aspect-[4/3] bg-black">
         <img src="${entry.image}" class="entry-card-image w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700" onerror="this.src='assets/images/zeus.jpg'">
-        ${isViewed ? `<div class="absolute top-3 right-3 px-2.5 py-0.5 bg-black/70 text-[10px] tracking-widest rounded">VIEWED</div>` : ''}
       </div>
       <div class="p-5 flex-1 flex flex-col">
         <div class="flex items-center gap-x-2 mb-1.5">
-          <span class="text-xs px-2.5 py-px rounded bg-white/5 text-[#C5A46E]/80 tracking-wider">${entry.type.toUpperCase()}</span>
+          <span class="text-xs px-2.5 py-px rounded bg-white/5 text-[#C5A46E]/80 tracking-wider">${entry.cycle}</span>
         </div>
         <h3 class="heading-serif text-3xl leading-none tracking-[-1.2px]">${entry.name}</h3>
         <p class="text-xs text-[#E8D9B5]/90 mt-1 line-clamp-1">${entry.epithet}</p>
         <p class="mt-4 text-sm text-[#F5F0E6]/70 flex-1 line-clamp-3">${entry.hook}</p>
-        <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-xs">
-          <span class="text-[#C5A46E] group-hover:text-[#E8D9B5] transition flex items-center gap-x-1">
-            ENTER <span class="text-base leading-none">→</span>
-          </span>
+        <div class="mt-5 pt-4 border-t border-white/10 text-xs text-[#C5A46E] group-hover:text-[#E8D9B5] transition">
+          EXPLORE THIS FIGURE →
         </div>
       </div>
     `;
@@ -148,7 +169,47 @@ function renderEntries(filter = 'all', searchTerm = '') {
   });
 }
 
-// Open detailed entry modal (updated for new fields)
+// Update cycle filters
+function setupCycleFilters() {
+  const container = document.getElementById('cycle-filters');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  // All button
+  const allBtn = document.createElement('button');
+  allBtn.textContent = 'All Cycles';
+  allBtn.className = 'active-filter px-5 py-1.5 rounded-full text-sm border border-[#C5A46E] bg-[#C5A46E] text-[#05080F] font-medium';
+  allBtn.onclick = () => {
+    currentCycle = 'all';
+    updateActiveFilter(allBtn);
+    renderEntries('all', document.getElementById('global-search')?.value || '');
+  };
+  container.appendChild(allBtn);
+
+  cycles.forEach(cycle => {
+    const btn = document.createElement('button');
+    btn.textContent = cycle;
+    btn.className = 'px-5 py-1.5 rounded-full text-sm border border-white/10 hover:border-white/30 transition-colors';
+    btn.onclick = () => {
+      currentCycle = cycle;
+      updateActiveFilter(btn);
+      renderEntries(cycle, document.getElementById('global-search')?.value || '');
+    };
+    container.appendChild(btn);
+  });
+}
+
+function updateActiveFilter(activeBtn) {
+  document.querySelectorAll('#cycle-filters button').forEach(btn => {
+    btn.classList.remove('active-filter', 'border-[#C5A46E]', 'bg-[#C5A46E]', 'text-[#05080F]');
+    btn.classList.add('border-white/10');
+  });
+  activeBtn.classList.add('active-filter', 'border-[#C5A46E]', 'bg-[#C5A46E]', 'text-[#05080F]');
+  activeBtn.classList.remove('border-white/10');
+}
+
+// Open entry modal (simplified for now)
 function openEntry(id) {
   const entry = entries.find(e => e.id === id);
   if (!entry) return;
@@ -156,115 +217,25 @@ function openEntry(id) {
   viewedEntries.add(id);
   localStorage.setItem('aether_viewed', JSON.stringify([...viewedEntries]));
 
-  if (!journeyEntries.some(e => e.id === id)) {
-    journeyEntries.unshift({ id: entry.id, name: entry.name, type: entry.type, ts: Date.now() });
-    if (journeyEntries.length > 12) journeyEntries.pop();
-    localStorage.setItem('aether_journey', JSON.stringify(journeyEntries));
-  }
-
-  const modal = document.getElementById('entry-modal');
-  const hero = document.getElementById('modal-hero');
-  hero.innerHTML = `
-    <img src="${entry.image}" class="absolute inset-0 w-full h-full object-cover opacity-95" onerror="this.src='assets/images/zeus.jpg'">
-    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-[#05080F]"></div>
-    <button onclick="closeModal()" class="absolute top-6 right-6 bg-black/60 hover:bg-black/80 transition text-sm px-5 py-2 rounded-full border border-white/20">Close</button>
-  `;
-
-  document.getElementById('modal-name').textContent = entry.name;
-  document.getElementById('modal-epithet').textContent = entry.epithet;
-  
-  let storyHTML = `<p>${entry.story}</p>`;
-  if (entry.sources) {
-    storyHTML += `<div class="mt-6 text-sm"><span class="uppercase text-xs tracking-wider text-[#C5A46E]/70">Primary Sources</span><ul class="mt-1 list-disc pl-5 text-[#F5F0E6]/85">${entry.sources.map(s => `<li>${s}</li>`).join('')}</ul></div>`;
-  }
-  if (entry.variants) {
-    storyHTML += `<div class="mt-4 text-sm"><span class="uppercase text-xs tracking-wider text-[#C5A46E]/70">Variant Traditions</span><p class="mt-1 text-[#F5F0E6]/85">${entry.variants}</p></div>`;
-  }
-  document.getElementById('modal-story').innerHTML = storyHTML;
-
-  // Interpretive Horizons
-  const modernDiv = document.getElementById('modal-modern');
-  modernDiv.innerHTML = entry.interpretiveHorizons 
-    ? `<p>${entry.interpretiveHorizons}</p>` 
-    : `<p class="italic text-[#F5F0E6]/60">No extended interpretive discussion has been added for this figure yet.</p>`;
-
-  // Symbols
-  document.getElementById('modal-symbols').innerHTML = entry.symbols.map(s => 
-    `<span class="px-4 py-1 text-sm bg-[#0A0F1E] border border-[#C5A46E]/20 rounded-full">${s}</span>`
-  ).join('');
-
-  // Relations
-  const relContainer = document.getElementById('modal-relations');
-  relContainer.innerHTML = '';
-  if (entry.relations && entry.relations.length > 0) {
-    entry.relations.forEach(rel => {
-      const btn = document.createElement('button');
-      btn.className = 'thread-link px-4 py-1.5 text-sm rounded-full bg-[#0A0F1E] border border-[#C5A46E]/30 hover:border-[#C5A46E]';
-      btn.innerHTML = `${rel.label}: <span class="font-medium text-[#E8D9B5]">${entries.find(e => e.id === rel.id)?.name || rel.id}</span>`;
-      btn.onclick = () => { closeModal(); setTimeout(() => openEntry(rel.id), 320); };
-      relContainer.appendChild(btn);
-    });
-  }
-
-  modal.classList.remove('hidden');
-  modal.classList.add('flex');
+  alert(`Opening detailed view for ${entry.name}. Full modal coming in next update.`);
 }
 
-function closeModal() {
-  const modal = document.getElementById('entry-modal');
-  modal.classList.remove('flex');
-  modal.classList.add('hidden');
-}
+// Search
+function initSearch() {
+  const search = document.getElementById('global-search');
+  if (!search) return;
 
-// Random Ancient Testimony
-function openOracle() {
-  const modal = document.getElementById('oracle-modal');
-  modal.classList.remove('hidden');
-  modal.classList.add('flex');
-  getNewOracle(true);
+  search.addEventListener('input', () => {
+    renderEntries(currentCycle, search.value);
+  });
 }
-
-function closeOracle() {
-  const modal = document.getElementById('oracle-modal');
-  modal.classList.remove('flex');
-  modal.classList.add('hidden');
-}
-
-function getNewOracle(initial = false) {
-  const textEl = document.getElementById('oracle-text');
-  const suggEl = document.getElementById('oracle-suggestion');
-  
-  let idx = Math.floor(Math.random() * oracles.length);
-  const oracle = oracles[idx];
-  textEl.textContent = oracle.text;
-  
-  const suggested = entries.find(e => e.id === oracle.suggestion);
-  if (suggested) {
-    suggEl.innerHTML = `
-      <div class="text-xs text-[#C5A46E]/60 mb-1.5">RELATED FIGURE</div>
-      <button onclick="followOracleSuggestion('${oracle.suggestion}')" 
-              class="inline-flex items-center gap-x-2 text-[#E8D9B5] hover:text-white border-b border-[#C5A46E]/40 pb-px transition">
-        ${suggested.name} <span class="text-xs">→</span>
-      </button>
-    `;
-  } else {
-    suggEl.innerHTML = '';
-  }
-}
-
-function followOracleSuggestion(id) {
-  closeOracle();
-  setTimeout(() => openEntry(id), 380);
-}
-
-// Other functions (family tree, timeline, quiz, journey, etc.) remain from previous version
-// For brevity in this commit, the supporting functions (renderFamilyTree, startQuiz, etc.) are assumed to still exist from the reverted original.
 
 // Boot
 window.onload = function() {
   renderEntries('all');
-  // renderTimeline and renderFamilyTree would be called here in full version
-  console.log('%c[AETHER] Focused on historical depth. Session: Outside the Box', 'color:#C5A46E30');
+  setupCycleFilters();
+  initSearch();
+  console.log('%c[AETHER] Explorative mode: Mythic Cycles', 'color:#C5A46E30');
 };
 
-window.AETHER = { openEntry, openOracle, renderEntries };
+window.AETHER = { renderEntries };
