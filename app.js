@@ -56,6 +56,22 @@ const entries = [
     ]
   },
   {
+    id: "rhea",
+    name: "Rhea",
+    type: "Titan",
+    cycle: "Cosmic Order",
+    epithet: "Mother of the Olympians",
+    hook: "The Titaness who saved Zeus and enabled the overthrow of Cronus.",
+    image: "assets/images/hera.jpg",
+    story: "Sister and wife of Cronus. After watching him swallow their first five children, she hid the infant Zeus in Crete and gave Cronus a stone wrapped in swaddling clothes to swallow instead. She played a crucial role in the succession that led to the Olympian order.",
+    sources: ["Hesiod, Theogony", "Apollodorus"],
+    symbols: ["Lion", "Cymbals"],
+    relations: [
+      { id: "cronus", label: "Brother and Husband" },
+      { id: "zeus", label: "Son" }
+    ]
+  },
+  {
     id: "zeus",
     name: "Zeus",
     type: "Olympian",
@@ -271,6 +287,87 @@ const entries = [
     relations: [
       { id: "zeus", label: "Father" }
     ]
+  },
+
+  // === ADDITIONAL IMPORTANT FIGURES ===
+  {
+    id: "apollo",
+    name: "Apollo",
+    type: "Olympian",
+    cycle: "Cosmic Order",
+    epithet: "God of Light, Music, Prophecy, and Healing",
+    hook: "The most widely worshipped of the gods — beautiful, distant, and terrifyingly clear-sighted.",
+    image: "assets/images/apollo.jpg",
+    story: "Son of Zeus and Leto, twin brother of Artemis. Apollo is associated with the sun, music, poetry, prophecy (especially at Delphi), healing, and sudden, pitiless punishment. He represents order, clarity, and the dangerous power of divine knowledge.",
+    sources: ["Hesiod, Theogony", "Homeric Hymn to Apollo", "Euripides, Ion"],
+    symbols: ["Lyre", "Laurel", "Bow", "Python"],
+    relations: [
+      { id: "artemis", label: "Twin Sister" },
+      { id: "zeus", label: "Father" }
+    ]
+  },
+  {
+    id: "artemis",
+    name: "Artemis",
+    type: "Olympian",
+    cycle: "Cosmic Order",
+    epithet: "Goddess of the Hunt, Moon, and Wilderness",
+    hook: "The virgin huntress who protects the young and punishes those who violate her sacred spaces.",
+    image: "assets/images/artemis.jpg",
+    story: "Twin sister of Apollo and daughter of Zeus and Leto. Artemis roams the wild with her nymphs. She is fiercely protective of young animals and girls, but merciless to those who offend her chastity or sacred groves (most famously Actaeon).",
+    sources: ["Homeric Hymn to Artemis", "Callimachus, Hymn to Artemis"],
+    symbols: ["Bow", "Deer", "Crescent Moon"],
+    relations: [
+      { id: "apollo", label: "Twin Brother" }
+    ]
+  },
+  {
+    id: "demeter",
+    name: "Demeter",
+    type: "Olympian",
+    cycle: "Cosmic Order",
+    epithet: "Goddess of Grain and the Seasons",
+    hook: "The mother whose grief brought winter to the world.",
+    image: "assets/images/hera.jpg",
+    story: "Sister of Zeus and mother of Persephone. When Hades abducted her daughter, Demeter’s grief caused the earth to stop producing food. The resulting famine forced Zeus to negotiate Persephone’s partial return, establishing the cycle of the seasons.",
+    sources: ["Homeric Hymn to Demeter"],
+    symbols: ["Wheat", "Torch", "Poppy"],
+    relations: [
+      { id: "persephone", label: "Daughter" },
+      { id: "zeus", label: "Brother" }
+    ]
+  },
+  {
+    id: "persephone",
+    name: "Persephone",
+    type: "Olympian",
+    cycle: "Cosmic Order",
+    epithet: "Queen of the Underworld, Goddess of Spring",
+    hook: "The maiden who became queen of the dead and brings life back to the earth each year.",
+    image: "assets/images/athena.jpg",
+    story: "Daughter of Demeter and Zeus. Abducted by Hades while picking flowers, she became queen of the Underworld. Her annual return to the surface world brings spring and growth; her descent brings winter. She embodies the tension between life and death.",
+    sources: ["Homeric Hymn to Demeter"],
+    symbols: ["Pomegranate", "Torch"],
+    relations: [
+      { id: "demeter", label: "Mother" },
+      { id: "hades", label: "Husband" }
+    ]
+  },
+  {
+    id: "oedipus",
+    name: "Oedipus",
+    type: "Hero",
+    cycle: "The Theban Cycle",
+    epithet: "The King Who Solved the Sphinx’s Riddle",
+    hook: "The man who unknowingly killed his father and married his mother, becoming a central figure in Greek tragedy.",
+    image: "assets/images/heracles.jpg",
+    story: "Son of Laius and Jocasta, rulers of Thebes. After being exposed as an infant due to a prophecy, he was raised in Corinth. Returning to Thebes, he killed his father at a crossroads and solved the Sphinx’s riddle, becoming king and unknowingly marrying his mother. His eventual discovery of the truth led to catastrophe.",
+    sources: ["Sophocles, Oedipus Rex", "Apollodorus"],
+    symbols: ["Sphinx", "Staff"],
+    relations: [
+      { id: "jocasta", label: "Mother and Wife" },
+      { id: "antigone", label: "Daughter" }
+    ]
   }
 ];
 
@@ -280,7 +377,8 @@ const cycles = [
   "The Heroic Age",
   "The Trojan War",
   "Transgression",
-  "Ecstatic Traditions"
+  "Ecstatic Traditions",
+  "The Theban Cycle"
 ];
 
 // State
