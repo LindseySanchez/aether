@@ -24,6 +24,38 @@ const entries = [
     ]
   },
   {
+    id: "uranus",
+    name: "Uranus",
+    type: "Primordial",
+    cycle: "Cosmic Order",
+    epithet: "The Sky",
+    hook: "The first ruler of the cosmos, father of the Titans.",
+    image: "assets/images/zeus.jpg",
+    story: "Uranus covered Gaia completely. Together they produced the Titans, Cyclopes, and other powerful beings. His fear of his children led him to imprison them within Gaia, provoking her to conspire with Cronus to castrate him and end his rule.",
+    sources: ["Hesiod, Theogony"],
+    symbols: ["Sky"],
+    relations: [
+      { id: "gaia", label: "Consort" },
+      { id: "cronus", label: "Son" }
+    ]
+  },
+  {
+    id: "cronus",
+    name: "Cronus",
+    type: "Titan",
+    cycle: "Cosmic Order",
+    epithet: "Lord of the Golden Age",
+    hook: "The Titan who overthrew his father only to be overthrown by his own son.",
+    image: "assets/images/zeus.jpg",
+    story: "Cronus castrated Uranus at Gaia’s urging and took his place as ruler. During his reign the world experienced the Golden Age. Fearing a prophecy that he would be overthrown by his children, he swallowed them at birth until Rhea tricked him into swallowing a stone instead of Zeus.",
+    sources: ["Hesiod, Theogony", "Apollodorus"],
+    symbols: ["Sickle"],
+    relations: [
+      { id: "rhea", label: "Sister and Wife" },
+      { id: "zeus", label: "Son" }
+    ]
+  },
+  {
     id: "zeus",
     name: "Zeus",
     type: "Olympian",
@@ -31,7 +63,7 @@ const entries = [
     epithet: "King of the Gods, Lord of Sky and Thunder",
     hook: "The thunderer who established the current order of the cosmos.",
     image: "assets/images/zeus.jpg",
-    story: "Zeus led the rebellion against the Titans and divided the world with his brothers Poseidon and Hades. He became the supreme ruler, associated with justice, hospitality, and the maintenance of cosmic order, though often through complex and sometimes ruthless means.",
+    story: "Zeus led the Olympians in the war against the Titans (Titanomachy) and established a new order after their victory. He divided the cosmos with his brothers Poseidon and Hades and became the supreme ruler, associated with justice, hospitality, and the maintenance of cosmic order.",
     sources: ["Hesiod, Theogony", "Homer, Iliad"],
     symbols: ["Thunderbolt", "Eagle", "Oak"],
     relations: [
@@ -48,11 +80,59 @@ const entries = [
     epithet: "Queen of the Gods, Guardian of Marriage",
     hook: "The powerful and often wrathful protector of marital bonds and the established order.",
     image: "assets/images/hera.jpg",
-    story: "As wife of Zeus and queen of the gods, Hera plays a central role in enforcing the social and cosmic order. Her frequent conflicts with Zeus and persecution of his offspring reveal deep tensions within the divine hierarchy.",
+    story: "As wife of Zeus and queen of the gods, Hera plays a central role in enforcing the social and cosmic order. She is the protector of marriage and women in childbirth, but her frequent conflicts with Zeus and persecution of his lovers and children reveal the tensions within the new divine hierarchy.",
     sources: ["Hesiod, Theogony", "Homer, Iliad"],
     symbols: ["Peacock", "Pomegranate"],
     relations: [
       { id: "zeus", label: "Husband and King" }
+    ]
+  },
+  {
+    id: "athena",
+    name: "Athena",
+    type: "Olympian",
+    cycle: "Cosmic Order",
+    epithet: "Goddess of Wisdom, Strategy, and Crafts",
+    hook: "The virgin goddess born fully armed from Zeus’s head.",
+    image: "assets/images/athena.jpg",
+    story: "Athena sprang fully grown and armored from Zeus’s forehead after he swallowed her mother Metis. She is the goddess of strategic warfare, wisdom, crafts, and the protector of cities (especially Athens). She represents intelligence and civilization over brute force.",
+    sources: ["Hesiod, Theogony", "Homer, Iliad and Odyssey"],
+    symbols: ["Owl", "Aegis", "Olive Tree", "Spear"],
+    relations: [
+      { id: "zeus", label: "Father" }
+    ]
+  },
+  {
+    id: "poseidon",
+    name: "Poseidon",
+    type: "Olympian",
+    cycle: "Cosmic Order",
+    epithet: "Lord of the Sea, Earth-Shaker",
+    hook: "The moody god who received the sea in the division of the cosmos.",
+    image: "assets/images/poseidon.jpg",
+    story: "After the Titanomachy, Poseidon drew the lot for the sea. He is volatile and powerful, associated with earthquakes, horses, and the unpredictable nature of the ocean. His frequent conflicts with other gods and mortals (notably Odysseus) highlight the dangerous side of divine power.",
+    sources: ["Hesiod, Theogony", "Homer, Iliad and Odyssey"],
+    symbols: ["Trident", "Horse", "Dolphin"],
+    relations: [
+      { id: "zeus", label: "Brother" },
+      { id: "hades", label: "Brother" }
+    ]
+  },
+  {
+    id: "hades",
+    name: "Hades",
+    type: "Olympian",
+    cycle: "Cosmic Order",
+    epithet: "Lord of the Dead, The Unseen One",
+    hook: "The ruler of the Underworld who received the realm of the dead in the division of the cosmos.",
+    image: "assets/images/poseidon.jpg",
+    story: "After the Titanomachy, Hades drew the lot for the Underworld. He is stern and just rather than evil, guarding the realm of the dead and the riches beneath the earth. His abduction of Persephone became one of the central myths explaining the cycle of seasons and the relationship between life and death.",
+    sources: ["Hesiod, Theogony", "Homeric Hymn to Demeter"],
+    symbols: ["Cerberus", "Helm of Invisibility"],
+    relations: [
+      { id: "zeus", label: "Brother" },
+      { id: "poseidon", label: "Brother" },
+      { id: "persephone", label: "Wife" }
     ]
   },
 
@@ -65,12 +145,25 @@ const entries = [
     epithet: "The Fire-Bringer, Champion of Humanity",
     hook: "The Titan who defied the gods to give humanity the tools of civilization.",
     image: "assets/images/prometheus.jpg",
-    story: "Prometheus stole fire from the gods and gave it to humans, along with many other arts and skills. For this act of defiance against Zeus’s will, he was bound to a rock where an eagle ate his liver every day. He became the archetypal figure of the rebel who suffers for bringing knowledge and progress to humanity.",
+    story: "Prometheus stole fire from the gods and gave it to humans, along with many other arts and skills. For this act of defiance against Zeus’s will, he was bound to a rock in the Caucasus where an eagle ate his liver daily. He became the archetypal figure of the rebel who suffers for bringing knowledge and progress to humanity.",
     sources: ["Hesiod, Theogony and Works and Days", "Aeschylus, Prometheus Bound"],
     symbols: ["Fire", "Chains"],
     relations: [
       { id: "zeus", label: "Punisher" }
     ]
+  },
+  {
+    id: "pandora",
+    name: "Pandora",
+    type: "Myth",
+    cycle: "Transgression",
+    epithet: "The First Woman",
+    hook: "The woman created as punishment whose curiosity released all evils into the world.",
+    image: "assets/images/pandora.jpg",
+    story: "Created by Hephaestus on Zeus’s orders as revenge for Prometheus giving fire to humanity. Given a sealed jar (or box) containing all evils and told never to open it, Pandora’s curiosity led her to release suffering, disease, and discord into the world. Only Hope remained inside.",
+    sources: ["Hesiod, Works and Days"],
+    symbols: ["Jar"],
+    relations: []
   },
 
   // === THE HEROIC AGE ===
@@ -87,6 +180,36 @@ const entries = [
     symbols: ["Lion Skin", "Club"],
     relations: [
       { id: "zeus", label: "Father" }
+    ]
+  },
+  {
+    id: "perseus",
+    name: "Perseus",
+    type: "Hero",
+    cycle: "The Heroic Age",
+    epithet: "Slayer of Medusa",
+    hook: "The hero who beheaded the Gorgon and rescued Andromeda from a sea monster.",
+    image: "assets/images/medusa.jpg",
+    story: "Son of Zeus and Danaë. Tasked with bringing back the head of Medusa, he succeeded with the help of Athena and Hermes. Later he rescued Andromeda from a sea monster sent by Poseidon and founded the city of Mycenae.",
+    sources: ["Apollodorus", "Ovid"],
+    symbols: ["Medusa’s Head"],
+    relations: [
+      { id: "medusa", label: "Slayer of" }
+    ]
+  },
+  {
+    id: "theseus",
+    name: "Theseus",
+    type: "Hero",
+    cycle: "The Heroic Age",
+    epithet: "Slayer of the Minotaur, King of Athens",
+    hook: "The hero who ended the tribute of youths to Crete and unified Attica.",
+    image: "assets/images/heracles.jpg",
+    story: "Son of Aegeus (or Poseidon). He volunteered to enter the Labyrinth and slay the Minotaur with the help of Ariadne’s thread. Later he became king of Athens and is credited with synoecism — uniting the villages of Attica into one city-state.",
+    sources: ["Plutarch, Life of Theseus", "Apollodorus"],
+    symbols: ["Double Axe", "Thread"],
+    relations: [
+      { id: "minotaur", label: "Slayer of" }
     ]
   },
   {
@@ -117,6 +240,21 @@ const entries = [
     symbols: ["Bow", "Oar"],
     relations: []
   },
+  {
+    id: "achilles",
+    name: "Achilles",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "The Greatest Warrior of the Greeks",
+    hook: "The near-invincible hero whose anger and withdrawal from battle shaped the outcome of the Trojan War.",
+    image: "assets/images/heracles.jpg",
+    story: "Son of the mortal Peleus and the goddess Thetis. The greatest warrior among the Greeks at Troy. After a quarrel with Agamemnon, he withdrew from battle, leading to devastating losses for the Greeks. His return and eventual death at the hands of Paris (guided by Apollo) mark one of the central tragedies of the war.",
+    sources: ["Homer, Iliad"],
+    symbols: ["Armor", "Spear"],
+    relations: [
+      { id: "patroclus", label: "Closest Companion" }
+    ]
+  },
 
   // === ECSTATIC TRADITIONS ===
   {
@@ -133,40 +271,6 @@ const entries = [
     relations: [
       { id: "zeus", label: "Father" }
     ]
-  },
-
-  // Additional core figures
-  {
-    id: "athena",
-    name: "Athena",
-    type: "Olympian",
-    cycle: "Cosmic Order",
-    epithet: "Goddess of Wisdom, Strategy, and Crafts",
-    hook: "The virgin goddess born fully armed from Zeus’s head.",
-    image: "assets/images/athena.jpg",
-    story: "Athena sprang fully grown and armored from Zeus’s forehead after he swallowed her mother Metis. She is the goddess of strategic warfare, wisdom, crafts, and the protector of cities (especially Athens). She represents intelligence and civilization over brute force.",
-    sources: ["Hesiod, Theogony", "Homer, Iliad and Odyssey"],
-    symbols: ["Owl", "Aegis", "Olive Tree", "Spear"],
-    relations: [
-      { id: "zeus", label: "Father" }
-    ]
-  },
-  {
-    id: "hades",
-    name: "Hades",
-    type: "Olympian",
-    cycle: "Cosmic Order",
-    epithet: "Lord of the Dead, The Unseen One",
-    hook: "The ruler of the Underworld who received the realm of the dead in the division of the cosmos.",
-    image: "assets/images/poseidon.jpg",
-    story: "After the Titanomachy, Hades drew the lot for the Underworld. He is not evil but stern and just, guarding the realm of the dead. His abduction of Persephone became one of the most important myths explaining the cycle of seasons.",
-    sources: ["Hesiod, Theogony", "Homeric Hymn to Demeter"],
-    symbols: ["Cerberus", "Helm of Invisibility"],
-    relations: [
-      { id: "zeus", label: "Brother" },
-      { id: "poseidon", label: "Brother" },
-      { id: "persephone", label: "Wife" }
-    ]
   }
 ];
 
@@ -178,15 +282,6 @@ const cycles = [
   "Transgression",
   "Ecstatic Traditions"
 ];
-
-// Cycle descriptions for better exploration experience
-const cycleDescriptions = {
-  "Cosmic Order": "The great succession myths — how the current world of the gods came into being through rebellion, marriage, and the establishment of hierarchy.",
-  "The Heroic Age": "The age of great heroes who performed impossible labors, slew monsters, and bridged the world of gods and mortals.",
-  "The Trojan War": "The greatest war of the mythic age, where the greatest heroes clashed and the old order began to crumble.",
-  "Transgression": "Stories of those who crossed divine boundaries — bringing fire, opening forbidden jars, or challenging the gods’ will.",
-  "Ecstatic Traditions": "The arrival of Dionysus and the dangerous, liberating power of ritual madness and the dissolution of the self."
-};
 
 // State
 let currentCycle = 'all';
@@ -237,7 +332,7 @@ function renderEntries(cycle = 'all', searchTerm = '') {
   });
 }
 
-// Setup cycle filters with descriptions
+// Setup cycle filters
 function setupCycleFilters() {
   const container = document.getElementById('cycle-filters');
   if (!container) return;
@@ -250,7 +345,6 @@ function setupCycleFilters() {
   allBtn.onclick = () => {
     currentCycle = 'all';
     updateActiveFilter(allBtn);
-    document.getElementById('cycle-description').innerHTML = '';
     renderEntries('all', document.getElementById('global-search')?.value || '');
   };
   container.appendChild(allBtn);
@@ -262,8 +356,6 @@ function setupCycleFilters() {
     btn.onclick = () => {
       currentCycle = cycle;
       updateActiveFilter(btn);
-      const desc = cycleDescriptions[cycle] || '';
-      document.getElementById('cycle-description').innerHTML = desc ? `<p class="text-sm text-[#F5F0E6]/70 mt-2 max-w-3xl">${desc}</p>` : '';
       renderEntries(cycle, document.getElementById('global-search')?.value || '');
     };
     container.appendChild(btn);
