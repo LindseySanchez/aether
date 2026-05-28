@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AETHER • Greek Mythology</title>
-    <meta name="description" content="An interactive resource focused on the historical depth of Greek mythic traditions.">
+    <meta name="description" content="An interactive resource for the historical study of Greek mythic traditions.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -127,7 +127,7 @@
                 </div>
 
                 <div class="hidden md:flex items-center gap-x-8 text-sm">
-                    <a href="#tapestry" class="nav-link text-[#F5F0E6]/90 hover:text-[#F5F0E6] text-sm font-medium">The Corpus</a>
+                    <a href="#tapestry" class="nav-link text-[#F5F0E6]/90 hover:text-[#F5F0E6] text-sm font-medium">The Traditions</a>
                     <a href="#tree" class="nav-link text-[#F5F0E6]/90 hover:text-[#F5F0E6] text-sm font-medium">Genealogies</a>
                     <a href="#ages" class="nav-link text-[#F5F0E6]/90 hover:text-[#F5F0E6] text-sm font-medium">Chronology</a>
                 </div>
@@ -137,7 +137,7 @@
                         <input 
                             id="global-search"
                             type="text" 
-                            placeholder="Search figures and traditions..." 
+                            placeholder="Search figures, sources, traditions..." 
                             class="w-full bg-[#0A0F1E] border border-white/10 focus:border-[#C5A46E]/60 transition-colors text-sm rounded-full pl-11 py-2.5 placeholder:text-[#F5F0E6]/40 focus:outline-none">
                         <svg class="w-4 h-4 absolute left-4 top-3.5 text-[#C5A46E]/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </div>
@@ -157,7 +157,7 @@
     </nav>
 
     <!-- HERO -->
-    <header class="relative h-[88vh] min-h-[620px] flex items-center justify-center overflow-hidden">
+    <header class="relative h-[86vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 bg-black">
             <video 
                 id="hero-video"
@@ -168,7 +168,7 @@
                 class="absolute inset-0 w-full h-full object-cover opacity-85">
                 <source src="assets/videos/olympus-dawn.mp4" type="video/mp4">
             </video>
-            <div class="absolute inset-0 bg-gradient-to-b from-[#05080F]/70 via-[#05080F]/75 to-[#05080F]"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#05080F]/70 via-[#05080F]/78 to-[#05080F]"></div>
         </div>
 
         <div class="relative z-10 max-w-screen-2xl mx-auto px-8 text-center">
@@ -183,13 +183,13 @@
                 </p>
                 
                 <p class="max-w-xl mx-auto text-base text-[#F5F0E6]/75 mb-8">
-                    An interactive resource focused on the historical development of Greek mythic traditions, with attention to sources, variants, and later resonances.
+                    An interactive resource for those who want to engage seriously with the ancient traditions — their sources, their variations, and the questions they continue to raise.
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
                     <button onclick="document.getElementById('tapestry').scrollIntoView({ behavior: 'smooth' })" 
                             class="px-8 py-3 rounded-full bg-[#C5A46E] hover:bg-[#E8D9B5] active:bg-[#C5A46E] transition-all text-[#05080F] font-semibold text-sm tracking-wide">
-                        ENTER THE CORPUS
+                        ENTER THE TRADITIONS
                     </button>
                     
                     <button onclick="openOracle()" 
@@ -197,23 +197,19 @@
                         RANDOM ANCIENT TESTIMONY
                     </button>
                 </div>
-                
-                <div class="mt-10 text-xs tracking-[2px] text-[#C5A46E]/50">
-                    FOR THOSE WHO WANT TO UNDERSTAND THE TRADITIONS MORE DEEPLY
-                </div>
             </div>
         </div>
     </header>
 
-    <!-- THE CORPUS -->
+    <!-- THE TRADITIONS -->
     <div id="tapestry" class="max-w-screen-2xl mx-auto px-8 pt-10 pb-16">
         <div class="flex items-end justify-between mb-6">
             <div>
-                <div class="text-[#C5A46E] text-xs tracking-[3px] font-medium mb-1">THE CORPUS</div>
-                <h2 class="section-header text-5xl tracking-[-1.5px]">Figures and Traditions</h2>
+                <div class="text-[#C5A46E] text-xs tracking-[3px] font-medium mb-1">THE TRADITIONS</div>
+                <h2 class="section-header text-5xl tracking-[-1.5px]">Figures and Sources</h2>
             </div>
             <div class="hidden md:block text-right max-w-sm text-sm text-[#F5F0E6]/60">
-                Entries emphasize primary sources and the range of ancient testimony.
+                Each entry centers the ancient evidence and the range of surviving testimony.
             </div>
         </div>
 
@@ -229,7 +225,7 @@
         </div>
     </div>
 
-    <!-- THE GREAT TREE -->
+    <!-- GENEALOGIES -->
     <div id="tree" class="bg-[#0A0F1E] border-y border-white/10 py-14">
         <div class="max-w-screen-2xl mx-auto px-8">
             <div class="grid md:grid-cols-12 gap-x-10 items-center">
@@ -237,7 +233,7 @@
                     <div class="text-[#C5A46E] text-xs tracking-[3px] mb-1.5">GENEALOGIES</div>
                     <h2 class="section-header text-5xl tracking-[-1.2px] leading-none mb-4">Genealogical Relations</h2>
                     <p class="text-[#F5F0E6]/75 text-[14.5px] leading-relaxed max-w-md">
-                        Lineages drawn primarily from Hesiod, Homer, and later mythographers. Click nodes to explore associated traditions.
+                        These relationships are drawn from ancient sources and reflect the complex, sometimes contradictory genealogies preserved in the tradition.
                     </p>
                 </div>
 
@@ -250,11 +246,11 @@
         </div>
     </div>
 
-    <!-- THE AGES -->
+    <!-- CHRONOLOGY -->
     <div id="ages" class="max-w-screen-2xl mx-auto px-8 py-16">
         <div class="max-w-2xl mb-8">
             <div class="text-[#C5A46E] text-xs tracking-[3px] mb-1">CHRONOLOGY</div>
-            <h2 class="section-header text-5xl tracking-[-1.2px]">Periods and Narrative Horizons</h2>
+            <h2 class="section-header text-5xl tracking-[-1.2px]">Periods and Horizons</h2>
         </div>
 
         <div class="relative">
@@ -263,11 +259,11 @@
         </div>
     </div>
 
-    <!-- SOURCE & ACCESS -->
+    <!-- ACCESS -->
     <div class="max-w-screen-2xl mx-auto px-8 py-12 border-b border-white/10">
         <div class="max-w-3xl mx-auto text-center">
             <div class="text-[#C5A46E] text-xs tracking-[3px] mb-2">ACCESS</div>
-            <h3 class="section-header text-3xl tracking-tight mb-3">Source Code and Media</h3>
+            <h3 class="section-header text-3xl tracking-tight mb-3">Source Code and Full Assets</h3>
             
             <div class="flex flex-col sm:flex-row gap-3 justify-center mt-5">
                 <a href="https://github.com/LindseySanchez/aether" target="_blank"
@@ -275,7 +271,7 @@
                     View on GitHub
                 </a>
             </div>
-            <p class="mt-4 text-xs text-[#C5A46E]/50">This project was developed during an exploratory session with a focus on historical understanding.</p>
+            <p class="mt-4 text-xs text-[#C5A46E]/50">This project was developed during an exploratory session with a commitment to historical seriousness.</p>
         </div>
     </div>
 
@@ -293,7 +289,7 @@
         </div>
     </footer>
 
-    <!-- ENTRY MODAL (updated for new fields) -->
+    <!-- Modals -->
     <div id="entry-modal" onclick="if (event.target.id === 'entry-modal') closeModal()" class="hidden fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 md:p-8">
         <div onclick="event.stopImmediatePropagation()" class="modal w-full max-w-5xl bg-[#05080F] border border-[#C5A46E]/20 rounded-3xl overflow-hidden max-h-[94vh] flex flex-col">
             <div id="modal-hero" class="relative h-72 md:h-80 w-full flex-shrink-0">
@@ -328,7 +324,7 @@
             
             <div class="px-8 md:px-10 py-4 border-t border-white/10 bg-[#0A0F1E]/80 flex items-center gap-3 flex-shrink-0 text-sm">
                 <button onclick="addToJourneyFromModal()" class="px-5 py-2 rounded-xl border border-[#C5A46E]/30 hover:bg-[#C5A46E]/5 transition">Save to Session</button>
-                <button onclick="closeModal()" class="px-5 py-2 rounded-xl border border-white/15 hover:bg-white/5 transition">Return to Corpus</button>
+                <button onclick="closeModal()" class="px-5 py-2 rounded-xl border border-white/15 hover:bg-white/5 transition">Return</button>
             </div>
         </div>
     </div>
