@@ -714,6 +714,51 @@ const entries = [
     relations: [
       { id: "daedalus", label: "Father" }
     ]
+  },
+  {
+    id: "nestor",
+    name: "Nestor",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "The Wise Counselor of the Greeks",
+    hook: "The aged king whose experience and counsel guided the Greek leaders at Troy.",
+    image: "assets/images/heracles.jpg",
+    story: "King of Pylos and the oldest of the Greek leaders at Troy. Though no longer able to fight in the front lines, his wisdom, diplomacy, and storytelling made him one of the most respected figures in the Greek camp. He often acts as a mediator between Agamemnon and Achilles and provides historical perspective that enriches the Iliad.",
+    sources: ["Homer, Iliad"],
+    symbols: ["Scepter"],
+    relations: [
+      { id: "agamemnon", label: "Ally and Advisor" }
+    ]
+  },
+  {
+    id: "ajax",
+    name: "Ajax the Greater (Telamonian Ajax)",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "The Greatest Greek Warrior After Achilles",
+    hook: "The massive, unbreakable defender of the Greek ships at Troy.",
+    image: "assets/images/heracles.jpg",
+    story: "Son of Telamon and one of the greatest Greek warriors at Troy, second only to Achilles in strength and prowess. He single-handedly defended the Greek ships when the Trojans broke through, and later competed with Odysseus for Achilles’ armor. His eventual suicide after losing the contest to Odysseus is one of the most tragic events following the main action of the Iliad.",
+    sources: ["Homer, Iliad", "Sophocles, Ajax"],
+    symbols: ["Shield"],
+    relations: [
+      { id: "achilles", label: "Rival for Armor" }
+    ]
+  },
+  {
+    id: "diomedes",
+    name: "Diomedes",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "The Hero Who Wounded Gods",
+    hook: "One of the greatest Greek warriors at Troy, famous for wounding Ares and Aphrodite.",
+    image: "assets/images/heracles.jpg",
+    story: "Son of Tydeus and king of Argos. One of the most formidable Greek leaders at Troy, he wounded both Ares and Aphrodite in battle (a rare feat for a mortal). He also played a key role in the theft of the Palladium, a sacred statue whose removal helped doom Troy. His story shows the heights of mortal heroism while still respecting the limits set by the gods.",
+    sources: ["Homer, Iliad"],
+    symbols: ["Armor"],
+    relations: [
+      { id: "odysseus", label: "Companion in the Palladium Theft" }
+    ]
   }
 ];
 
