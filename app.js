@@ -121,8 +121,9 @@ const entries = [
     epithet: "Goddess of Wisdom, Strategy, and Crafts",
     hook: "The virgin goddess born fully armed from Zeus’s head.",
     image: "assets/images/athena.jpg",
-    story: "Athena sprang fully grown and armored from Zeus’s forehead after he swallowed her mother Metis. She is the goddess of strategic warfare, wisdom, crafts, and the protector of cities (especially Athens). She represents intelligence and civilization over brute force, and is one of the most consistently positive and powerful goddesses in Greek tradition. Her birth from Zeus’s head symbolizes the idea that wisdom and strategy belong to the highest authority. In the Iliad she repeatedly aids the Greeks and especially Odysseus and Diomedes; in the Odyssey she is the constant patron of the hero’s return. Her contest with Poseidon for Athens (the olive tree versus the salt spring) established her as the city’s divine protector. She was also the patron of weaving, metalwork, and the arts of peace.",
-    sources: ["Hesiod, Theogony 886-900", "Homer, Iliad and Odyssey", "Homeric Hymn to Athena"],
+    story: "Athena sprang fully grown and armored from Zeus’s forehead after he swallowed her mother Metis. She is the goddess of strategic warfare, wisdom, crafts, and the protector of cities (especially Athens). She represents intelligence and civilization over brute force, and is one of the most consistently positive and powerful goddesses in Greek tradition. Her birth from Zeus’s head symbolizes the idea that wisdom and strategy belong to the highest authority. In the Iliad she repeatedly aids the Greeks and especially Odysseus and Diomedes; in the Odyssey she is the constant patron of the hero’s return. Her contest with Poseidon for Athens (the olive tree versus the salt spring) established her as the city’s divine protector. She was also the patron of weaving, metalwork, and the arts of peace. Her wisdom is not merely intellectual but deeply tied to craft, city-building, and the defense of civilization against chaos.",
+    sources: ["Hesiod, Theogony 886-900", "Homer, Iliad and Odyssey", "Homeric Hymn to Athena", "Apollodorus, Library 1.3.6"],
+    variants: "Some local traditions (especially in Libya or with the story of Pallas) give her a different origin. The contest with Poseidon for Athens had multiple local versions, some more favorable to Poseidon than the one that became canonical in Athens.",
     symbols: ["Owl", "Aegis", "Olive Tree", "Spear"],
     relations: [
       { id: "zeus", label: "Father" }
@@ -136,7 +137,7 @@ const entries = [
     epithet: "Lord of the Sea, Earth-Shaker",
     hook: "The moody god who received the sea in the division of the cosmos.",
     image: "assets/images/poseidon.jpg",
-    story: "After the Titanomachy, Poseidon drew the lot for the sea. He is volatile and powerful, associated with earthquakes, horses, and the unpredictable nature of the ocean. His frequent conflicts with other gods and mortals (notably Odysseus) highlight the dangerous side of divine power and the limits of human control over natural forces. He is also credited with creating the first horse. In the Iliad he supports the Greeks while resenting Zeus’s authority; in the Odyssey his wrath keeps Odysseus from home for ten years after the hero blinds his son Polyphemus. His sanctuaries were often placed at dangerous capes and harbors.",
+    story: "After the Titanomachy, Poseidon drew the lot for the sea. He is volatile and powerful, associated with earthquakes, horses, and the unpredictable nature of the ocean. His frequent conflicts with other gods and mortals (notably Odysseus) highlight the dangerous side of divine power and the limits of human control over natural forces. He is also credited with creating the first horse. In the Iliad he supports the Greeks while resenting Zeus’s authority; in the Odyssey his wrath keeps Odysseus from home for ten years after the hero blinds his son Polyphemus. His sanctuaries were often placed at dangerous capes and harbors. He was also deeply connected to the founding myths of many coastal and island communities.",
     sources: ["Hesiod, Theogony", "Homer, Iliad and Odyssey"],
     symbols: ["Trident", "Horse", "Dolphin"],
     relations: [
@@ -152,8 +153,8 @@ const entries = [
     epithet: "Lord of the Dead, The Unseen One",
     hook: "The ruler of the Underworld who received the realm of the dead in the division of the cosmos.",
     image: "assets/images/poseidon.jpg",
-    story: "After the Titanomachy, Hades drew the lot for the Underworld. He is stern and just rather than evil, guarding the realm of the dead and the riches beneath the earth. His abduction of Persephone became one of the central myths explaining the cycle of seasons and the relationship between life and death. Unlike his brothers, he rarely leaves his realm and is rarely depicted as actively malevolent. The Homeric Hymn to Demeter gives the fullest account of the abduction and the compromise that followed. Hades was also known as Pluto (the Rich One) in later periods, reflecting the wealth that lies under the earth.",
-    sources: ["Hesiod, Theogony", "Homeric Hymn to Demeter"],
+    story: "After the Titanomachy, Hades drew the lot for the Underworld. He is stern and just rather than evil, guarding the realm of the dead and the riches beneath the earth. His abduction of Persephone became one of the central myths explaining the cycle of seasons and the relationship between life and death. Unlike his brothers, he rarely leaves his realm and is rarely depicted as actively malevolent. The Homeric Hymn to Demeter gives the fullest account of the abduction and the compromise that followed. Hades was also known as Pluto (the Rich One) in later periods, reflecting the wealth that lies under the earth. He presided over the judgment of the dead and the great oaths sworn by the Styx.",
+    sources: ["Hesiod, Theogony", "Homeric Hymn to Demeter", "Apollodorus, Library 1.2.1"],
     symbols: ["Cerberus", "Helm of Invisibility"],
     relations: [
       { id: "zeus", label: "Brother" },
@@ -219,7 +220,7 @@ const entries = [
     epithet: "Slayer of Medusa",
     hook: "The hero who beheaded the Gorgon and rescued Andromeda from a sea monster.",
     image: "assets/images/medusa.jpg",
-    story: "Son of Zeus and Danaë. Tasked with bringing back the head of Medusa, he succeeded with the help of Athena and Hermes. Later he rescued Andromeda from a sea monster sent by Poseidon and founded the city of Mycenae. His story is one of the earliest and most complete hero myths and involves many of the classic elements of the heroic journey. The Perseus cycle links the world of the Olympians directly to the great Mycenaean centers of the heroic age.",
+    story: "Son of Zeus and Danaë. Tasked with bringing back the head of Medusa, he succeeded with the help of Athena and Hermes. Later he rescued Andromeda from a sea monster sent by Poseidon and founded the city of Mycenae. His story is one of the earliest and most complete hero myths and involves many of the classic elements of the heroic journey. The Perseus cycle links the world of the Olympians directly to the great Mycenaean centers of the heroic age. His later adventures include the accidental killing of his grandfather Acrisius, fulfilling the prophecy that had caused his exposure as an infant.",
     sources: ["Apollodorus", "Ovid"],
     symbols: ["Medusa’s Head"],
     relations: [
@@ -234,9 +235,9 @@ const entries = [
     epithet: "Slayer of the Minotaur, King of Athens",
     hook: "The hero who ended the tribute of youths to Crete and unified Attica.",
     image: "assets/images/heracles.jpg",
-    story: "Son of Aegeus (or Poseidon). He volunteered to enter the Labyrinth and slay the Minotaur with the help of Ariadne’s thread. Later he became king of Athens and is credited with synoecism — uniting the villages of Attica into one city-state. His story bridges the worlds of heroic adventure and political founding, though it also includes darker episodes such as the abandonment of Ariadne and the death of his father. Plutarch’s Life of Theseus collects many variants and attempts to give him a coherent biography.",
+    story: "Son of Aegeus (or Poseidon). He volunteered to enter the Labyrinth and slay the Minotaur with the help of Ariadne’s thread. Later he became king of Athens and is credited with synoecism — uniting the villages of Attica into one city-state. His story bridges the worlds of heroic adventure and political founding, though it also includes darker episodes such as the abandonment of Ariadne and the death of his father. Plutarch’s Life of Theseus collects many variants and attempts to give him a coherent biography. He participated in the Calydonian boar hunt and the expedition of the Lapiths against the centaurs, and his abduction of the young Helen was one of the causes of later conflict.",
     sources: ["Plutarch, Life of Theseus", "Apollodorus"],
-    variants: "The parentage of Theseus (Aegeus vs. Poseidon) and the extent of his role in unifying Attica are subjects of variation across sources.",
+    variants: "The parentage of Theseus (Aegeus vs. Poseidon) and the extent of his role in unifying Attica are subjects of variation across sources. Some traditions make him more of a pan-Hellenic hero who participated in many of the great adventures of his generation.",
     symbols: ["Double Axe", "Thread"],
     relations: [
       { id: "minotaur", label: "Slayer of" }
@@ -290,7 +291,8 @@ const entries = [
     relations: [
       { id: "patroclus", label: "Closest Companion" },
       { id: "briseis", label: "Captive and Cause of Quarrel" },
-      { id: "agamemnon", label: "Rival and Commander" }
+      { id: "agamemnon", label: "Rival and Commander" },
+      { id: "thetis", label: "Mother" }
     ]
   },
   {
@@ -517,7 +519,7 @@ const entries = [
     epithet: "God of Light, Music, Prophecy, and Healing",
     hook: "The most widely worshipped of the gods — beautiful, distant, and terrifyingly clear-sighted.",
     image: "assets/images/apollo.jpg",
-    story: "Son of Zeus and Leto, twin brother of Artemis. Apollo is associated with the sun, music, poetry, prophecy (especially at Delphi), healing, and sudden, pitiless punishment. He represents order, clarity, and the dangerous power of divine knowledge. His oracles were among the most important religious institutions in the Greek world, and his myths often explore the tension between divine certainty and human limitation. He guided the arrow that killed Achilles and repeatedly intervened in the Trojan War on the side of the Trojans. His shrine at Delphi was the religious heart of the Greek world for centuries.",
+    story: "Son of Zeus and Leto, twin brother of Artemis. Apollo is associated with the sun, music, poetry, prophecy (especially at Delphi), healing, and sudden, pitiless punishment. He represents order, clarity, and the dangerous power of divine knowledge. His oracles were among the most important religious institutions in the Greek world, and his myths often explore the tension between divine certainty and human limitation. He guided the arrow that killed Achilles and repeatedly intervened in the Trojan War on the side of the Trojans. His shrine at Delphi was the religious heart of the Greek world for centuries. He was also the god of purification and the founder of colonies.",
     sources: ["Hesiod, Theogony", "Homeric Hymn to Apollo", "Euripides, Ion"],
     symbols: ["Lyre", "Laurel", "Bow", "Python"],
     relations: [
@@ -533,7 +535,7 @@ const entries = [
     epithet: "Goddess of the Hunt, Moon, and Wilderness",
     hook: "The virgin huntress who protects the young and punishes those who violate her sacred spaces.",
     image: "assets/images/artemis.jpg",
-    story: "Twin sister of Apollo and daughter of Zeus and Leto. Artemis roams the wild with her nymphs. She is fiercely protective of young animals and girls, but merciless to those who offend her chastity or sacred groves (most famously Actaeon). She represents the untamed aspects of nature and female independence in a world dominated by male gods and heroes. She demanded the sacrifice of Iphigenia at Aulis and was the divine power behind many of the most terrifying moments of the heroic age.",
+    story: "Twin sister of Apollo and daughter of Zeus and Leto. Artemis roams the wild with her nymphs. She is fiercely protective of young animals and girls, but merciless to those who offend her chastity or sacred groves (most famously Actaeon). She represents the untamed aspects of nature and female independence in a world dominated by male gods and heroes. She demanded the sacrifice of Iphigenia at Aulis and was the divine power behind many of the most terrifying moments of the heroic age. Her worship was especially strong in rural and border regions.",
     sources: ["Homeric Hymn to Artemis", "Callimachus, Hymn to Artemis"],
     symbols: ["Bow", "Deer", "Crescent Moon"],
     relations: [
@@ -644,7 +646,7 @@ const entries = [
     epithet: "Leader of the Argonauts",
     hook: "The hero who led the quest for the Golden Fleece and whose story explores the cost of heroism and broken oaths.",
     image: "assets/images/heracles.jpg",
-    story: "Son of Aeson, rightful king of Iolcus. Sent on an impossible quest by his uncle Pelias to retrieve the Golden Fleece, he assembled the greatest heroes of his age (the Argonauts) and succeeded with the help of Medea. His later betrayal of Medea and the destruction of his family make his story one of the most morally complex of the heroic age. Apollonius of Rhodes’ Argonautica gives the fullest surviving narrative, showing Jason as a leader who is often passive and reliant on the women around him. His abandonment of Medea for the daughter of the king of Corinth leads to the horrors dramatized in Euripides’ Medea.",
+    story: "Son of Aeson, rightful king of Iolcus. Sent on an impossible quest by his uncle Pelias to retrieve the Golden Fleece, he assembled the greatest heroes of his age (the Argonauts) and succeeded with the help of Medea. His later betrayal of Medea and the destruction of his family make his story one of the most morally complex of the heroic age. Apollonius of Rhodes’ Argonautica gives the fullest surviving narrative, showing Jason as a leader who is often passive and reliant on the women around him. His abandonment of Medea for the daughter of the king of Corinth leads to the horrors dramatized in Euripides’ Medea. He was also said to have died when his old ship, the Argo, collapsed on him.",
     sources: ["Apollonius of Rhodes, Argonautica", "Apollodorus"],
     symbols: ["Golden Fleece", "Argo"],
     relations: [
@@ -821,7 +823,7 @@ const entries = [
     ]
   },
 
-  // NEW EXPANSIONS — AJAX THE LESSER, BRISEIS, PATROCLUS, ANDROMACHE
+  // NEW EXPANSIONS — AJAX THE LESSER, BRISEIS, PATROCLUS, ANDROMACHE (from previous batch)
   {
     id: "ajax-lesser",
     name: "Ajax the Lesser (Oilean Ajax)",
@@ -888,6 +890,171 @@ const entries = [
     relations: [
       { id: "hector", label: "Husband" },
       { id: "astyanax", label: "Son" }
+    ]
+  },
+
+  // === CURRENT BATCH: NEW ESSENTIAL FIGURES (Phoenix, Orestes, Electra, Neoptolemus, Jocasta, Laius, Tiresias, Iphigenia, Aegisthus) ===
+  {
+    id: "phoenix",
+    name: "Phoenix",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "Achilles’ Tutor and Mentor, Emissary to the Embassy",
+    hook: "The old counselor who taught Achilles and tried to heal the quarrel between him and Agamemnon.",
+    image: "assets/images/heracles.jpg",
+    story: "Son of Amyntor. As a young man he was blinded (or nearly blinded) by his father after a family conflict involving his father’s concubine. He fled to the court of Peleus, where he was received kindly and became the tutor and companion of the young Achilles. He taught Achilles the arts of war, storytelling, and perhaps medicine. In the Iliad he is one of the three ambassadors sent to Achilles in Book 9 to persuade him to return to battle. His long, emotional speech — recounting his own story and the parable of the Prayers — is one of the most moving appeals in the epic. After Patroclus’s death he remains with Achilles and helps prepare his friend’s body. He represents the older, wiser generation that tries to temper the destructive pride of the younger heroes.",
+    sources: ["Homer, Iliad 9.432-605, 19.310-337", "Apollodorus, Library 3.13.8"],
+    variants: "Some traditions say he was actually blinded by his father; others that he was only threatened. His exact relationship to Achilles (tutor, foster-father, or lover in some later readings) was discussed in antiquity.",
+    symbols: ["Staff"],
+    relations: [
+      { id: "achilles", label: "Pupil and Companion" },
+      { id: "peleus", label: "Host and Protector" }
+    ]
+  },
+  {
+    id: "orestes",
+    name: "Orestes",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "Son of Agamemnon, Avenger of His Father, Haunted by the Furies",
+    hook: "The young man compelled by Apollo to kill his mother and her lover, becoming the central figure of the Oresteia.",
+    image: "assets/images/heracles.jpg",
+    story: "Son of Agamemnon and Clytemnestra. While still a child he was sent away by his sister Electra or by a nurse to escape the murderous household. Years later, commanded by Apollo, he returns to Mycenae to avenge his father by killing Clytemnestra and Aegisthus. After the matricide he is driven mad by the Erinyes (Furies) and wanders as a suppliant. In Aeschylus’s Eumenides he is tried at Athens before Athena and a jury of citizens; the vote is tied, Athena casts the deciding vote for acquittal, and the Furies are transformed into the Eumenides (Kindly Ones), protectors of the city. His story dramatizes the transition from blood vengeance to civic justice. Later tragedies (Sophocles’ Electra, Euripides’ Orestes and Iphigenia in Tauris) explore his guilt, his relationship with his sister, and his further adventures including the recovery of the statue of Artemis from the Tauri.",
+    sources: ["Aeschylus, Libation Bearers and Eumenides", "Sophocles, Electra", "Euripides, Orestes and Iphigenia in Tauris", "Apollodorus, Epitome 6.24-28"],
+    variants: "The degree of his remorse and the length of his persecution by the Furies vary. Some versions send him to the land of the Tauri to fetch the statue of Artemis as further purification. The trial in Athens is largely Aeschylus’s invention and has deep political resonance for the Athenian audience.",
+    symbols: ["Sword", "Suppliants’ Bough"],
+    relations: [
+      { id: "agamemnon", label: "Father" },
+      { id: "clytemnestra", label: "Mother (whom he kills)" },
+      { id: "electra", label: "Sister and Ally" },
+      { id: "aegisthus", label: "Mother’s Lover (whom he kills)" }
+    ]
+  },
+  {
+    id: "electra",
+    name: "Electra",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "Daughter of Agamemnon, Relentless Avenger and Loyal Sister",
+    hook: "The daughter who preserved her brother Orestes and drove the vengeance against their mother.",
+    image: "assets/images/athena.jpg",
+    story: "Daughter of Agamemnon and Clytemnestra. After her father’s murder she saved the infant Orestes and sent him into hiding. She remained in the palace, despised and often mistreated by her mother and Aegisthus, nursing her grief and hatred. In Aeschylus she is a secondary but crucial figure who recognizes her brother and helps plan the revenge. Sophocles and Euripides give her much larger, more tormented roles. In Sophocles’ Electra she is almost monomaniacal in her devotion to vengeance; in Euripides she is married to a poor farmer and lives in poverty while still plotting. Her reunion with Orestes and the subsequent killings are among the most intense scenes in Greek tragedy. After the events she marries Pylades, Orestes’ loyal friend.",
+    sources: ["Aeschylus, Libation Bearers", "Sophocles, Electra", "Euripides, Electra"],
+    variants: "The characterization of Electra varies sharply: Aeschylus’s Electra is pious and restrained; Sophocles’ is fierce and almost inhuman in her single-mindedness; Euripides’ is more psychologically damaged and socially degraded. All three versions were performed within a few decades of each other.",
+    symbols: ["Urn", "Mourning Veil"],
+    relations: [
+      { id: "agamemnon", label: "Father" },
+      { id: "clytemnestra", label: "Mother (whom she hates)" },
+      { id: "orestes", label: "Brother (whom she saves and supports)" },
+      { id: "aegisthus", label: "Mother’s Lover (whom she helps kill)" }
+    ]
+  },
+  {
+    id: "neoptolemus",
+    name: "Neoptolemus (Pyrrhus)",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "Son of Achilles, Brutal Victor at Troy, Later King of Epirus",
+    hook: "The fierce young warrior who killed Priam at the altar and took Andromache as his prize.",
+    image: "assets/images/heracles.jpg",
+    story: "Son of Achilles and Deidamia (or in some versions a different mother). Too young to fight at the beginning of the Trojan War, he was brought to Troy in the final stages after his father’s death, often by Odysseus and Diomedes, because a prophecy required his presence for the city to fall. He fought with terrifying ferocity. He killed the aged Priam at the altar of Zeus (or Apollo), an act of sacrilege that shocked even other Greeks. He claimed Andromache as his concubine and, in some versions, threw her son Astyanax from the walls. After the war he returned to Greece, became king of the Molossians in Epirus, and was the ancestor of several royal lines (including, later, Alexander the Great claimed descent through him). He was eventually killed at Delphi, either for sacrilege or in a quarrel over spoils. His story shows the brutal next generation of the heroic age.",
+    sources: ["Homer, Odyssey 11.506-537", "Euripides, Trojan Women and Andromache", "Virgil, Aeneid 2", "Apollodorus, Epitome 5.21, 6.12-13"],
+    variants: "The exact circumstances of Priam’s death and the fate of Astyanax vary. Some sources make Neoptolemus more pious and reluctant; others emphasize his savagery. His death at Delphi is given different causes in different traditions.",
+    symbols: ["Sword", "Achilles’ Armor"],
+    relations: [
+      { id: "achilles", label: "Father" },
+      { id: "andromache", label: "Concubine (later wife in some versions)" },
+      { id: "priam", label: "Victim" }
+    ]
+  },
+  {
+    id: "jocasta",
+    name: "Jocasta",
+    type: "Hero",
+    cycle: "The Theban Cycle",
+    epithet: "Queen of Thebes, Wife and Mother of Oedipus",
+    hook: "The woman at the dark center of the Theban curse, wife and mother of the same man.",
+    image: "assets/images/athena.jpg",
+    story: "Wife of Laius and queen of Thebes. After the prophecy that their son would kill his father, she consented to (or ordered) the exposure of the infant Oedipus. When the grown Oedipus saved Thebes from the Sphinx and became king, she married him and bore him four children: Eteocles, Polynices, Antigone, and Ismene. In Sophocles’ Oedipus Rex she is a strong, rational woman who tries to calm Oedipus’s fears and dismisses prophecy. When the truth emerges she hangs herself. Some earlier versions suggest she lived longer or met a different end. Her story is one of the most compressed and terrible in Greek myth: a woman whose attempts to escape fate only tighten its grip, and whose love for her son/husband leads to the destruction of her entire house.",
+    sources: ["Sophocles, Oedipus Rex", "Euripides, Phoenician Women", "Apollodorus, Library 3.5.7"],
+    variants: "In some early traditions Jocasta (sometimes called Epicaste) lived long enough to see her sons kill each other. Euripides gives her a more active, suffering role in the Phoenician Women, trying until the end to prevent the fratricide.",
+    symbols: ["Veil", "Noose"],
+    relations: [
+      { id: "laius", label: "First Husband" },
+      { id: "oedipus", label: "Second Husband and Son" },
+      { id: "eteocles-polynices", label: "Sons" },
+      { id: "antigone", label: "Daughter" }
+    ]
+  },
+  {
+    id: "laius",
+    name: "Laius",
+    type: "Hero",
+    cycle: "The Theban Cycle",
+    epithet: "King of Thebes, Father of Oedipus, Origin of the Curse",
+    hook: "The man whose crimes against guest-friendship and his own son began the terrible chain of Theban suffering.",
+    image: "assets/images/heracles.jpg",
+    story: "King of Thebes and husband of Jocasta. As a young man he was exiled and received hospitality from Pelops. While under Pelops’ roof he abducted and raped the king’s young son Chrysippus. This act of xenia violation brought a curse upon his house. Later, when an oracle warned that his own son would kill him, he ordered the infant Oedipus exposed on Mount Cithaeron. The exposed child survived, grew up, and fulfilled the prophecy by killing Laius at a crossroads (not knowing he was his father). Laius’s story shows how one act of hubris and violation of sacred laws can poison generations. He is a shadowy but crucial figure whose crimes set the entire Theban cycle in motion.",
+    sources: ["Sophocles, Oedipus Rex", "Euripides, Phoenician Women (fragments and references)", "Apollodorus, Library 3.5.7"],
+    variants: "The story of the rape of Chrysippus appears in some but not all traditions and was used to explain the origin of the curse on the Labdacids. Some sources emphasize Laius’s arrogance toward the oracle more than the earlier crime.",
+    symbols: ["Chariot", "Scepter"],
+    relations: [
+      { id: "jocasta", label: "Wife" },
+      { id: "oedipus", label: "Son (whom he tries to kill and who kills him)" }
+    ]
+  },
+  {
+    id: "tiresias",
+    name: "Tiresias",
+    type: "Hero",
+    cycle: "The Theban Cycle",
+    epithet: "The Blind Prophet Who Lived Seven Generations",
+    hook: "The seer who appears in almost every major Theban story, seeing what others cannot.",
+    image: "assets/images/apollo.jpg",
+    story: "The most famous prophet in Greek mythology. According to one tradition he was blinded by Athena after seeing her bathe, but given the gift of prophecy in compensation. Another story says he was turned into a woman for seven years after striking mating snakes, then turned back, and was asked by Zeus and Hera to settle a dispute about which sex enjoyed love more (he said women). For this he was blinded by Hera but given long life and prophetic power by Zeus. He appears in Oedipus Rex (where he is forced to reveal the truth Oedipus does not want to hear), Antigone, the Bacchae (where he supports the new god Dionysus), and the Odyssey (where Odysseus consults his shade in the Underworld). He is the living embodiment of the cost and power of divine knowledge across the generations of Theban suffering.",
+    sources: ["Sophocles, Oedipus Rex and Antigone", "Euripides, Bacchae", "Homer, Odyssey 11", "Apollodorus, Library 3.7.1-3"],
+    variants: "The exact cause of his blindness and the length of his life vary. Some traditions give him multiple lives or the ability to retain his prophetic powers even in Hades. He is one of the few figures who bridges the heroic age and the world of the gods across many different poems and plays.",
+    symbols: ["Staff", "Snakes"],
+    relations: [
+      { id: "oedipus", label: "Revealer of Truth To" },
+      { id: "creon", label: "Advisor To" },
+      { id: "dionysus", label: "Supporter Of" }
+    ]
+  },
+  {
+    id: "iphigenia",
+    name: "Iphigenia",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "Daughter of Agamemnon, Sacrificed at Aulis",
+    hook: "The innocent girl whose death at her father’s hand launched the Greek fleet and set the Oresteia in motion.",
+    image: "assets/images/athena.jpg",
+    story: "Eldest daughter of Agamemnon and Clytemnestra. When the Greek fleet was becalmed at Aulis, the seer Calchas declared that Artemis demanded her sacrifice before the winds would allow the ships to sail for Troy. Agamemnon, after terrible inner conflict, consented (or was tricked into consenting). Iphigenia was brought to Aulis under the false pretense of marriage to Achilles. In Aeschylus she is sacrificed; in Euripides’ Iphigenia in Aulis she goes willingly to her death for the glory of Greece. In another Euripidean play (Iphigenia in Tauris) she is miraculously saved by Artemis at the last moment, taken to the land of the Tauri, and later rescued by her brother Orestes. Her death (or apparent death) is the primal wound that drives Clytemnestra’s revenge.",
+    sources: ["Aeschylus, Agamemnon", "Euripides, Iphigenia in Aulis and Iphigenia in Tauris"],
+    variants: "The question of whether she was actually killed or saved by Artemis was already debated in antiquity. Aeschylus presents a completed sacrifice; Euripides offers both the tragic and the redemptive versions in different plays.",
+    symbols: ["Veil", "Altar"],
+    relations: [
+      { id: "agamemnon", label: "Father (who sacrifices her)" },
+      { id: "clytemnestra", label: "Mother (who never forgives)" },
+      { id: "orestes", label: "Brother" }
+    ]
+  },
+  {
+    id: "aegisthus",
+    name: "Aegisthus",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "Cousin and Lover of Clytemnestra, Usurper and Murderer of Agamemnon",
+    hook: "The weak but vengeful man who helped murder the returning king and ruled Mycenae for seven years.",
+    image: "assets/images/heracles.jpg",
+    story: "Son of Thyestes and (in the usual version) his own daughter Pelopia, conceived as part of the terrible feud between the houses of Atreus and Thyestes. He was the only surviving son of Thyestes after Atreus’s horrific revenge banquet. Raised in exile, he returned to Mycenae, became the lover of Clytemnestra while Agamemnon was at Troy, and together they murdered the king in his bath upon his return. He ruled for seven years until Orestes killed him. In Aeschylus he is a weak, gloating tyrant; in other versions he is more of a partner in crime. His story is the final link in the multi-generational curse of the House of Atreus that began with Tantalus and continued through Atreus’s feast of his brother’s children.",
+    sources: ["Aeschylus, Agamemnon and Libation Bearers", "Sophocles, Electra", "Euripides, Electra", "Apollodorus, Epitome 6.23-25"],
+    variants: "The exact parentage and the degree of his agency in the murder vary. Some sources make him more of a tool of Clytemnestra; others give him a stronger role in planning the coup.",
+    symbols: ["Sword"],
+    relations: [
+      { id: "clytemnestra", label: "Lover and Accomplice" },
+      { id: "agamemnon", label: "Victim (cousin)" },
+      { id: "orestes", label: "Avenger (who kills him)" }
     ]
   }
 ];
