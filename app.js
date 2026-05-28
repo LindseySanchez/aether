@@ -24,38 +24,6 @@ const entries = [
     ]
   },
   {
-    id: "uranus",
-    name: "Uranus",
-    type: "Primordial",
-    cycle: "Cosmic Order",
-    epithet: "The Sky",
-    hook: "The first ruler of the cosmos, father of the Titans.",
-    image: "assets/images/zeus.jpg",
-    story: "Uranus covered Gaia completely. Together they produced the Titans, Cyclopes, and other powerful beings. His fear of his children led him to imprison them within Gaia, provoking her to conspire with Cronus to castrate him.",
-    sources: ["Hesiod, Theogony"],
-    symbols: ["Sky"],
-    relations: [
-      { id: "gaia", label: "Consort" },
-      { id: "cronus", label: "Son" }
-    ]
-  },
-  {
-    id: "cronus",
-    name: "Cronus",
-    type: "Titan",
-    cycle: "Cosmic Order",
-    epithet: "Lord of the Golden Age",
-    hook: "The Titan who overthrew his father only to be overthrown by his own son.",
-    image: "assets/images/zeus.jpg",
-    story: "Cronus castrated Uranus at Gaia’s urging and took his place as ruler. During his reign, the world experienced the Golden Age. Fearing a prophecy that he would be overthrown by his children, he swallowed them at birth until Rhea tricked him into swallowing a stone instead of Zeus.",
-    sources: ["Hesiod, Theogony", "Apollodorus"],
-    symbols: ["Sickle"],
-    relations: [
-      { id: "rhea", label: "Sister and Wife" },
-      { id: "zeus", label: "Son" }
-    ]
-  },
-  {
     id: "zeus",
     name: "Zeus",
     type: "Olympian",
@@ -63,7 +31,7 @@ const entries = [
     epithet: "King of the Gods, Lord of Sky and Thunder",
     hook: "The thunderer who established the current order of the cosmos.",
     image: "assets/images/zeus.jpg",
-    story: "Zeus led the Olympians in the war against the Titans (Titanomachy) and established a new order after their victory. He divided the cosmos with his brothers Poseidon and Hades and became the supreme ruler, associated with justice, hospitality, and the maintenance of cosmic order.",
+    story: "Zeus led the rebellion against the Titans and divided the world with his brothers Poseidon and Hades. He became the supreme ruler, associated with justice, hospitality, and the maintenance of cosmic order, though often through complex and sometimes ruthless means.",
     sources: ["Hesiod, Theogony", "Homer, Iliad"],
     symbols: ["Thunderbolt", "Eagle", "Oak"],
     relations: [
@@ -78,9 +46,9 @@ const entries = [
     type: "Olympian",
     cycle: "Cosmic Order",
     epithet: "Queen of the Gods, Guardian of Marriage",
-    hook: "The powerful protector of the established divine and social order.",
+    hook: "The powerful and often wrathful protector of marital bonds and the established order.",
     image: "assets/images/hera.jpg",
-    story: "As wife and sister of Zeus, Hera holds a central position in the Olympian hierarchy. She is the protector of marriage and women in childbirth, but her frequent conflicts with Zeus and persecution of his lovers and children reveal the tensions within the new cosmic order.",
+    story: "As wife of Zeus and queen of the gods, Hera plays a central role in enforcing the social and cosmic order. Her frequent conflicts with Zeus and persecution of his offspring reveal deep tensions within the divine hierarchy.",
     sources: ["Hesiod, Theogony", "Homer, Iliad"],
     symbols: ["Peacock", "Pomegranate"],
     relations: [
@@ -97,25 +65,12 @@ const entries = [
     epithet: "The Fire-Bringer, Champion of Humanity",
     hook: "The Titan who defied the gods to give humanity the tools of civilization.",
     image: "assets/images/prometheus.jpg",
-    story: "Prometheus stole fire from Olympus and gave it to humans, along with many arts and skills. For this act of defiance against Zeus’s will, he was bound to a rock in the Caucasus where an eagle ate his regenerating liver every day. He became the archetypal figure of the rebel who suffers for bringing knowledge and progress to humanity.",
+    story: "Prometheus stole fire from the gods and gave it to humans, along with many other arts and skills. For this act of defiance against Zeus’s will, he was bound to a rock where an eagle ate his liver every day. He became the archetypal figure of the rebel who suffers for bringing knowledge and progress to humanity.",
     sources: ["Hesiod, Theogony and Works and Days", "Aeschylus, Prometheus Bound"],
     symbols: ["Fire", "Chains"],
     relations: [
       { id: "zeus", label: "Punisher" }
     ]
-  },
-  {
-    id: "pandora",
-    name: "Pandora",
-    type: "Myth",
-    cycle: "Transgression",
-    epithet: "The First Woman",
-    hook: "The woman created as punishment and whose curiosity released all evils into the world.",
-    image: "assets/images/pandora.jpg",
-    story: "Created by Hephaestus on Zeus’s orders as revenge for Prometheus giving fire to humanity. Given a sealed jar (or box) containing all evils and told never to open it, Pandora’s curiosity led her to release suffering, disease, and discord into the world. Only Hope remained inside.",
-    sources: ["Hesiod, Works and Days"],
-    symbols: ["Jar"],
-    relations: []
   },
 
   // === THE HEROIC AGE ===
@@ -125,43 +80,13 @@ const entries = [
     type: "Hero",
     cycle: "The Heroic Age",
     epithet: "The Greatest of Heroes",
-    hook: "The son of Zeus who achieved immortality through suffering and impossible labors.",
+    hook: "The son of Zeus who achieved immortality through immense suffering and impossible labors.",
     image: "assets/images/heracles.jpg",
-    story: "Born to Zeus and the mortal Alcmene, Heracles was hated by Hera from birth. After being driven mad and killing his family, he was assigned twelve labors by King Eurystheus as penance. Through superhuman strength, courage, and endurance, he completed tasks no mortal could achieve.",
+    story: "Born to Zeus and the mortal Alcmene, Heracles was hated by Hera from birth. After being driven mad and killing his family, he was assigned twelve labors by King Eurystheus as penance. Through superhuman strength, courage, and endurance, he completed tasks no mortal could achieve, eventually ascending to Olympus.",
     sources: ["Apollodorus, Library", "Euripides, Heracles"],
     symbols: ["Lion Skin", "Club"],
     relations: [
       { id: "zeus", label: "Father" }
-    ]
-  },
-  {
-    id: "perseus",
-    name: "Perseus",
-    type: "Hero",
-    cycle: "The Heroic Age",
-    epithet: "Slayer of Medusa",
-    hook: "The hero who beheaded the Gorgon and rescued Andromeda.",
-    image: "assets/images/medusa.jpg",
-    story: "Son of Zeus and Danaë. Tasked with bringing back the head of Medusa, he succeeded with the help of Athena and Hermes. Later, he rescued Andromeda from a sea monster and founded the city of Mycenae.",
-    sources: ["Apollodorus", "Ovid"],
-    symbols: ["Medusa’s Head"],
-    relations: [
-      { id: "medusa", label: "Slayer of" }
-    ]
-  },
-  {
-    id: "theseus",
-    name: "Theseus",
-    type: "Hero",
-    cycle: "The Heroic Age",
-    epithet: "Slayer of the Minotaur, King of Athens",
-    hook: "The hero who ended the tribute of youths to Crete and unified Attica.",
-    image: "assets/images/heracles.jpg",
-    story: "Son of Aegeus (or Poseidon). He volunteered to enter the Labyrinth and slay the Minotaur with the help of Ariadne’s thread. Later he became king of Athens and is credited with synoecism — uniting the villages of Attica into one city-state.",
-    sources: ["Plutarch, Life of Theseus", "Apollodorus"],
-    symbols: ["Double Axe", "Thread"],
-    relations: [
-      { id: "minotaur", label: "Slayer of" }
     ]
   },
   {
@@ -170,28 +95,26 @@ const entries = [
     type: "Monster",
     cycle: "The Heroic Age",
     epithet: "The Gorgon",
-    hook: "A woman transformed into a monster whose head became a powerful weapon.",
+    hook: "A woman transformed into a monster whose head became one of the most powerful weapons in the Greek world.",
     image: "assets/images/medusa.jpg",
-    story: "One of the three Gorgons. In later traditions, she was a beautiful woman transformed into a monster after being violated in Athena’s temple. Her gaze turned men to stone until she was beheaded by Perseus.",
+    story: "Originally a beautiful woman, Medusa was transformed into a Gorgon. Her gaze turned men to stone. After being slain by Perseus, her head was given to Athena and retained its petrifying power.",
     sources: ["Hesiod, Theogony", "Ovid, Metamorphoses"],
     symbols: ["Serpents", "Gaze"],
     relations: [
-      { id: "perseus", label: "Slayer of" }
+      { id: "perseus", label: "Slayer" }
     ]
   },
-
-  // === THE TROJAN WAR ===
   {
     id: "odysseus",
     name: "Odysseus",
     type: "Hero",
     cycle: "The Trojan War",
-    epithet: "The Man of Many Turns, King of Ithaca",
-    hook: "The cleverest of the Greek heroes whose long journey home became legendary.",
+    epithet: "The Man of Many Turns",
+    hook: "The cleverest of the Greek heroes, whose long journey home became one of the defining stories of Western literature.",
     image: "assets/images/heracles.jpg",
     story: "King of Ithaca and one of the greatest Greek leaders at Troy. After the fall of the city, it took him ten years to return home due to Poseidon’s anger. His story explores cunning, endurance, identity, homecoming, and the human condition.",
     sources: ["Homer, Odyssey"],
-    symbols: ["Bow of Eurytus", "The Oar"],
+    symbols: ["Bow", "Oar"],
     relations: []
   },
 
@@ -202,9 +125,9 @@ const entries = [
     type: "Olympian",
     cycle: "Ecstatic Traditions",
     epithet: "God of Wine, Ecstasy, and Theatre",
-    hook: "The god who brings both liberation and destruction through ecstasy.",
+    hook: "The god who brings both liberation and destruction through ecstasy and the breakdown of boundaries.",
     image: "assets/images/dionysus.jpg",
-    story: "Son of Zeus and Semele. Dionysus represents the arrival of something wild, transformative, and often terrifying. His worship involved altered states, the blurring of social boundaries, and direct encounter with the divine through ritual madness.",
+    story: "Son of Zeus and Semele, Dionysus represents the arrival of something wild and transformative. His worship involved altered states of consciousness, the blurring of social roles, and a direct encounter with the divine that could be both ecstatic and terrifying.",
     sources: ["Euripides, Bacchae", "Homeric Hymn to Dionysus"],
     symbols: ["Thyrsus", "Grapevine", "Leopard"],
     relations: [
@@ -310,7 +233,7 @@ function updateActiveFilter(activeBtn) {
   activeBtn.classList.remove('border-white/10');
 }
 
-// Open detailed entry (basic version for now)
+// Open detailed rich modal
 function openEntry(id) {
   const entry = entries.find(e => e.id === id);
   if (!entry) return;
@@ -318,18 +241,56 @@ function openEntry(id) {
   viewedEntries.add(id);
   localStorage.setItem('aether_viewed', JSON.stringify([...viewedEntries]));
 
-  const details = `
-${entry.name}
-${entry.epithet}
+  // Populate modal
+  document.getElementById('modal-hero').innerHTML = `
+    <img src="${entry.image}" class="absolute inset-0 w-full h-full object-cover opacity-95" onerror="this.src='assets/images/zeus.jpg'">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-[#05080F]"></div>
+    <button onclick="closeModal()" class="absolute top-5 right-5 bg-black/60 hover:bg-black/80 transition text-xs px-4 py-1.5 rounded-full border border-white/20">Close</button>
+    <div class="absolute bottom-0 left-0 p-8">
+      <div class="text-xs tracking-[2px] text-[#C5A46E] mb-1">${entry.cycle}</div>
+      <h2 class="heading-serif text-5xl md:text-6xl tracking-[-2px] text-white">${entry.name}</h2>
+      <p class="text-[#E8D9B5] text-lg mt-1">${entry.epithet}</p>
+    </div>
+  `;
 
-Cycle: ${entry.cycle}
+  document.getElementById('modal-story').innerHTML = `<p>${entry.story}</p>`;
 
-Story: ${entry.story}
+  const sourcesEl = document.getElementById('modal-sources');
+  sourcesEl.innerHTML = entry.sources 
+    ? entry.sources.map(s => `<div class="mb-1">• ${s}</div>`).join('')
+    : '<div class="text-[#F5F0E6]/60 italic">Sources not yet detailed for this figure.</div>';
 
-Sources: ${entry.sources ? entry.sources.join(', ') : 'Not yet added'}
-  `.trim();
+  const symbolsEl = document.getElementById('modal-symbols');
+  symbolsEl.innerHTML = entry.symbols.map(s => 
+    `<span class="px-4 py-1 text-sm bg-[#0A0F1E] border border-[#C5A46E]/20 rounded-full">${s}</span>`
+  ).join('');
 
-  alert(details);
+  const relContainer = document.getElementById('modal-relations');
+  relContainer.innerHTML = '';
+  if (entry.relations && entry.relations.length > 0) {
+    entry.relations.forEach(rel => {
+      const related = entries.find(e => e.id === rel.id);
+      const btn = document.createElement('button');
+      btn.className = 'thread-link px-4 py-1.5 text-sm rounded-full bg-[#0A0F1E] border border-[#C5A46E]/30 hover:border-[#C5A46E]';
+      btn.innerHTML = `${rel.label}: <span class="font-medium text-[#E8D9B5]">${related ? related.name : rel.id}</span>`;
+      btn.onclick = () => {
+        closeModal();
+        setTimeout(() => openEntry(rel.id), 250);
+      };
+      relContainer.appendChild(btn);
+    });
+  } else {
+    relContainer.innerHTML = '<span class="text-[#F5F0E6]/60 text-sm italic">Few direct relations recorded yet.</span>';
+  }
+
+  document.getElementById('entry-modal').classList.remove('hidden');
+  document.getElementById('entry-modal').classList.add('flex');
+}
+
+function closeModal() {
+  const modal = document.getElementById('entry-modal');
+  modal.classList.remove('flex');
+  modal.classList.add('hidden');
 }
 
 // Search
