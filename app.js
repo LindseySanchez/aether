@@ -212,7 +212,7 @@ const entries = [
     epithet: "Slayer of Medusa",
     hook: "The hero who beheaded the Gorgon and rescued Andromeda from a sea monster.",
     image: "assets/images/medusa.jpg",
-    story: "Son of Zeus and Danaë. Tasked with bringing back the head of Medusa, he succeeded with the help of Athena and Hermes. Later he rescued Andromeda from a sea monster sent by Poseidon and founded the city of Mycenae. His story is one of the earliest and most complete hero myths and involves many of the classic elements of the heroic journey: divine parentage, impossible quest, monster-slaying, and marriage to a rescued princess.",
+    story: "Son of Zeus and Danaë. Tasked with bringing back the head of Medusa, he succeeded with the help of Athena and Hermes. Later he rescued Andromeda from a sea monster sent by Poseidon and founded the city of Mycenae. His story is one of the earliest and most complete hero myths and involves many of the classic elements of the heroic journey.",
     sources: ["Apollodorus", "Ovid"],
     symbols: ["Medusa’s Head"],
     relations: [
@@ -309,6 +309,92 @@ const entries = [
     relations: [
       { id: "menelaus", label: "Husband" },
       { id: "paris", label: "Abductor / Lover" }
+    ]
+  },
+  {
+    id: "agamemnon",
+    name: "Agamemnon",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "King of Mycenae, Leader of the Greeks at Troy",
+    hook: "The high king whose decisions shaped the fate of the Greek expedition against Troy.",
+    image: "assets/images/heracles.jpg",
+    story: "Brother of Menelaus and king of Mycenae. As leader of the Greek forces at Troy, his quarrel with Achilles over Briseis is the central conflict of the Iliad. His return home and murder by Clytemnestra and Aegisthus form the core of the Oresteia cycle. He embodies the tensions between personal desire, royal duty, and the destructive consequences of hubris and poor leadership.",
+    sources: ["Homer, Iliad", "Aeschylus, Agamemnon", "Sophocles, Electra"],
+    variants: "The reasons for his quarrel with Achilles and the exact nature of his sacrifice of Iphigenia vary across sources.",
+    symbols: ["Scepter"],
+    relations: [
+      { id: "menelaus", label: "Brother" },
+      { id: "clytemnestra", label: "Wife" },
+      { id: "iphigenia", label: "Daughter" }
+    ]
+  },
+  {
+    id: "clytemnestra",
+    name: "Clytemnestra",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "Queen of Mycenae, Avenger of Her Daughter",
+    hook: "The wife who murdered her husband to avenge the sacrifice of their daughter.",
+    image: "assets/images/athena.jpg",
+    story: "Wife of Agamemnon and sister of Helen. While Agamemnon was at Troy, she took Aegisthus as a lover. Upon his return, she murdered him in revenge for the sacrifice of their daughter Iphigenia. Her story is central to the Oresteia and explores themes of justice, vengeance, gender, and the cycle of violence in the House of Atreus.",
+    sources: ["Aeschylus, Agamemnon and Libation Bearers", "Sophocles, Electra", "Euripides, Electra"],
+    variants: "Some sources emphasize her jealousy over Agamemnon’s concubine Cassandra; others focus more purely on the sacrifice of Iphigenia as her motivation.",
+    symbols: ["Axe"],
+    relations: [
+      { id: "agamemnon", label: "Husband" },
+      { id: "aegisthus", label: "Lover and Accomplice" },
+      { id: "iphigenia", label: "Daughter" }
+    ]
+  },
+  {
+    id: "paris",
+    name: "Paris (Alexandros)",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "Prince of Troy Who Judged the Goddesses",
+    hook: "The Trojan prince whose choice sparked the greatest war of the mythic age.",
+    image: "assets/images/heracles.jpg",
+    story: "Son of Priam and Hecuba. Exposed as an infant due to a prophecy, he was raised as a shepherd. When asked to judge which goddess was the most beautiful (Hera, Athena, or Aphrodite), he chose Aphrodite, who promised him the love of Helen. His abduction (or elopement) with Helen from Sparta triggered the Trojan War. He is often portrayed as charming but cowardly and irresponsible compared to his brother Hector.",
+    sources: ["Homer, Iliad", "Euripides, Trojan Women and Helen"],
+    variants: "The degree of Helen’s willingness in leaving with him varies significantly across sources. Some portray her as abducted; others as a willing lover.",
+    symbols: ["Apple of Discord"],
+    relations: [
+      { id: "helen", label: "Wife / Abducted Lover" },
+      { id: "hector", label: "Brother" }
+    ]
+  },
+  {
+    id: "priam",
+    name: "Priam",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "King of Troy, Father of Many Sons",
+    hook: "The aged king who watched his city and family destroyed in the greatest war of the age.",
+    image: "assets/images/heracles.jpg",
+    story: "King of Troy during the war with the Greeks. Father of fifty sons, including Hector and Paris. He is portrayed as a wise but tragic figure who loses almost everything. His ransom of Hector’s body from Achilles is one of the most moving scenes in the Iliad, showing the shared humanity between enemies.",
+    sources: ["Homer, Iliad"],
+    symbols: ["Scepter"],
+    relations: [
+      { id: "hector", label: "Son" },
+      { id: "paris", label: "Son" },
+      { id: "hecuba", label: "Wife" }
+    ]
+  },
+  {
+    id: "hecuba",
+    name: "Hecuba",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "Queen of Troy, Mother of Princes",
+    hook: "The queen who lost almost all her children in the destruction of Troy.",
+    image: "assets/images/athena.jpg",
+    story: "Wife of Priam and mother of many sons and daughters, including Hector, Paris, and Cassandra. After the fall of Troy, she witnessed the deaths of her husband and most of her children. Her transformation into a dog in some versions symbolizes the ultimate degradation of royal dignity.",
+    sources: ["Homer, Iliad", "Euripides, Trojan Women and Hecuba"],
+    symbols: ["Veil"],
+    relations: [
+      { id: "priam", label: "Husband" },
+      { id: "hector", label: "Son" }
     ]
   },
 
@@ -504,6 +590,36 @@ const entries = [
     symbols: ["Golden Fleece", "Argo"],
     relations: [
       { id: "medea", label: "Wife and Helper" }
+    ]
+  },
+  {
+    id: "atalanta",
+    name: "Atalanta",
+    type: "Hero",
+    cycle: "The Heroic Age",
+    epithet: "The Swift-Footed Huntress",
+    hook: "One of the greatest female heroes, famous for her speed and participation in the Calydonian Boar hunt.",
+    image: "assets/images/artemis.jpg",
+    story: "Raised in the wilderness and devoted to Artemis, Atalanta was one of the few women to join the hunt for the Calydonian Boar. She drew first blood and was awarded the hide, sparking a deadly quarrel. She later agreed to marry only the man who could beat her in a footrace, which Hippomenes won by using golden apples given by Aphrodite. Her story explores female independence, the tension between wilderness and civilization, and the power of desire.",
+    sources: ["Apollodorus", "Ovid, Metamorphoses"],
+    symbols: ["Bow", "Boar Hide"],
+    relations: [
+      { id: "hippomenes", label: "Husband" }
+    ]
+  },
+  {
+    id: "orpheus",
+    name: "Orpheus",
+    type: "Hero",
+    cycle: "The Heroic Age",
+    epithet: "The Greatest Poet and Musician",
+    hook: "The poet whose music could charm gods, beasts, and the dead themselves.",
+    image: "assets/images/apollo.jpg",
+    story: "Son of Apollo (or Oeagrus) and the Muse Calliope. His music was so powerful it could move trees and stones and tame wild animals. He joined the Argonauts and later descended to the Underworld to retrieve his wife Eurydice, charming Hades and Persephone with his song. His failure to obey the condition not to look back at her until they reached the surface, and his subsequent death at the hands of the Maenads, make him one of the most tragic and culturally influential figures in Greek myth.",
+    sources: ["Apollonius of Rhodes, Argonautica", "Virgil, Georgics", "Ovid, Metamorphoses"],
+    symbols: ["Lyre"],
+    relations: [
+      { id: "eurydice", label: "Wife" }
     ]
   }
 ];
