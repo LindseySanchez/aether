@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AETHER • Greek Mythology</title>
-    <meta name="description" content="An interactive resource for the historical study of Greek mythic traditions.">
+    <meta name="description" content="An explorative resource for Greek mythic traditions, organized by major narrative cycles.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -16,22 +16,12 @@
             --gold: #C5A46E;
             --gold-light: #E8D9B5;
             --ivory: #F5F0E6;
-            --terracotta: #8B4D3F;
         }
         
         .heading-serif {
             font-family: 'Playfair Display', Georgia, serif;
             font-weight: 700;
             letter-spacing: -0.02em;
-        }
-
-        .body-sans {
-            font-family: 'Instrument Sans', system_ui, -apple-system, sans-serif;
-        }
-
-        .section-header {
-            font-family: 'Playfair Display', Georgia, serif;
-            letter-spacing: -0.025em;
         }
 
         .myth-card {
@@ -47,65 +37,13 @@
             border-color: rgba(197, 164, 110, 0.4);
         }
 
-        .tapestry-grid {
-            background-image: 
-                linear-gradient(rgba(197, 164, 110, 0.035) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(197, 164, 110, 0.035) 1px, transparent 1px);
-            background-size: 28px 28px;
-        }
-
-        .greek-key {
-            background-image: url("data:image/svg+xml,%3Csvg width='40' height='8' viewBox='0 0 40 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4H8V0H16V4H24V8H32V4H40' stroke='%23C5A46E' stroke-width='1.5' stroke-opacity='0.25'/%3E%3C/svg%3E");
-            background-repeat: repeat-x;
-            background-size: 40px 8px;
-        }
-
-        .modal {
-            animation: modalEnter 0.4s cubic-bezier(0.32, 0.72, 0, 1);
-        }
-
-        @keyframes modalEnter {
-            from { opacity: 0; transform: translateY(40px) scale(0.985); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
-
-        .thread-link {
+        .cycle-filter {
             transition: all 0.2s ease;
         }
-        
-        .thread-link:hover {
-            color: #E8D9B5;
-            transform: translateX(2px);
-        }
-
-        .nav-link {
-            position: relative;
-            transition: color 0.2s ease;
-        }
-        
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -2px;
-            left: 0;
+        .cycle-filter.active {
             background-color: #C5A46E;
-            transition: width 0.25s ease;
-        }
-        
-        .nav-link:hover:after {
-            width: 100%;
-        }
-
-        .oracle-card {
-            background: linear-gradient(135deg, #0A0F1E 0%, #05080F 100%);
-            border: 1px solid rgba(197, 164, 110, 0.2);
-        }
-
-        .elegant-divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, rgba(197,164,110,0.3), transparent);
+            color: #05080F;
+            border-color: #C5A46E;
         }
     </style>
 </head>
@@ -123,13 +61,6 @@
                             <span class="heading-serif text-3xl tracking-tighter font-bold text-[#F5F0E6]">AETHER</span>
                         </div>
                     </div>
-                    <div class="px-3 py-1 text-[10px] font-medium tracking-[3px] text-[#C5A46E]/70 border border-[#C5A46E]/20 rounded">Historical Focus</div>
-                </div>
-
-                <div class="hidden md:flex items-center gap-x-8 text-sm">
-                    <a href="#tapestry" class="nav-link text-[#F5F0E6]/90 hover:text-[#F5F0E6] text-sm font-medium">The Traditions</a>
-                    <a href="#tree" class="nav-link text-[#F5F0E6]/90 hover:text-[#F5F0E6] text-sm font-medium">Genealogies</a>
-                    <a href="#ages" class="nav-link text-[#F5F0E6]/90 hover:text-[#F5F0E6] text-sm font-medium">Chronology</a>
                 </div>
 
                 <div class="flex items-center gap-x-3">
@@ -137,18 +68,12 @@
                         <input 
                             id="global-search"
                             type="text" 
-                            placeholder="Search figures, sources, traditions..." 
+                            placeholder="Search figures..." 
                             class="w-full bg-[#0A0F1E] border border-white/10 focus:border-[#C5A46E]/60 transition-colors text-sm rounded-full pl-11 py-2.5 placeholder:text-[#F5F0E6]/40 focus:outline-none">
-                        <svg class="w-4 h-4 absolute left-4 top-3.5 text-[#C5A46E]/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </div>
                     
-                    <button onclick="openOracle()" 
-                            class="flex items-center gap-x-2 px-5 py-2.5 rounded-full border border-[#C5A46E]/30 hover:bg-[#C5A46E]/5 text-sm font-medium transition-all hover:border-[#C5A46E]/60">
-                        <span>Random Testimony</span>
-                    </button>
-                    
                     <button onclick="showJourneyPanel()" 
-                            class="p-2.5 rounded-full hover:bg-white/5 border border-white/10 transition-colors" title="Your Session">
+                            class="p-2.5 rounded-full hover:bg-white/5 border border-white/10 transition-colors" title="Your Exploration">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                     </button>
                 </div>
@@ -157,7 +82,7 @@
     </nav>
 
     <!-- HERO -->
-    <header class="relative h-[86vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+    <header class="relative h-[82vh] min-h-[580px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 bg-black">
             <video 
                 id="hero-video"
@@ -179,22 +104,17 @@
                     AETHER
                 </h1>
                 <p class="text-xl md:text-2xl text-[#E8D9B5] tracking-tight mb-5">
-                    Greek Mythology — Historical Depth &amp; Interpretive Clarity
+                    Explore Greek Mythology by its major narrative cycles
                 </p>
                 
                 <p class="max-w-xl mx-auto text-base text-[#F5F0E6]/75 mb-8">
-                    An interactive resource for those who want to engage seriously with the ancient traditions — their sources, their variations, and the questions they continue to raise.
+                    Move through the great stories and traditions the way the ancient world experienced them — not as a flat list of gods and monsters, but as living cycles of meaning.
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
                     <button onclick="document.getElementById('tapestry').scrollIntoView({ behavior: 'smooth' })" 
                             class="px-8 py-3 rounded-full bg-[#C5A46E] hover:bg-[#E8D9B5] active:bg-[#C5A46E] transition-all text-[#05080F] font-semibold text-sm tracking-wide">
-                        ENTER THE TRADITIONS
-                    </button>
-                    
-                    <button onclick="openOracle()" 
-                            class="px-8 py-3 rounded-full border border-white/25 hover:bg-white/5 transition-all text-sm font-medium tracking-wide">
-                        RANDOM ANCIENT TESTIMONY
+                        BEGIN EXPLORING
                     </button>
                 </div>
             </div>
@@ -203,24 +123,18 @@
 
     <!-- THE TRADITIONS -->
     <div id="tapestry" class="max-w-screen-2xl mx-auto px-8 pt-10 pb-16">
-        <div class="flex items-end justify-between mb-6">
-            <div>
-                <div class="text-[#C5A46E] text-xs tracking-[3px] font-medium mb-1">THE TRADITIONS</div>
-                <h2 class="section-header text-5xl tracking-[-1.5px]">Figures and Sources</h2>
-            </div>
-            <div class="hidden md:block text-right max-w-sm text-sm text-[#F5F0E6]/60">
-                Each entry centers the ancient evidence and the range of surviving testimony.
-            </div>
+        <div class="mb-8">
+            <div class="text-[#C5A46E] text-xs tracking-[3px] font-medium mb-2">EXPLORE BY MYTHIC CYCLE</div>
+            <h2 class="section-header text-5xl tracking-[-1.5px] mb-4">The Living Traditions</h2>
+            <p class="max-w-2xl text-[#F5F0E6]/75">Greek mythology is not a catalog. It is a web of interconnected stories. Choose a cycle to explore the figures who shaped it.</p>
         </div>
 
-        <div class="flex flex-wrap items-center gap-2 mb-6" id="filters">
-            <button data-filter="all" onclick="filterEntries('all')" class="active-filter px-5 py-1.5 rounded-full text-sm border border-[#C5A46E] bg-[#C5A46E] text-[#05080F] font-medium">All</button>
-            <button data-filter="Olympian" onclick="filterEntries('Olympian')" class="px-5 py-1.5 rounded-full text-sm border border-white/10 hover:border-white/30 transition-colors">Olympians</button>
-            <button data-filter="Hero" onclick="filterEntries('Hero')" class="px-5 py-1.5 rounded-full text-sm border border-white/10 hover:border-white/30 transition-colors">Heroes</button>
-            <button data-filter="Monster" onclick="filterEntries('Monster')" class="px-5 py-1.5 rounded-full text-sm border border-white/10 hover:border-white/30 transition-colors">Monsters &amp; Creatures</button>
-            <button data-filter="Titan" onclick="filterEntries('Titan')" class="px-5 py-1.5 rounded-full text-sm border border-white/10 hover:border-white/30 transition-colors">Titans &amp; Primordials</button>
+        <!-- Cycle Filters -->
+        <div id="cycle-filters" class="flex flex-wrap gap-2 mb-8">
+            <!-- Populated by JavaScript -->
         </div>
 
+        <!-- Cards Grid -->
         <div id="entries-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
         </div>
     </div>
@@ -230,10 +144,10 @@
         <div class="max-w-screen-2xl mx-auto px-8">
             <div class="grid md:grid-cols-12 gap-x-10 items-center">
                 <div class="md:col-span-5 mb-8 md:mb-0">
-                    <div class="text-[#C5A46E] text-xs tracking-[3px] mb-1.5">GENEALOGIES</div>
-                    <h2 class="section-header text-5xl tracking-[-1.2px] leading-none mb-4">Genealogical Relations</h2>
+                    <div class="text-[#C5A46E] text-xs tracking-[3px] mb-1.5">CONNECTIONS</div>
+                    <h2 class="section-header text-5xl tracking-[-1.2px] leading-none mb-4">Genealogies &amp; Relationships</h2>
                     <p class="text-[#F5F0E6]/75 text-[14.5px] leading-relaxed max-w-md">
-                        These relationships are drawn from ancient sources and reflect the complex, sometimes contradictory genealogies preserved in the tradition.
+                        Many of these stories are deeply interconnected through blood, marriage, and conflict. Explore the web of relationships.
                     </p>
                 </div>
 
@@ -246,110 +160,17 @@
         </div>
     </div>
 
-    <!-- CHRONOLOGY -->
-    <div id="ages" class="max-w-screen-2xl mx-auto px-8 py-16">
-        <div class="max-w-2xl mb-8">
-            <div class="text-[#C5A46E] text-xs tracking-[3px] mb-1">CHRONOLOGY</div>
-            <h2 class="section-header text-5xl tracking-[-1.2px]">Periods and Horizons</h2>
-        </div>
-
-        <div class="relative">
-            <div class="flex overflow-x-auto pb-6 gap-5 snap-x snap-mandatory scrollbar-hide">
-            </div>
-        </div>
-    </div>
-
-    <!-- ACCESS -->
-    <div class="max-w-screen-2xl mx-auto px-8 py-12 border-b border-white/10">
-        <div class="max-w-3xl mx-auto text-center">
-            <div class="text-[#C5A46E] text-xs tracking-[3px] mb-2">ACCESS</div>
-            <h3 class="section-header text-3xl tracking-tight mb-3">Source Code and Full Assets</h3>
-            
-            <div class="flex flex-col sm:flex-row gap-3 justify-center mt-5">
-                <a href="https://github.com/LindseySanchez/aether" target="_blank"
-                   class="inline-flex items-center justify-center gap-2 px-7 py-2.5 rounded-2xl border border-[#C5A46E]/40 hover:bg-[#C5A46E]/10 transition text-sm">
-                    View on GitHub
-                </a>
-            </div>
-            <p class="mt-4 text-xs text-[#C5A46E]/50">This project was developed during an exploratory session with a commitment to historical seriousness.</p>
-        </div>
-    </div>
-
     <!-- FOOTER -->
     <footer class="max-w-screen-2xl mx-auto px-8 py-10 text-[#F5F0E6]/50 text-sm">
         <div class="flex flex-col md:flex-row justify-between items-center gap-y-3">
             <div>
-                Focused on the historical depth of Greek mythic traditions
+                AETHER — Exploring the major cycles of Greek mythology
             </div>
             <div class="flex gap-x-5 text-xs tracking-wider">
-                <a href="https://www.theoi.com/" target="_blank" class="hover:text-[#C5A46E] transition">Theoi Project</a>
                 <a href="https://github.com/LindseySanchez/aether" target="_blank" class="hover:text-[#C5A46E] transition">GitHub</a>
-                <button onclick="resetAllProgress()" class="hover:text-[#C5A46E] transition">Clear Session Data</button>
             </div>
         </div>
     </footer>
-
-    <!-- Modals -->
-    <div id="entry-modal" onclick="if (event.target.id === 'entry-modal') closeModal()" class="hidden fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 md:p-8">
-        <div onclick="event.stopImmediatePropagation()" class="modal w-full max-w-5xl bg-[#05080F] border border-[#C5A46E]/20 rounded-3xl overflow-hidden max-h-[94vh] flex flex-col">
-            <div id="modal-hero" class="relative h-72 md:h-80 w-full flex-shrink-0">
-                <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-[#05080F]"></div>
-                <button onclick="closeModal()" class="absolute top-5 right-5 bg-black/60 hover:bg-black/80 transition text-xs px-3 py-1 rounded-full border border-white/20">CLOSE</button>
-            </div>
-
-            <div class="p-8 md:p-10 flex-1 overflow-y-auto">
-                <div class="max-w-3xl">
-                    <h2 id="modal-name" class="heading-serif text-6xl tracking-[-2px] leading-none"></h2>
-                    <p id="modal-epithet" class="text-[#E8D9B5] text-xl mt-1"></p>
-                    <div class="elegant-divider my-6"></div>
-                    
-                    <div id="modal-story" class="prose prose-invert max-w-none text-[14.8px] leading-relaxed text-[#F5F0E6]/90"></div>
-
-                    <div class="mt-8">
-                        <div class="uppercase text-xs tracking-[2px] text-[#C5A46E]/70 mb-2">SYMBOLS &amp; ATTRIBUTES</div>
-                        <div id="modal-symbols" class="flex flex-wrap gap-2"></div>
-                    </div>
-
-                    <div class="mt-7">
-                        <div class="uppercase text-xs tracking-[2px] text-[#C5A46E]/70 mb-2">RELATED FIGURES</div>
-                        <div id="modal-relations" class="flex flex-wrap gap-2"></div>
-                    </div>
-
-                    <div class="mt-7 bg-[#0A0F1E] border border-white/10 rounded-2xl p-6">
-                        <div class="uppercase text-xs tracking-[2px] text-[#C5A46E]/70 mb-1.5">INTERPRETIVE HORIZONS</div>
-                        <div id="modal-modern" class="text-[#F5F0E6]/85 leading-relaxed text-sm"></div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="px-8 md:px-10 py-4 border-t border-white/10 bg-[#0A0F1E]/80 flex items-center gap-3 flex-shrink-0 text-sm">
-                <button onclick="addToJourneyFromModal()" class="px-5 py-2 rounded-xl border border-[#C5A46E]/30 hover:bg-[#C5A46E]/5 transition">Save to Session</button>
-                <button onclick="closeModal()" class="px-5 py-2 rounded-xl border border-white/15 hover:bg-white/5 transition">Return</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="oracle-modal" onclick="if (event.target.id === 'oracle-modal') closeOracle()" class="hidden fixed inset-0 bg-black/80 z-[110] flex items-center justify-center p-5">
-        <div onclick="event.stopImmediatePropagation()" class="oracle-card max-w-md w-full rounded-3xl p-8 text-center border border-[#C5A46E]/20">
-            <div class="text-[#C5A46E] text-xs tracking-[3px] mb-1">RANDOM ANCIENT TESTIMONY</div>
-            <div id="oracle-text" class="min-h-[90px] text-lg leading-tight text-[#E8D9B5] italic px-2 mt-4"></div>
-            <div id="oracle-suggestion" class="mt-6 text-sm"></div>
-            <div class="flex gap-3 mt-7">
-                <button onclick="getNewOracle()" class="flex-1 py-2.5 text-sm rounded-2xl border border-[#C5A46E]/40 hover:bg-[#C5A46E]/5 transition">Another Fragment</button>
-                <button onclick="closeOracle()" class="flex-1 py-2.5 text-sm rounded-2xl bg-[#C5A46E] text-[#05080F] font-medium">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="journey-panel" onclick="if (event.target.id === 'journey-panel') hideJourneyPanel()" class="hidden fixed inset-0 bg-black/70 z-[120] flex justify-end">
-        <div onclick="event.stopImmediatePropagation()" class="w-full max-w-sm bg-[#05080F] h-full border-l border-[#C5A46E]/20 p-7 overflow-y-auto text-sm">
-            <div class="flex justify-between items-center mb-6">
-                <div class="text-lg tracking-tight">Session History</div>
-                <button onclick="hideJourneyPanel()" class="text-2xl leading-none text-[#C5A46E]/50 hover:text-[#C5A46E]">×</button>
-            </div>
-            <div id="journey-content" class="space-y-2"></div>
-        </div>
-    </div>
 
     <script src="app.js"></script>
 </body>
