@@ -2,42 +2,42 @@
 
 **An Interactive Encyclopedia of Greek Mythology**
 
-Built during the "Outside the Box" creative session.
+> Built during the "Outside the Box" creative session.
 
-> The myths were never meant to be forgotten.
+AETHER is not a traditional reference site. It is a living digital tapestry designed to spark wonder, curiosity, and a genuine love of exploration.
 
-AETHER is a living, breathing digital tapestry of Greek mythology designed for wonder and exploration rather than dry reference.
+## Live Site
 
-## Live Demo
+Once GitHub Pages is enabled, view it here:
+→ https://lindseysanchez.github.io/aether
 
-Once GitHub Pages is enabled, the site will be available at:
-https://lindseysanchez.github.io/aether
+## Features
 
-## What Makes It Special
+- **The Living Tapestry** — Beautiful searchable & filterable entries
+- **Follow the Threads** — Clickable connections between myths
+- **The Great Tree** — Interactive family tree of the gods
+- **The Oracle** — Random profound wisdom with suggested paths
+- **The Ages** — Mythic timeline
+- **The Trials** — Elegant knowledge ritual (quiz)
+- **Your Journey** — Personal exploration tracker
 
-- **The Living Tapestry** — Filterable, beautiful cards with poetic hooks
-- **Follow the Threads** — Every entry has clickable relations that open new stories
-- **The Great Tree** — Interactive SVG family tree of the gods
-- **The Oracle** — Random profound pronouncements with suggested threads
-- **The Ages** — Horizontal mythic timeline
-- **The Trials** — Elegant 6-question knowledge ritual
-- **Your Journey** — Personal exploration tracker (localStorage)
+## How to Run Locally
 
-## How to View Locally
+1. Clone or download this repo
+2. Open `index.html` in any browser
 
-1. Download or clone this repository
-2. Open `index.html` in any modern browser
+No build tools or dependencies needed.
 
-No build step required.
+## Full Experience (Images + Videos)
 
-## Assets
+The media assets live in the `assets/` folder. For the complete version with all custom art and videos:
+- Download the zip from the Releases tab, or
+- Use the original shared zip from OneDrive
 
-The `assets/` folder (images + videos) is required for the full experience. You can download the complete package (including all media) from the Releases section or the original zip.
+## Session
 
-## Credits
-
-Created with reverence in the "Outside the Box" session.
+Created as part of the "Outside the Box" brainstorming session.
 
 ---
 
-**Session name:** Outside the Box
+*"The myths were never meant to be forgotten."*
