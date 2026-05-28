@@ -1,40 +1,37 @@
-# AETHER
+**AETHER: A Scholarly Resource for the Study of Greek Mythology**
 
-**An Interactive Encyclopedia of Greek Mythology**
+**Target Audience:** Graduate students and researchers in Classics, Ancient History, Religious Studies, and related fields.
 
-> Built during the "Outside the Box" creative session.
+### Purpose and Scope
 
-AETHER is a living, breathing digital tapestry of Greek mythology designed for wonder and exploration.
+AETHER provides a structured, interactive interface to core Greek mythic traditions, with explicit attention to primary sources, variant accounts, and problems of transmission and interpretation. It is designed as a pedagogical and research-adjacent tool rather than a work of original scholarship.
 
-## Live Demo
+The resource emphasizes:
 
-https://lindseysanchez.github.io/aether
+- Distinction between different ancient authors, periods, and local traditions
+- Explicit citation of primary sources (Hesiod, Homer, Apollodorus, Pausanias, tragic fragments, etc.)
+- Awareness of the fragmentary and mediated nature of the evidence
+- Connections between mythic figures grounded in ancient testimony
 
-## Features
+### Limitations
 
-- Beautiful searchable & filterable entries
-- Clickable connections between gods, heroes, and myths
-- Interactive SVG family tree
-- The Oracle (random profound wisdom)
-- Mythic timeline
-- Elegant knowledge ritual (quiz)
-- Personal exploration tracker
+This is a curated pedagogical interface, not a comprehensive database. Many entries synthesize multiple traditions; users should always consult the cited primary sources and current scholarship. The visual and interactive design prioritizes usability for teaching and rapid orientation over exhaustive philological apparatus.
 
-## How to Run Locally
+### Recommended Use
 
-1. Clone or download this repository
-2. Open `index.html` in any modern browser
+- Seminar preparation and graduate-level teaching support
+- Rapid orientation before deeper engagement with primary texts and commentaries
+- Exploration of genealogical and narrative interconnections
+- As a prompt for discussion of source criticism and reception
 
-No build step or dependencies required.
+### Technical Note
 
-## Full Experience (Images + Videos)
+The project was developed during an exploratory "Outside the Box" session. The current version represents an initial scholarly reframing. Further development would benefit from integration with existing digital resources (e.g., the Perseus Digital Library, the Thesaurus Linguae Graecae, and standard commentaries).
 
-All custom artwork and videos live in the `assets/` folder. For the complete offline version, download the zip from the [Releases](https://github.com/LindseySanchez/aether/releases) tab (once created) or use the original shared package.
+### Citation
 
-## Session
-
-Created as part of the "Outside the Box" brainstorming session.
+If you find this resource useful in teaching or research, please cite it appropriately and consult the primary sources directly.
 
 ---
 
-*"The myths were never meant to be forgotten."*
+*This resource is offered in a spirit of intellectual seriousness and with full awareness of its provisional character.*
