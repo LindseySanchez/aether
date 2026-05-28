@@ -1,1 +1,626 @@
-[The actual full content of temp_good_index.html will be inserted here by the system]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHER • Greek Mythology Encyclopedia</title>
+    <meta name="description" content="An interactive living encyclopedia of Greek mythology. Follow the threads. Awaken wonder.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Instrument+Sans:wght@300;400;500&amp;display=swap');
+        
+        :root {
+            --navy: #0A0F1E;
+            --deep-navy: #05080F;
+            --gold: #C5A46E;
+            --gold-light: #E8D9B5;
+            --ivory: #F5F0E6;
+            --terracotta: #8B4D3F;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .body-sans {
+            font-family: 'Instrument Sans', system_ui, -apple-system, sans-serif;
+        }
+
+        .section-header {
+            font-family: 'Playfair Display', Georgia, serif;
+            letter-spacing: -0.025em;
+        }
+
+        .myth-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                       box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1),
+                       border-color 0.2s ease;
+            border: 1px solid rgba(197, 164, 110, 0.15);
+        }
+        
+        .myth-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+            border-color: rgba(197, 164, 110, 0.4);
+        }
+
+        .gilded-frame {
+            position: relative;
+        }
+        
+        .gilded-frame::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(145deg, #C5A46E 0%, transparent 30%, transparent 70%, #C5A46E 100%);
+            z-index: -1;
+            border-radius: 8px;
+            opacity: 0.6;
+        }
+
+        .divine-glow {
+            box-shadow: 0 0 0 1px rgba(197, 164, 110, 0.2),
+                        0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .tapestry-grid {
+            background-image: 
+                linear-gradient(rgba(197, 164, 110, 0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(197, 164, 110, 0.035) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+
+        .greek-key {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='8' viewBox='0 0 40 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4H8V0H16V4H24V8H32V4H40' stroke='%23C5A46E' stroke-width='1.5' stroke-opacity='0.25'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: 40px 8px;
+        }
+
+        .modal {
+            animation: modalEnter 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+        }
+
+        @keyframes modalEnter {
+            from { opacity: 0; transform: translateY(40px) scale(0.985); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .entry-header {
+            background: linear-gradient(to bottom, rgba(5,8,15,0.75), rgba(5,8,15,0.92));
+        }
+
+        .thread-link {
+            transition: all 0.2s ease;
+        }
+        
+        .thread-link:hover {
+            color: #E8D9B5;
+            transform: translateX(2px);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #C5A46E;
+            transition: width 0.25s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .oracle-card {
+            background: linear-gradient(135deg, #0A0F1E 0%, #05080F 100%);
+            border: 1px solid rgba(197, 164, 110, 0.2);
+        }
+
+        .myth-statue {
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .myth-card:hover .myth-statue {
+            transform: scale(1.04);
+        }
+
+        .gold-text {
+            color: #C5A46E;
+        }
+
+        .labyrinth-bg {
+            background-image: 
+                radial-gradient(circle at 25% 30%, rgba(197,164,110,0.04) 0%, transparent 50%),
+                radial-gradient(circle at 75% 70%, rgba(139,77,63,0.03) 0%, transparent 60%);
+        }
+
+        .timeline-dot {
+            box-shadow: 0 0 0 4px rgba(197, 164, 110, 0.15);
+        }
+
+        .elegant-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(197,164,110,0.3), transparent);
+        }
+
+        .vision-card {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(197, 164, 110, 0.15);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .vision-card:hover {
+            border-color: rgba(197, 164, 110, 0.4);
+            transform: translateY(-3px);
+        }
+        
+        .vision-card video {
+            transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .vision-card:hover video {
+            transform: scale(1.08);
+        }
+        
+        .vision-overlay {
+            background: linear-gradient(to top, rgba(5,8,15,0.92) 0%, rgba(5,8,15,0.4) 40%, transparent 70%);
+        }
+
+        .vision-modal {
+            animation: visionEnter 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+        }
+    </style>
+</head>
+<body class="bg-[#05080F] text-[#F5F0E6] body-sans antialiased">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 border-b border-white/10 bg-[#05080F]/95 backdrop-blur-lg">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="px-8 py-5 flex items-center justify-between">
+                <div class="flex items-center gap-x-3">
+                    <div class="flex items-center gap-x-2.5">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#C5A46E] to-[#8B4D3F] flex items-center justify-center">
+                            <span class="text-[#05080F] text-xl font-bold tracking-tighter">A</span>
+                        </div>
+                        <div>
+                            <span class="heading-serif text-3xl tracking-tighter font-bold text-[#F5F0E6]">AETHER</span>
+                        </div>
+                    </div>
+                    <div class="px-3 py-1 text-[10px] font-medium tracking-[3px] text-[#C5A46E]/70 border border-[#C5A46E]/20 rounded">EST. 800 BCE</div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-8 text-sm">
+                    <a href="#tapestry" class="nav-link text-[#F5F0E6]/90 hover:text-[#F5F0E6] text-sm font-medium">The Tapestry</a>
+                    <a href="#tree" class="nav-link text-[#F5F0E6]/90 hover:text-[#F5F0E6] text-sm font-medium">The Great Tree</a>
+                    <a href="#ages" class="nav-link text-[#F5F0E6]/90 hover:text-[#F5F0E6] text-sm font-medium">The Ages</a>
+                    <a href="#trials" class="nav-link text-[#F5F0E6]/90 hover:text-[#F5F0E6] text-sm font-medium">The Trials</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <!-- Global Search -->
+                    <div class="relative w-72 hidden lg:block">
+                        <input 
+                            id="global-search"
+                            type="text" 
+                            placeholder="Search gods, heroes, myths..." 
+                            class="w-full bg-[#0A0F1E] border border-white/10 focus:border-[#C5A46E]/60 transition-colors text-sm rounded-full pl-11 py-2.5 placeholder:text-[#F5F0E6]/40 focus:outline-none">
+                        <svg class="w-4 h-4 absolute left-4 top-3.5 text-[#C5A46E]/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    
+                    <button onclick="openOracle()" 
+                            class="flex items-center gap-x-2 px-5 py-2.5 rounded-full border border-[#C5A46E]/30 hover:bg-[#C5A46E]/5 text-sm font-medium transition-all hover:border-[#C5A46E]/60">
+                        <span>Consult the Oracle</span>
+                    </button>
+                    
+                    <button onclick="showJourneyPanel()" 
+                            class="p-2.5 rounded-full hover:bg-white/5 border border-white/10 transition-colors" title="Your Journey">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="relative h-[92vh] min-h-[680px] flex items-center justify-center overflow-hidden">
+        <!-- Video Background -->
+        <div class="absolute inset-0 bg-black">
+            <video 
+                id="hero-video"
+                autoplay 
+                muted 
+                loop 
+                playsinline
+                class="absolute inset-0 w-full h-full object-cover opacity-90">
+                <source src="assets/videos/olympus-dawn.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#05080F]/60 via-[#05080F]/65 to-[#05080F]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(#C5A46E_0.5px,transparent_1px)] bg-[length:3px_3px] opacity-[0.035]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-screen-2xl mx-auto px-8 text-center">
+            <div class="max-w-4xl mx-auto">
+                <!-- Greek key decorative line -->
+                <div class="greek-key h-[3px] w-16 mx-auto mb-8 opacity-60"></div>
+                
+                <h1 class="heading-serif text-[92px] md:text-[110px] leading-[0.86] tracking-tighter font-bold text-white mb-3">
+                    AETHER
+                </h1>
+                <p class="text-2xl md:text-3xl text-[#E8D9B5] tracking-tight font-light mb-6">
+                    The myths were never meant to be forgotten.
+                </p>
+                
+                <p class="max-w-lg mx-auto text-lg text-[#F5F0E6]/80 mb-10">
+                    An interactive encyclopedia of Greek mythology. Follow the threads between gods, heroes, and monsters. 
+                    Rediscover wonder.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button onclick="document.getElementById('tapestry').scrollIntoView({ behavior: 'smooth' })" 
+                            class="px-9 py-4 rounded-full bg-[#C5A46E] hover:bg-[#E8D9B5] active:bg-[#C5A46E] transition-all text-[#05080F] font-semibold text-base tracking-wide flex items-center gap-x-3 group">
+                        <span>ENTER THE TAPESTRY</span>
+                        <span class="group-active:translate-x-0.5 transition">→</span>
+                    </button>
+                    
+                    <button onclick="openOracle()" 
+                            class="px-9 py-4 rounded-full border border-white/25 hover:bg/white/5 transition-all text-base font-medium tracking-wide">
+                        ASK THE ORACLE
+                    </button>
+                </div>
+                
+                <div class="mt-16 flex justify-center">
+                    <div class="flex items-center gap-x-2 text-xs tracking-[3px] text-[#C5A46E]/50">
+                        <div class="w-px h-2.5 bg-[#C5A46E]/30"></div>
+                        SCROLL TO BEGIN YOUR JOURNEY
+                        <div class="w-px h-2.5 bg-[#C5A46E]/30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 -translate-x/2 text-[#C5A46E]/40">
+            <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </header>
+
+    <!-- THE ORACLE TEASER -->
+    <div class="max-w-screen-2xl mx-auto px-8 pt-16 pb-8">
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="inline-flex items-center gap-x-2 px-4 py-1 rounded-full bg-[#C5A46E]/10 border border-[#C5A46E]/20 text-xs tracking-[2px] text-[#C5A46E] mb-3">THE DELPHIC VOICE</div>
+            <h2 class="section-header text-5xl tracking-tighter mb-4">The Oracle is listening.</h2>
+            <p class="text-[#F5F0E6]/75 text-lg">Receive a sign. A fragment of wisdom. A thread to follow into the unknown.</p>
+            
+            <button onclick="openOracle()" 
+                    class="mt-8 group inline-flex items-center justify-center gap-x-3 px-8 py-3.5 rounded-full border border-[#C5A46E]/40 hover:border-[#C5A46E] transition-all text-[#E8D9B5] hover:text/white">
+                <span class="font-medium">Consult the Oracle</span>
+                <span class="text-xl transition group-hover:rotate-12">🔿</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- THE TAPESTRY -->
+    <div id="tapestry" class="max-w-screen-2xl mx-auto px-8 pt-12 pb-20">
+        <div class="flex items/end justify-between mb-8">
+            <div>
+                <div class="flex items-center gap-x-3 mb-2">
+                    <span class="text-[#C5A46E] text-sm tracking/[3px] font-medium">THE LIVING TAPESTRY</span>
+                </div>
+                <h2 class="section-header text-6xl tracking-[-2.2px] leading-none">Stories that still breathe.</h2>
+            </div>
+            <div class="hidden md:block text-right max-w-xs text-[#F5F0E6]/60 text-sm">
+                Every god, hero, and monster is connected. Click any thread to follow it deeper.
+            </div>
+        </div>
+
+        <!-- KEY VISIONS: Fall Back in Time -->
+        <div class="mb-12">
+            <div class="flex items-end justify-between mb-5">
+                <div>
+                    <div class="text-[#C5A46E] text-xs tracking/[3px] mb-1">KEY VISIONS</div>
+                    <h3 class="text-3xl tracking-tight">Fall back in time.</h3>
+                </div>
+                <div class="text-sm text-[#F5F0E6]/50 hidden md:block">Five immersive windows into the ancient world</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
+                <!-- Vision 1: Cosmic Order -->
+                <div onclick="playVision(0)" class="vision-card group relative aspect-video rounded-2xl overflow-hidden cursor-pointer bg-black">
+                    <video muted loop playsinline class="w-full h/full object-cover opacity-90">
+                        <source src="assets/videos/vision-cosmic.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 vision-overlay"></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <div class="text/[10px] tracking-[2px] text-[#C5A46E]/80 mb-0.5">COSMIC ORDER</div>
+                        <div class="text-lg leading-none tracking-tight text/white">Gaia & the Birth of the World</div>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <div class="px-4 py-1 rounded-full bg/white/10 backdrop-blur text-xs tracking-widest border border/white/20">ENTER THE VISION</div>
+                    </div>
+                </div>
+
+                <!-- Vision 2: Underworld -->
+                <div onclick="playVision(1)" class="vision-card group relative aspect-video rounded-2xl overflow-hidden cursor-pointer bg/black">
+                    <video muted loop playsinline class="w/full h/full object-cover opacity-90">
+                        <source src="assets/videos/vision-underworld.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 vision-overlay"></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <div class="text/[10px] tracking/[2px] text-[#C5A46E]/80 mb-0.5">THE UNDERWORLD</div>
+                        <div class="text-lg leading-none tracking-tight text/white">Persephone's Descent</div>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <div class="px-4 py-1 rounded-full bg/white/10 backdrop-blur text-xs tracking-widest border border/white/20">ENTER THE VISION</div>
+                    </div>
+                </div>
+
+                <!-- Vision 3: Achilles Rage -->
+                <div onclick="playVision(2)" class="vision-card group relative aspect-video rounded-2xl overflow-hidden cursor-pointer bg/black">
+                    <video muted loop playsinline class="w/full h/full object-cover opacity-90">
+                        <source src="assets/videos/vision-achilles.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 vision-overlay"></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <div class="text/[10px] tracking/[2px] text-[#C5A46E]/80 mb-0.5">THE HEROIC AGE</div>
+                        <div class="text-lg leading-none tracking-tight text/white">Achilles' Rage</div>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <div class="px-4 py-1 rounded-full bg/white/10 backdrop-blur text-xs tracking-widest border border/white/20">ENTER THE VISION</div>
+                    </div>
+                </div>
+
+                <!-- Vision 4: Dionysus -->
+                <div onclick="playVision(3)" class="vision-card group relative aspect-video rounded-2xl overflow-hidden cursor-pointer bg/black">
+                    <video muted loop playsinline class="w/full h/full object-cover opacity-90">
+                        <source src="assets/videos/vision-dionysus.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 vision-overlay"></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <div class="text/[10px] tracking/[2px] text-[#C5A46E]/80 mb-0.5">ECSTATIC TRADITIONS</div>
+                        <div class="text-lg leading-none tracking-tight text/white">Dionysian Mystery</div>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <div class="px-4 py-1 rounded-full bg/white/10 backdrop-blur text-xs tracking-widest border border/white/20">ENTER THE VISION</div>
+                    </div>
+                </div>
+
+                <!-- Vision 5: Odysseus -->
+                <div onclick="playVision(4)" class="vision-card group relative aspect-video rounded-2xl overflow-hidden cursor-pointer bg/black">
+                    <video muted loop playsinline class="w/full h/full object-cover opacity-90">
+                        <source src="assets/videos/vision-nostos.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 vision-overlay"></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <div class="text/[10px] tracking/[2px] text-[#C5A46E]/80 mb-0.5">THE LONG RETURN</div>
+                        <div class="text-lg leading-none tracking-tight text/white">Odysseus's Nostos</div>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <div class="px-4 py-1 rounded-full bg/white/10 backdrop-blur text-xs tracking-widest border border/white/20">ENTER THE VISION</div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text/[10px] text-[#C5A46E]/40 mt-3 tracking-widest">SLOW DOWN. LET THE ANCIENT WORLD WASH OVER YOU.</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap items-center gap-2 mb-8" id="filters">
+            <button data-filter="all" onclick="filterEntries('all')" class="active-filter px-5 py-1.5 rounded-full text-sm border border-[#C5A46E] bg-[#C5A46E] text-[#05080F] font-medium">All Threads</button>
+            <button data-filter="Olympian" onclick="filterEntries('Olympian')" class="px-5 py-1.5 rounded-full text-sm border border/white/10 hover:border/white/30 transition-colors">Olympians</button>
+            <button data-filter="Hero" onclick="filterEntries('Hero')" class="px-5 py-1.5 rounded-full text-sm border border/white/10 hover:border/white/30 transition-colors">Heroes</button>
+            <button data-filter="Monster" onclick="filterEntries('Monster')" class="px-5 py-1.5 rounded/full text-sm border border/white/10 hover:border/white/30 transition-colors">Monsters</button>
+            <button data-filter="Titan" onclick="filterEntries('Titan')" class="px-5 py-1.5 rounded/full text-sm border border/white/10 hover:border/white/30 transition-colors">Titans</button>
+            <button data-filter="Myth" onclick="filterEntries('Myth')" class="px-5 py-1.5 rounded/full text-sm border border/white/10 hover:border/white/30 transition-colors">Myths</button>
+        </div>
+
+        <!-- Cards Grid -->
+        <div id="entries-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
+            <!-- Populated dynamically by JavaScript -->
+        </div>
+        
+        <div class="mt-6 text-center">
+            <p class="text-xs tracking-widest text-[#C5A46E]/40">18 ENTRIES • 94 KNOWN THREADS • INFINITE PATHS</p>
+        </div>
+    </div>
+
+    <!-- THE GREAT TREE -->
+    <div id="tree" class="bg-[#0A0F1E] border-y border/white/10 py-16">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="grid md:grid-cols-12 gap-x-10 items-center">
+                <div class="md:col-span-5 mb-10 md:mb-0">
+                    <div class="text-[#C5A46E] text-sm tracking/[3px] mb-2">THE DIVINE BLOODLINE</div>
+                    <h2 class="section-header text-6xl tracking-[-2px] leading-none mb-6">The Great Tree of the Gods</h2>
+                    <p class="text-[#F5F0E6]/75 text/[15px] leading-relaxed max-w-md">
+                        From Chaos came Gaia. From Gaia and Uranus came the Titans. 
+                        From the Titans came the Olympians. Click any figure to reveal their lineage and stories.
+                    </p>
+                    <div class="mt-6 flex gap-3">
+                        <button onclick="resetFamilyTree()" class="text-sm px-4 py-2 border border/white/15 rounded/full hover:bg/white/5 transition">Reset View</button>
+                        <button onclick="highlightLineage('zeus')" class="text-sm px-4 py-2 border border-[#C5A46E]/30 hover:border-[#C5A46E]/60 rounded/full transition">Highlight Zeus Line</button>
+                    </div>
+                </div>
+
+                <div class="md:col-span-7">
+                    <div class="bg-[#05080F] border border/white/10 rounded-3xl p-6 md:p-8 relative overflow-hidden">
+                        <svg id="family-tree" width="100%" height="420" viewBox="0 0 820 420" class="w/full"></svg>
+                    </div>
+                    <p class="text/[10px] text-center text-[#C5A46E]/40 mt-3 tracking-wider">INTERACTIVE — CLICK ANY NODE TO EXPLORE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- THE AGES -->
+    <div id="ages" class="max-w-screen-2xl mx-auto px-8 py-20">
+        <div class="max-w-2xl mb-10">
+            <span class="text-[#C5A46E] text-sm tracking/[3px]">THE SWEEP OF TIME</span>
+            <h2 class="section-header text-6xl tracking-[-1.8px] mt-1">The Ages of Myth</h2>
+        </div>
+
+        <div class="relative">
+            <div class="flex overflow-x-auto pb-8 gap-5 snap-x snap-mandatory scrollbar-hide">
+                <!-- Timeline items populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- THE TRIALS (Quiz) -->
+    <div id="trials" class="bg-[#0A0F1E] border-y border/white/10 py-20">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="text-[#C5A46E] text-sm tracking/[3px] mb-3">THE SACRED TRIALS</div>
+                <h2 class="section-header text-6xl tracking-tight mb-4">Prove yourself worthy of the gods.</h2>
+                <p class="text-lg text-[#F5F0E6]/70">A short journey through knowledge. Answer with heart as well as mind.</p>
+                
+                <button onclick="startQuiz()" 
+                        class="mt-10 inline-flex items-center gap-3 px-10 py-4 rounded-2xl bg/white text-[#05080F] font-semibold text-lg hover:bg-[#E8D9B5] transition">
+                    BEGIN THE TRIALS
+                </button>
+                <div class="text-xs mt-3 text-[#C5A46E]/50">6 questions • No wrong answers, only deeper understanding</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WHY THIS MATTERS -->
+    <div class="max-w-screen-2xl mx-auto px-8 py-20 border-b border/white/10">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="greek-key h-px w-12 mx-auto mb-8"></div>
+            <h3 class="section-header text-4xl tracking-tight">Why these stories still matter.</h3>
+            <p class="mt-6 text-xl leading-tight text-[#F5F0E6]/80">
+                Greek mythology is not a collection of quaint fairy tales. It is humanity’s first attempt to understand power, love, 
+                fate, hubris, justice, and what it means to be alive in a world full of forces larger than ourselves.
+            </p>
+            <p class="mt-4 text-[#F5F0E6]/60">Every modern story you love — from Star Wars to superhero films to the very idea of tragedy — owes a debt to these ancient voices.</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="max-w-screen-2xl mx-auto px-8 py-12 text-[#F5F0E6]/50 text-sm">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-y-4">
+            <div>
+                Built with reverence in the spirit of curiosity. • Session: Outside the Box
+            </div>
+            <div class="flex gap-x-6 text-xs tracking-wider">
+                <a href="https://www.theoi.com/" target="_blank" class="hover:text-[#C5A46E] transition">Theoi Project</a>
+                <a href="#" class="hover:text-[#C5A46E] transition">Further Reading</a>
+                <button onclick="resetAllProgress()" class="hover:text-[#C5A46E] transition">Clear Journey</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ENTRY MODAL -->
+    <div id="entry-modal" onclick="if (event.target.id === 'entry-modal') closeModal()" class="hidden fixed inset-0 z-[100] bg/black/90 flex items-center justify-center p-4 md:p-8">
+        <div onclick="event.stopImmediatePropagation()" class="modal w/full max-w-5xl bg-[#05080F] border border-[#C5A46E]/20 rounded-3xl overflow-hidden max-h/[94vh] flex flex-col">
+            
+            <!-- Modal Header Image -->
+            <div id="modal-hero" class="relative h-80 md:h-96 w/full flex-shrink-0">
+                <!-- Populated by JS -->
+                <div class="absolute inset-0 bg-gradient-to-b from/black/20 to-[#05080F]"></div>
+                <button onclick="closeModal()" class="absolute top-6 right-6 bg/black/60 hover:bg/black/80 transition text-sm px-4 py-1.5 rounded/full border border/white/20">Close</button>
+            </div>
+
+            <div class="p-9 md:p-12 flex-1 overflow-y-auto">
+                <div class="max-w-3xl">
+                    <div id="modal-meta" class="flex items-center gap-x-3 text-sm mb-3 text-[#C5A46E]"></div>
+                    
+                    <h2 id="modal-name" class="heading-serif text-7xl tracking-[-2.5px] leading-none"></h2>
+                    <p id="modal-epithet" class="text-[#E8D9B5] text-2xl mt-1 tracking-tight"></p>
+                    
+                    <div class="elegant-divider my-8"></div>
+
+                    <!-- Story -->
+                    <div id="modal-story" class="prose prose-invert max-w-none text/[15.2px] leading-relaxed text-[#F5F0E6]/90"></div>
+
+                    <!-- Symbols -->
+                    <div class="mt-10">
+                        <div class="uppercase text-xs tracking/[2px] text-[#C5A46E]/70 mb-3">SYMBOLS &amp; ATTRIBUTES</div>
+                        <div id="modal-symbols" class="flex flex-wrap gap-2"></div>
+                    </div>
+
+                    <!-- Relations -->
+                    <div class="mt-9">
+                        <div class="uppercase text-xs tracking/[2px] text-[#C5A46E]/70 mb-3">THREADS IN THE TAPESTRY</div>
+                        <div id="modal-relations" class="flex flex-wrap gap-2"></div>
+                    </div>
+
+                    <!-- Modern Echo -->
+                    <div class="mt-9 bg-[#0A0F1E] border border/white/10 rounded-2xl p-7">
+                        <div class="uppercase text-xs tracking/[2px] text-[#C5A46E]/70 mb-2">ECHOES IN OUR WORLD</div>
+                        <div id="modal-modern" class="text-[#F5F0E6]/85 leading-relaxed"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer actions in modal -->
+            <div class="px-9 md:px-12 py-5 border-t border/white/10 bg-[#0A0F1E]/80 flex items-center gap-3 flex-shrink-0">
+                <button onclick="addToJourneyFromModal()" class="text-sm flex-1 md:flex-none px-6 py-3 rounded-2xl border border-[#C5A46E]/30 hover:bg-[#C5A46E]/5 transition">Add to My Journey</button>
+                <button onclick="closeModal()" class="text-sm flex-1 md:flex-none px-6 py-3 rounded-2xl border border/white/15 hover:bg/white/5 transition">Return to the Tapestry</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Oracle Modal -->
+    <div id="oracle-modal" onclick="if (event.target.id === 'oracle-modal') closeOracle()" class="hidden fixed inset-0 bg/black/80 z/[110] flex items-center justify-center p-6">
+        <div onclick="event.stopImmediatePropagation()" class="oracle-card max-w-lg w/full rounded-3xl p-9 md:p-11 text-center border border-[#C5A46E]/20">
+            <div class="text-[#C5A46E] text-xs tracking/[4px] mb-1">THE PYTHIA SPEAKS</div>
+            <h3 class="heading-serif text-4xl tracking-tight mb-6">The Oracle at Delphi</h3>
+            
+            <div id="oracle-text" class="min-h/[110px] text-xl leading-tight text-[#E8D9B5] italic px-3"></div>
+            
+            <div id="oracle-suggestion" class="mt-8 text-sm"></div>
+            
+            <div class="flex gap-3 mt-9">
+                <button onclick="getNewOracle()" class="flex-1 py-3.5 text-sm rounded-2xl border border-[#C5A46E]/40 hover:bg-[#C5A46E]/5 transition">Receive Another Sign</button>
+                <button onclick="closeOracle()" class="flex-1 py-3.5 text-sm rounded-2xl bg-[#C5A46E] text-[#05080F] font-medium">Return to the World</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Journey Panel -->
+    <div id="journey-panel" onclick="if (event.target.id === 'journey-panel') hideJourneyPanel()" class="hidden fixed inset-0 bg/black/70 z/[120] flex justify/end">
+        <div onclick="event.stopImmediatePropagation()" class="w/full max-w-md bg-[#05080F] h/full border-l border-[#C5A46E]/20 p-8 overflow-y-auto">
+            <div class="flex justify-between items-center mb-8">
+                <div>
+                    <div class="text-[#C5A46E] text-xs tracking/[3px]">YOUR PATH SO FAR</div>
+                    <div class="text-3xl heading-serif tracking-tighter">The Journey</div>
+                </div>
+                <button onclick="hideJourneyPanel()" class="text-2xl leading-none text-[#C5A46E]/50 hover:text-[#C5A46E]">×</button>
+            </div>
+            
+            <div id="journey-content" class="space-y-3"></div>
+            
+            <div class="mt-10 pt-8 border-t border/white/10 text-xs text-[#C5A46E]/60">
+                The more you explore, the richer your personal tapestry becomes. Return anytime.
+            </div>
+        </div>
+    </div>
+
+    <!-- Vision Modal (Key Concepts - Fall Back in Time) -->
+    <div id="vision-modal" onclick="if (event.target.id === 'vision-modal') closeVisionModal()" class="hidden fixed inset-0 bg/black/90 z/[200] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="w/full max-w-5xl bg-[#05080F] rounded-3xl overflow-hidden border border-[#C5A46E]/20">
+            <div class="relative">
+                <video id="vision-player" class="w/full aspect-video bg/black" controls autoplay></video>
+                <button onclick="closeVisionModal()" class="absolute top-4 right-4 px-4 py-1.5 text-xs rounded/full bg/black/60 hover:bg/black/80 border border/white/20 transition">Close</button>
+            </div>
+            <div class="p-8">
+                <div id="vision-meta" class="flex items-center gap-x-3 mb-3">
+                    <!-- Populated by JS -->
+                </div>
+                <div id="vision-description" class="text-[#F5F0E6]/80 leading-relaxed max-w-3xl text/[15px]">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
