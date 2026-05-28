@@ -81,14 +81,20 @@ const entries = [
     epithet: "King of the Gods, Lord of Sky and Thunder",
     hook: "The thunderer who established the current order of the cosmos.",
     image: "assets/images/zeus.jpg",
-    story: "Zeus led the Olympians in the war against the Titans (Titanomachy) and established a new order after their victory. He divided the cosmos with his brothers Poseidon and Hades and became the supreme ruler, associated with justice, hospitality, and the maintenance of cosmic order. His many affairs and resulting offspring are central to Greek genealogies, yet he is repeatedly shown as bound by larger forces of fate and the expectations of hospitality and oath-keeping.",
-    sources: ["Hesiod, Theogony", "Homer, Iliad"],
-    variants: "The extent of Zeus's power and the degree to which he is subject to fate varies across authors. In some traditions he appears more limited; in others he is identified with cosmic order itself.",
+    story: "Zeus led the Olympians in the war against the Titans (Titanomachy) and established a new order after their victory. He divided the cosmos with his brothers Poseidon and Hades and became the supreme ruler, associated with justice, hospitality, and the maintenance of cosmic order. His many affairs and resulting offspring are central to Greek genealogies, yet he is repeatedly shown as bound by larger forces of fate and the expectations of hospitality and oath-keeping. In the Iliad he is both the all-powerful cloud-gatherer and a god who must sometimes yield to the balance of fate and the will of other deities. The Titanomachy itself is described in detail by Hesiod: Zeus frees the Cyclopes, gains the thunderbolt, and hurls his father Cronus and the Titans into Tartarus. Later myths show him as the upholder of xenia (guest-friendship) and the punisher of hubris, yet also as a serial lover whose unions produce heroes and new dangers. His worship spanned the Greek world, from the great oracle at Dodona to the games at Olympia.",
+    sources: ["Hesiod, Theogony 453-506, 617-735", "Homer, Iliad 1.1-52, 8.1-40, 15.1-33, 24.1-76", "Apollodorus, Library 1.1-2"],
+    variants: "The extent of Zeus's power and the degree to which he is subject to fate varies across authors. In some traditions he appears more limited; in others he is identified with cosmic order itself. The binding of Zeus by Hera, Poseidon, and Athena (Iliad 1.396-406 with the help of Thetis and Briareus) shows even the king of the gods can be temporarily constrained. Local traditions in Crete emphasized his birth and death more than his kingship.",
     symbols: ["Thunderbolt", "Eagle", "Oak"],
     relations: [
       { id: "hera", label: "Wife and Queen" },
       { id: "poseidon", label: "Brother" },
-      { id: "hades", label: "Brother" }
+      { id: "hades", label: "Brother" },
+      { id: "athena", label: "Daughter" },
+      { id: "apollo", label: "Son" },
+      { id: "artemis", label: "Daughter" },
+      { id: "dionysus", label: "Son" },
+      { id: "hermes", label: "Son" },
+      { id: "persephone", label: "Daughter" }
     ]
   },
   {
@@ -99,8 +105,9 @@ const entries = [
     epithet: "Queen of the Gods, Guardian of Marriage",
     hook: "The powerful and often wrathful protector of marital bonds and the established order.",
     image: "assets/images/hera.jpg",
-    story: "As wife of Zeus and queen of the gods, Hera plays a central role in enforcing the social and cosmic order. She is the protector of marriage and women in childbirth, but her frequent conflicts with Zeus and persecution of his lovers and children reveal the tensions within the new divine hierarchy. She represents both the ideal of queenship and the destructive potential of divine jealousy when the order she protects is threatened.",
-    sources: ["Hesiod, Theogony", "Homer, Iliad"],
+    story: "As wife of Zeus and queen of the gods, Hera plays a central role in enforcing the social and cosmic order. She is the protector of marriage and women in childbirth, but her frequent conflicts with Zeus and persecution of his lovers and children reveal the tensions within the new divine hierarchy. She represents both the ideal of queenship and the destructive potential of divine jealousy when the order she protects is threatened. In the Iliad she is Zeus’s equal in will and nearly his match in power; she repeatedly schemes against Troy and against Heracles. One of the most striking variants tells how she, Poseidon, and Athena once bound Zeus in his sleep and were only thwarted by the intervention of Thetis and the hundred-handed Briareus. Her worship at Samos and Argos was especially magnificent, and she was honored as the divine patroness of legitimate marriage and civic stability.",
+    sources: ["Hesiod, Theogony", "Homer, Iliad 1.396-406, 14.153-353, 19.95-133", "Apollodorus, Library 1.3.1-2"],
+    variants: "Some traditions make Hera the eldest daughter of Cronus and Rhea and portray her as a more equal partner to Zeus before his rise. The story of her binding of Zeus appears only in the Iliad and is rarely emphasized in cult. In some local myths she is a more benevolent civic goddess.",
     symbols: ["Peacock", "Pomegranate"],
     relations: [
       { id: "zeus", label: "Husband and King" }
@@ -114,8 +121,8 @@ const entries = [
     epithet: "Goddess of Wisdom, Strategy, and Crafts",
     hook: "The virgin goddess born fully armed from Zeus’s head.",
     image: "assets/images/athena.jpg",
-    story: "Athena sprang fully grown and armored from Zeus’s forehead after he swallowed her mother Metis. She is the goddess of strategic warfare, wisdom, crafts, and the protector of cities (especially Athens). She represents intelligence and civilization over brute force, and is one of the most consistently positive and powerful goddesses in Greek tradition. Her birth from Zeus’s head symbolizes the idea that wisdom and strategy belong to the highest authority.",
-    sources: ["Hesiod, Theogony", "Homer, Iliad and Odyssey"],
+    story: "Athena sprang fully grown and armored from Zeus’s forehead after he swallowed her mother Metis. She is the goddess of strategic warfare, wisdom, crafts, and the protector of cities (especially Athens). She represents intelligence and civilization over brute force, and is one of the most consistently positive and powerful goddesses in Greek tradition. Her birth from Zeus’s head symbolizes the idea that wisdom and strategy belong to the highest authority. In the Iliad she repeatedly aids the Greeks and especially Odysseus and Diomedes; in the Odyssey she is the constant patron of the hero’s return. Her contest with Poseidon for Athens (the olive tree versus the salt spring) established her as the city’s divine protector. She was also the patron of weaving, metalwork, and the arts of peace.",
+    sources: ["Hesiod, Theogony 886-900", "Homer, Iliad and Odyssey", "Homeric Hymn to Athena"],
     symbols: ["Owl", "Aegis", "Olive Tree", "Spear"],
     relations: [
       { id: "zeus", label: "Father" }
@@ -129,7 +136,7 @@ const entries = [
     epithet: "Lord of the Sea, Earth-Shaker",
     hook: "The moody god who received the sea in the division of the cosmos.",
     image: "assets/images/poseidon.jpg",
-    story: "After the Titanomachy, Poseidon drew the lot for the sea. He is volatile and powerful, associated with earthquakes, horses, and the unpredictable nature of the ocean. His frequent conflicts with other gods and mortals (notably Odysseus) highlight the dangerous side of divine power and the limits of human control over natural forces. He is also credited with creating the first horse.",
+    story: "After the Titanomachy, Poseidon drew the lot for the sea. He is volatile and powerful, associated with earthquakes, horses, and the unpredictable nature of the ocean. His frequent conflicts with other gods and mortals (notably Odysseus) highlight the dangerous side of divine power and the limits of human control over natural forces. He is also credited with creating the first horse. In the Iliad he supports the Greeks while resenting Zeus’s authority; in the Odyssey his wrath keeps Odysseus from home for ten years after the hero blinds his son Polyphemus. His sanctuaries were often placed at dangerous capes and harbors.",
     sources: ["Hesiod, Theogony", "Homer, Iliad and Odyssey"],
     symbols: ["Trident", "Horse", "Dolphin"],
     relations: [
@@ -145,7 +152,7 @@ const entries = [
     epithet: "Lord of the Dead, The Unseen One",
     hook: "The ruler of the Underworld who received the realm of the dead in the division of the cosmos.",
     image: "assets/images/poseidon.jpg",
-    story: "After the Titanomachy, Hades drew the lot for the Underworld. He is stern and just rather than evil, guarding the realm of the dead and the riches beneath the earth. His abduction of Persephone became one of the central myths explaining the cycle of seasons and the relationship between life and death. Unlike his brothers, he rarely leaves his realm and is rarely depicted as actively malevolent.",
+    story: "After the Titanomachy, Hades drew the lot for the Underworld. He is stern and just rather than evil, guarding the realm of the dead and the riches beneath the earth. His abduction of Persephone became one of the central myths explaining the cycle of seasons and the relationship between life and death. Unlike his brothers, he rarely leaves his realm and is rarely depicted as actively malevolent. The Homeric Hymn to Demeter gives the fullest account of the abduction and the compromise that followed. Hades was also known as Pluto (the Rich One) in later periods, reflecting the wealth that lies under the earth.",
     sources: ["Hesiod, Theogony", "Homeric Hymn to Demeter"],
     symbols: ["Cerberus", "Helm of Invisibility"],
     relations: [
@@ -164,9 +171,9 @@ const entries = [
     epithet: "The Fire-Bringer, Champion of Humanity",
     hook: "The Titan who defied the gods to give humanity the tools of civilization.",
     image: "assets/images/prometheus.jpg",
-    story: "Prometheus stole fire from the gods and gave it to humans, along with many other arts and skills. For this act of defiance against Zeus’s will, he was bound to a rock in the Caucasus where an eagle ate his liver daily. He became the archetypal figure of the rebel who suffers for bringing knowledge and progress to humanity, embodying the tension between divine authority and human advancement. His punishment was eventually ended by Heracles.",
+    story: "Prometheus stole fire from the gods and gave it to humans, along with many other arts and skills. For this act of defiance against Zeus’s will, he was bound to a rock in the Caucasus where an eagle ate his liver daily. He became the archetypal figure of the rebel who suffers for bringing knowledge and progress to humanity, embodying the tension between divine authority and human advancement. His punishment was eventually ended by Heracles. Hesiod presents him as a trickster who also tries to cheat the gods over the division of sacrificial meat. Aeschylus’s Prometheus Bound transforms him into a suffering culture hero who knows the future and withholds it from Zeus. His release by Heracles (son of Zeus) beautifully closes the circle of rebellion and reconciliation.",
     sources: ["Hesiod, Theogony and Works and Days", "Aeschylus, Prometheus Bound"],
-    variants: "In some traditions, Prometheus is portrayed more as a culture hero and benefactor than a defiant rebel. His release by Heracles also varies in emphasis across sources.",
+    variants: "In some traditions, Prometheus is portrayed more as a culture hero and benefactor than a defiant rebel. His release by Heracles also varies in emphasis across sources. Later Roman authors sometimes conflated him with other trickster figures.",
     symbols: ["Fire", "Chains"],
     relations: [
       { id: "zeus", label: "Punisher" }
@@ -180,7 +187,7 @@ const entries = [
     epithet: "The First Woman",
     hook: "The woman created as punishment whose curiosity released all evils into the world.",
     image: "assets/images/pandora.jpg",
-    story: "Created by Hephaestus on Zeus’s orders as revenge for Prometheus giving fire to humanity. Given a sealed jar (or box) containing all evils and told never to open it, Pandora’s curiosity led her to release suffering, disease, and discord into the world. Only Hope remained inside. Her story explores themes of curiosity, disobedience, and the irreversible nature of certain actions. She is sometimes portrayed as more victim than villain.",
+    story: "Created by Hephaestus on Zeus’s orders as revenge for Prometheus giving fire to humanity. Given a sealed jar (or box) containing all evils and told never to open it, Pandora’s curiosity led her to release suffering, disease, and discord into the world. Only Hope remained inside. Her story explores themes of curiosity, disobedience, and the irreversible nature of certain actions. She is sometimes portrayed as more victim than villain. Hesiod’s two versions (Theogony and Works and Days) differ slightly in emphasis; later authors developed her character in more sympathetic directions.",
     sources: ["Hesiod, Works and Days"],
     variants: "The nature of what was released from the jar (evils vs. blessings) and whether Pandora acted out of curiosity or divine compulsion varies across later interpretations.",
     symbols: ["Jar"],
@@ -196,9 +203,9 @@ const entries = [
     epithet: "The Greatest of Heroes",
     hook: "The son of Zeus who achieved immortality through immense suffering and impossible labors.",
     image: "assets/images/heracles.jpg",
-    story: "Born to Zeus and the mortal Alcmene, Heracles was hated by Hera from birth. After being driven mad and killing his family, he was assigned twelve labors by King Eurystheus as penance. Through superhuman strength, courage, and endurance, he completed tasks no mortal could achieve. His labors include slaying the Nemean Lion, cleaning the Augean stables, capturing the Cretan Bull, and bringing back Cerberus from the Underworld. Eventually he achieved apotheosis and joined the gods on Olympus. His story is the clearest example of the Greek hero who earns divinity through suffering and achievement.",
-    sources: ["Apollodorus, Library", "Euripides, Heracles", "Sophocles, Women of Trachis"],
-    variants: "The exact number and nature of the labors varies across sources, as does the emphasis on whether Heracles was more victim or agent of his fate.",
+    story: "Born to Zeus and the mortal Alcmene, Heracles was hated by Hera from birth. After being driven mad and killing his family, he was assigned twelve labors by King Eurystheus as penance. Through superhuman strength, courage, and endurance, he completed tasks no mortal could achieve. His labors include slaying the Nemean Lion, cleaning the Augean stables, capturing the Cretan Bull, and bringing back Cerberus from the Underworld. Eventually he achieved apotheosis and joined the gods on Olympus. His story is the clearest example of the Greek hero who earns divinity through suffering and achievement. He also sailed with the Argonauts, sacked Troy in an earlier generation, and freed Prometheus. The cycle of his labors and his final fiery death on Mount Oeta (followed by apotheosis) form one of the most complete heroic biographies in Greek myth.",
+    sources: ["Apollodorus, Library 2.4-2.7", "Euripides, Heracles", "Sophocles, Women of Trachis", "Hesiod, Theogony 950-955"],
+    variants: "The exact number and nature of the labors varies across sources, as does the emphasis on whether Heracles was more victim or agent of his fate. Some traditions place his sack of Troy before the famous labors; others emphasize his role as a civilizing hero who founded cities and ended local tyrannies.",
     symbols: ["Lion Skin", "Club"],
     relations: [
       { id: "zeus", label: "Father" }
@@ -212,7 +219,7 @@ const entries = [
     epithet: "Slayer of Medusa",
     hook: "The hero who beheaded the Gorgon and rescued Andromeda from a sea monster.",
     image: "assets/images/medusa.jpg",
-    story: "Son of Zeus and Danaë. Tasked with bringing back the head of Medusa, he succeeded with the help of Athena and Hermes. Later he rescued Andromeda from a sea monster sent by Poseidon and founded the city of Mycenae. His story is one of the earliest and most complete hero myths and involves many of the classic elements of the heroic journey.",
+    story: "Son of Zeus and Danaë. Tasked with bringing back the head of Medusa, he succeeded with the help of Athena and Hermes. Later he rescued Andromeda from a sea monster sent by Poseidon and founded the city of Mycenae. His story is one of the earliest and most complete hero myths and involves many of the classic elements of the heroic journey. The Perseus cycle links the world of the Olympians directly to the great Mycenaean centers of the heroic age.",
     sources: ["Apollodorus", "Ovid"],
     symbols: ["Medusa’s Head"],
     relations: [
@@ -227,7 +234,7 @@ const entries = [
     epithet: "Slayer of the Minotaur, King of Athens",
     hook: "The hero who ended the tribute of youths to Crete and unified Attica.",
     image: "assets/images/heracles.jpg",
-    story: "Son of Aegeus (or Poseidon). He volunteered to enter the Labyrinth and slay the Minotaur with the help of Ariadne’s thread. Later he became king of Athens and is credited with synoecism — uniting the villages of Attica into one city-state. His story bridges the worlds of heroic adventure and political founding, though it also includes darker episodes such as the abandonment of Ariadne and the death of his father.",
+    story: "Son of Aegeus (or Poseidon). He volunteered to enter the Labyrinth and slay the Minotaur with the help of Ariadne’s thread. Later he became king of Athens and is credited with synoecism — uniting the villages of Attica into one city-state. His story bridges the worlds of heroic adventure and political founding, though it also includes darker episodes such as the abandonment of Ariadne and the death of his father. Plutarch’s Life of Theseus collects many variants and attempts to give him a coherent biography.",
     sources: ["Plutarch, Life of Theseus", "Apollodorus"],
     variants: "The parentage of Theseus (Aegeus vs. Poseidon) and the extent of his role in unifying Attica are subjects of variation across sources.",
     symbols: ["Double Axe", "Thread"],
@@ -243,7 +250,7 @@ const entries = [
     epithet: "The Gorgon",
     hook: "A woman transformed into a monster whose head became one of the most powerful weapons in the Greek world.",
     image: "assets/images/medusa.jpg",
-    story: "Originally a beautiful woman, Medusa was transformed into a Gorgon. Her gaze turned men to stone. After being slain by Perseus, her head was given to Athena and retained its petrifying power. The story explores themes of victimization, monstrosity, and the transformation of the victim into a weapon. Even in death she continued to generate powerful new beings (Pegasus and Chrysaor).",
+    story: "Originally a beautiful woman, Medusa was transformed into a Gorgon. Her gaze turned men to stone. After being slain by Perseus, her head was given to Athena and retained its petrifying power. The story explores themes of victimization, monstrosity, and the transformation of the victim into a weapon. Even in death she continued to generate powerful new beings (Pegasus and Chrysaor). Hesiod presents her as monstrous from the beginning; the famous rape by Poseidon and subsequent transformation appear only in later sources, especially Ovid. The ambiguity of her nature—monster or wronged woman—has made her one of the most reinterpreted figures in the entire corpus.",
     sources: ["Hesiod, Theogony", "Ovid, Metamorphoses"],
     variants: "The rape narrative is absent from our earliest sources. Hesiod presents Medusa as a monster from the beginning. The version that emphasizes her victimization becomes dominant only in later Roman poetry.",
     symbols: ["Serpents", "Gaze"],
@@ -259,10 +266,14 @@ const entries = [
     epithet: "The Man of Many Turns",
     hook: "The cleverest of the Greek heroes, whose long journey home became one of the defining stories of Western literature.",
     image: "assets/images/heracles.jpg",
-    story: "King of Ithaca and one of the greatest Greek leaders at Troy. After the fall of the city, it took him ten years to return home due to Poseidon’s anger. His story explores cunning, endurance, identity, homecoming, and the human condition more deeply than almost any other Greek hero myth. He is both admired for his intelligence and criticized for his deceptions and moral compromises.",
-    sources: ["Homer, Odyssey"],
+    story: "King of Ithaca and one of the greatest Greek leaders at Troy. After the fall of the city, it took him ten years to return home due to Poseidon’s anger. His story explores cunning, endurance, identity, homecoming, and the human condition more deeply than almost any other Greek hero myth. He is both admired for his intelligence and criticized for his deceptions and moral compromises. The Odyssey gives us the fullest portrait of any Greek hero: his encounters with the Cyclops, Circe, the Sirens, Scylla and Charybdis, his descent to the Underworld, the slaughter of the suitors, and the final recognition scene with Penelope. Later tradition (the Teiresias prophecy in Odyssey 11) sends him on one last sea journey to a land where oars are unknown.",
+    sources: ["Homer, Odyssey 1-24", "Apollodorus, Epitome 7.1-40"],
+    variants: "Some post-Homeric epics (the Telegony) give him additional adventures and a different death at the hands of his son by Circe. The degree of his moral ambiguity varies sharply between the Odyssey itself and later philosophical and tragic treatments.",
     symbols: ["Bow", "Oar"],
-    relations: []
+    relations: [
+      { id: "penelope", label: "Wife" },
+      { id: "telemachus", label: "Son" }
+    ]
   },
   {
     id: "achilles",
@@ -272,11 +283,14 @@ const entries = [
     epithet: "The Greatest Warrior of the Greeks",
     hook: "The near-invincible hero whose anger and withdrawal from battle shaped the outcome of the Trojan War.",
     image: "assets/images/heracles.jpg",
-    story: "Son of the mortal Peleus and the goddess Thetis. The greatest warrior among the Greeks at Troy. After a quarrel with Agamemnon, he withdrew from battle, leading to devastating losses for the Greeks. His return and eventual death at the hands of Paris (guided by Apollo) mark one of the central tragedies of the war. His story explores the tension between individual honor and communal responsibility, as well as the cost of divine parentage.",
-    sources: ["Homer, Iliad"],
+    story: "Son of the mortal Peleus and the goddess Thetis. The greatest warrior among the Greeks at Troy. After a quarrel with Agamemnon over the captive Briseis, he withdrew from battle, leading to devastating losses for the Greeks. His return and eventual death at the hands of Paris (guided by Apollo) mark one of the central tragedies of the war. His story explores the tension between individual honor and communal responsibility, as well as the cost of divine parentage. In the Iliad he chooses a short life of glory over a long obscure one (Iliad 9.410-416). When Patroclus is killed wearing his armor, Achilles’ grief and rage drive him to superhuman feats and the desecration of Hector’s body. His encounter with Priam in Book 24 is one of the most profound moments of shared humanity in all of literature. The later tradition of his vulnerable heel is post-Homeric; in the Iliad he is simply the greatest and most doomed of men.",
+    sources: ["Homer, Iliad 1.1-611, 9.307-429, 16.1-100, 18.1-147, 19.1-424, 22.1-404, 24.1-804", "Apollodorus, Library 3.13.6-8"],
+    variants: "The story of his near-invulnerability except for the heel appears first in the Hellenistic period. The Iliad itself emphasizes his mortality and his fated early death. Some traditions make him the lover of Patroclus; others emphasize only their friendship.",
     symbols: ["Armor", "Spear"],
     relations: [
-      { id: "patroclus", label: "Closest Companion" }
+      { id: "patroclus", label: "Closest Companion" },
+      { id: "briseis", label: "Captive and Cause of Quarrel" },
+      { id: "agamemnon", label: "Rival and Commander" }
     ]
   },
   {
@@ -287,11 +301,13 @@ const entries = [
     epithet: "Greatest Defender of Troy",
     hook: "The noble Trojan prince and greatest defender of his city.",
     image: "assets/images/heracles.jpg",
-    story: "Son of Priam and Hecuba, husband of Andromache, and father of Astyanax. As the greatest warrior of Troy, he leads the defense against the Greeks. Unlike many heroes, he fights not primarily for personal glory but for the survival of his city and family. His death at the hands of Achilles is one of the most tragic and human moments in the Iliad.",
-    sources: ["Homer, Iliad"],
+    story: "Son of Priam and Hecuba, husband of Andromache, and father of Astyanax. As the greatest warrior of Troy, he leads the defense against the Greeks. Unlike many heroes, he fights not primarily for personal glory but for the survival of his city and family. His death at the hands of Achilles is one of the most tragic and human moments in the Iliad. His farewell to Andromache and Astyanax on the walls of Troy (Iliad 6) is the most moving domestic scene in the epic. After his death his body is ransomed by his father in one of the greatest scenes of reconciliation between enemies in world literature.",
+    sources: ["Homer, Iliad 6.1-529, 22.1-404, 24.1-804"],
     symbols: ["Armor"],
     relations: [
-      { id: "andromache", label: "Wife" }
+      { id: "andromache", label: "Wife" },
+      { id: "priam", label: "Father" },
+      { id: "hecuba", label: "Mother" }
     ]
   },
   {
@@ -302,13 +318,14 @@ const entries = [
     epithet: "The Face That Launched a Thousand Ships",
     hook: "The most beautiful woman in the world, whose abduction sparked the Trojan War.",
     image: "assets/images/athena.jpg",
-    story: "Daughter of Zeus and Leda (or Nemesis). Married to Menelaus of Sparta, she was either abducted or eloped with Paris of Troy, becoming the casus belli of the Trojan War. Her role raises complex questions about agency, beauty, responsibility, and the causes of war. Ancient authors are divided on whether she was a willing participant or a victim of divine will.",
-    sources: ["Homer, Iliad", "Euripides, Helen", "Herodotus"],
-    variants: "Herodotus suggests she may never have gone to Troy at all, and that the war was fought over a phantom.",
+    story: "Daughter of Zeus and Leda (or Nemesis). Married to Menelaus of Sparta, she was either abducted or eloped with Paris of Troy, becoming the casus belli of the Trojan War. Her role raises complex questions about agency, beauty, responsibility, and the causes of war. Ancient authors are divided on whether she was a willing participant or a victim of divine will. In the Iliad she is a figure of remorse and self-awareness, watching the war from the walls and speaking with bitter insight. Euripides’ Helen and the historian Herodotus preserve a remarkable alternative tradition: that Helen never went to Troy at all, and that the Greeks fought for a phantom (eidolon) while the real Helen remained in Egypt. In Spartan cult she was worshipped as a goddess associated with fertility and young women.",
+    sources: ["Homer, Iliad 3.121-244, 6.343-368", "Euripides, Helen", "Herodotus, Histories 2.112-120", "Stesichorus, Palinode (fragments)"],
+    variants: "Herodotus suggests she may never have gone to Troy at all, and that the war was fought over a phantom. The Stesichorus palinode blamed Helen and was punished with blindness until he recanted. Spartan tradition treated her as a local goddess.",
     symbols: ["Beauty"],
     relations: [
       { id: "menelaus", label: "Husband" },
-      { id: "paris", label: "Abductor / Lover" }
+      { id: "paris", label: "Abductor / Lover" },
+      { id: "clytemnestra", label: "Sister" }
     ]
   },
   {
@@ -319,14 +336,15 @@ const entries = [
     epithet: "King of Mycenae, Leader of the Greeks at Troy",
     hook: "The high king whose decisions shaped the fate of the Greek expedition against Troy.",
     image: "assets/images/heracles.jpg",
-    story: "Brother of Menelaus and king of Mycenae. As leader of the Greek forces at Troy, his quarrel with Achilles over Briseis is the central conflict of the Iliad. His return home and murder by Clytemnestra and Aegisthus form the core of the Oresteia cycle. He embodies the tensions between personal desire, royal duty, and the destructive consequences of hubris and poor leadership.",
-    sources: ["Homer, Iliad", "Aeschylus, Agamemnon", "Sophocles, Electra"],
-    variants: "The reasons for his quarrel with Achilles and the exact nature of his sacrifice of Iphigenia vary across sources.",
+    story: "Brother of Menelaus and king of Mycenae. As leader of the Greek forces at Troy, his quarrel with Achilles over Briseis is the central conflict of the Iliad. His return home and murder by Clytemnestra and Aegisthus form the core of the Oresteia cycle. He embodies the tensions between personal desire, royal duty, and the destructive consequences of hubris and poor leadership. At Aulis the Greek fleet was becalmed; Agamemnon was forced (or chose) to sacrifice his daughter Iphigenia to Artemis so the fleet could sail (Aeschylus, Agamemnon 184-247 gives the most powerful version). In the Iliad he is both a great king and a flawed man whose taking of Briseis nearly destroys the expedition. His murder in the bath upon his return is the primal crime that launches the cycle of vengeance dramatized in Aeschylus’s Oresteia.",
+    sources: ["Homer, Iliad 1.1-611, 2.1-454, 9.1-181, 19.1-153", "Aeschylus, Agamemnon 1-257, 783-974", "Euripides, Iphigenia in Aulis"],
+    variants: "The reasons for his quarrel with Achilles and the exact nature of his sacrifice of Iphigenia vary across sources. Some versions make the sacrifice demanded by Artemis as punishment for Agamemnon’s boast; others present it as a necessary but horrific price for the war.",
     symbols: ["Scepter"],
     relations: [
       { id: "menelaus", label: "Brother" },
       { id: "clytemnestra", label: "Wife" },
-      { id: "iphigenia", label: "Daughter" }
+      { id: "iphigenia", label: "Daughter" },
+      { id: "cassandra", label: "Concubine" }
     ]
   },
   {
@@ -337,14 +355,15 @@ const entries = [
     epithet: "Queen of Mycenae, Avenger of Her Daughter",
     hook: "The wife who murdered her husband to avenge the sacrifice of their daughter.",
     image: "assets/images/athena.jpg",
-    story: "Wife of Agamemnon and sister of Helen. While Agamemnon was at Troy, she took Aegisthus as a lover. Upon his return, she murdered him in revenge for the sacrifice of their daughter Iphigenia. Her story is central to the Oresteia and explores themes of justice, vengeance, gender, and the cycle of violence in the House of Atreus.",
+    story: "Wife of Agamemnon and sister of Helen. While Agamemnon was at Troy, she took Aegisthus as a lover. Upon his return, she murdered him in revenge for the sacrifice of their daughter Iphigenia. Her story is central to the Oresteia and explores themes of justice, vengeance, gender, and the cycle of violence in the House of Atreus. In Aeschylus she is a formidable, articulate avenger who claims the justice of her act. In Sophocles and Euripides the emphasis shifts; some versions add jealousy over Cassandra as a motive. Her murder by her own son Orestes completes the cycle of blood that only Athena’s intervention can end.",
     sources: ["Aeschylus, Agamemnon and Libation Bearers", "Sophocles, Electra", "Euripides, Electra"],
-    variants: "Some sources emphasize her jealousy over Agamemnon’s concubine Cassandra; others focus more purely on the sacrifice of Iphigenia as her motivation.",
+    variants: "Some sources emphasize her jealousy over Agamemnon’s concubine Cassandra; others focus more purely on the sacrifice of Iphigenia as her motivation. The degree of her complicity with Aegisthus also varies.",
     symbols: ["Axe"],
     relations: [
       { id: "agamemnon", label: "Husband" },
       { id: "aegisthus", label: "Lover and Accomplice" },
-      { id: "iphigenia", label: "Daughter" }
+      { id: "iphigenia", label: "Daughter" },
+      { id: "orestes", label: "Son" }
     ]
   },
   {
@@ -355,7 +374,7 @@ const entries = [
     epithet: "Prince of Troy Who Judged the Goddesses",
     hook: "The Trojan prince whose choice sparked the greatest war of the mythic age.",
     image: "assets/images/heracles.jpg",
-    story: "Son of Priam and Hecuba. Exposed as an infant due to a prophecy, he was raised as a shepherd. When asked to judge which goddess was the most beautiful (Hera, Athena, or Aphrodite), he chose Aphrodite, who promised him the love of Helen. His abduction (or elopement) with Helen from Sparta triggered the Trojan War. He is often portrayed as charming but cowardly and irresponsible compared to his brother Hector.",
+    story: "Son of Priam and Hecuba. Exposed as an infant due to a prophecy, he was raised as a shepherd. When asked to judge which goddess was the most beautiful (Hera, Athena, or Aphrodite), he chose Aphrodite, who promised him the love of Helen. His abduction (or elopement) with Helen from Sparta triggered the Trojan War. He is often portrayed as charming but cowardly and irresponsible compared to his brother Hector. In the Iliad he fights well when he must but prefers the bedroom to the battlefield. His arrow, guided by Apollo, kills Achilles and ends the greatest Greek hero.",
     sources: ["Homer, Iliad", "Euripides, Trojan Women and Helen"],
     variants: "The degree of Helen’s willingness in leaving with him varies significantly across sources. Some portray her as abducted; others as a willing lover.",
     symbols: ["Apple of Discord"],
@@ -372,7 +391,7 @@ const entries = [
     epithet: "King of Troy, Father of Many Sons",
     hook: "The aged king who watched his city and family destroyed in the greatest war of the age.",
     image: "assets/images/heracles.jpg",
-    story: "King of Troy during the war with the Greeks. Father of fifty sons, including Hector and Paris. He is portrayed as a wise but tragic figure who loses almost everything. His ransom of Hector’s body from Achilles is one of the most moving scenes in the Iliad, showing the shared humanity between enemies.",
+    story: "King of Troy during the war with the Greeks. Father of fifty sons, including Hector and Paris. He is portrayed as a wise but tragic figure who loses almost everything. His ransom of Hector’s body from Achilles is one of the most moving scenes in the Iliad, showing the shared humanity between enemies. In Iliad 24 he travels alone at night to the Greek camp, kisses the hands that killed his son, and returns with the body for proper burial. It is one of the greatest moments of grace and reconciliation in ancient literature.",
     sources: ["Homer, Iliad"],
     symbols: ["Scepter"],
     relations: [
@@ -389,7 +408,7 @@ const entries = [
     epithet: "Queen of Troy, Mother of Princes",
     hook: "The queen who lost almost all her children in the destruction of Troy.",
     image: "assets/images/athena.jpg",
-    story: "Wife of Priam and mother of many sons and daughters, including Hector, Paris, and Cassandra. After the fall of Troy, she witnessed the deaths of her husband and most of her children. Her transformation into a dog in some versions symbolizes the ultimate degradation of royal dignity.",
+    story: "Wife of Priam and mother of many sons and daughters, including Hector, Paris, and Cassandra. After the fall of Troy, she witnessed the deaths of her husband and most of her children. Her transformation into a dog in some versions symbolizes the ultimate degradation of royal dignity. Euripides’ Hecuba and Trojan Women give her the most powerful laments in Greek tragedy, turning her personal grief into an indictment of war itself.",
     sources: ["Homer, Iliad", "Euripides, Trojan Women and Hecuba"],
     symbols: ["Veil"],
     relations: [
@@ -407,12 +426,85 @@ const entries = [
     epithet: "God of Wine, Ecstasy, and Theatre",
     hook: "The god who brings both liberation and destruction through ecstasy and the breakdown of boundaries.",
     image: "assets/images/dionysus.jpg",
-    story: "Son of Zeus and Semele, Dionysus represents the arrival of something wild and transformative. His worship involved altered states of consciousness, the blurring of social roles, and a direct encounter with the divine that could be both ecstatic and terrifying. He is also the god of theatre, linking ritual performance with religious experience. His arrival often disrupts established order but also brings renewal and the possibility of transcendence through ecstasy.",
+    story: "Son of Zeus and Semele, Dionysus represents the arrival of something wild and transformative. His worship involved altered states of consciousness, the blurring of social roles, and a direct encounter with the divine that could be both ecstatic and terrifying. He is also the god of theatre, linking ritual performance with religious experience. His arrival often disrupts established order but also brings renewal and the possibility of transcendence through ecstasy. Euripides’ Bacchae is the greatest exploration of his power: the god returns to Thebes to establish his rites, the king Pentheus resists, and the result is the tearing apart of the king by his own mother and the women of the city. Dionysus embodies the truth that civilization requires both order and the controlled release of what lies beneath it.",
     sources: ["Euripides, Bacchae", "Homeric Hymn to Dionysus"],
-    variants: "The degree to which his cults involved actual violence or ritual madness remains debated. Some sources emphasize liberation and joy; others emphasize terror and destruction.",
+    variants: "The degree to which his cults involved actual violence or ritual madness remains debated. Some sources emphasize liberation and joy; others emphasize terror and destruction. The Orphic tradition gives him a very different cosmic role as a suffering and reborn god-child.",
     symbols: ["Thyrsus", "Grapevine", "Leopard"],
     relations: [
       { id: "zeus", label: "Father" }
+    ]
+  },
+
+  // === THE THEBAN CYCLE ===
+  {
+    id: "oedipus",
+    name: "Oedipus",
+    type: "Hero",
+    cycle: "The Theban Cycle",
+    epithet: "The King Who Solved the Sphinx’s Riddle",
+    hook: "The man who unknowingly killed his father and married his mother, becoming a central figure in Greek tragedy.",
+    image: "assets/images/heracles.jpg",
+    story: "Son of Laius and Jocasta, rulers of Thebes. After being exposed as an infant due to a prophecy, he was raised in Corinth. Returning to Thebes, he killed his father at a crossroads and solved the Sphinx’s riddle, becoming king and unknowingly marrying his mother. His eventual discovery of the truth led to catastrophe. His story explores fate, free will, knowledge, and the limits of human understanding more powerfully than almost any other Greek myth. Sophocles’ Oedipus Rex dramatizes the day of discovery with unmatched intensity; Oedipus at Colonus shows the blinded, exiled king finding a mysterious sacred death that blesses Athens. The Theban cycle as a whole (Laius, Oedipus, the Seven Against Thebes, Antigone) forms one of the two great epic-tragic complexes of Greek myth, rivaled only by the Trojan War.",
+    sources: ["Sophocles, Oedipus Rex, Oedipus at Colonus", "Apollodorus, Library 3.5.7-9"],
+    variants: "The details of how Oedipus discovered the truth and the extent of his self-punishment vary across sources. Some versions are more focused on his suffering, others on his guilt. The oracle’s wording and whether Oedipus could have avoided his fate are perennial questions.",
+    symbols: ["Sphinx", "Staff"],
+    relations: [
+      { id: "jocasta", label: "Mother and Wife" },
+      { id: "antigone", label: "Daughter" },
+      { id: "creon", label: "Brother-in-law and Successor" }
+    ]
+  },
+  {
+    id: "antigone",
+    name: "Antigone",
+    type: "Hero",
+    cycle: "The Theban Cycle",
+    epithet: "The Woman Who Defied the King for the Sake of Family and the Gods",
+    hook: "The daughter of Oedipus who chose divine law over human law.",
+    image: "assets/images/athena.jpg",
+    story: "Daughter of Oedipus and Jocasta. After the deaths of her brothers Eteocles and Polynices, she defied King Creon’s order and buried Polynices, leading to her own death. Her story explores the conflict between family duty, divine law, and state authority, and remains one of the most powerful examinations of individual conscience versus political power in Western literature. Sophocles’ Antigone has been read for centuries as a clash between two rights: the duty to the dead and the gods versus the necessity of civic order. Her death is both a victory of principle and a profound human tragedy.",
+    sources: ["Sophocles, Antigone"],
+    symbols: ["Burial"],
+    relations: [
+      { id: "oedipus", label: "Father" },
+      { id: "creon", label: "Uncle and Opponent" }
+    ]
+  },
+  {
+    id: "creon",
+    name: "Creon",
+    type: "Hero",
+    cycle: "The Theban Cycle",
+    epithet: "King of Thebes, Guardian of Civic Order",
+    hook: "The ruler whose defense of the city’s laws led to the destruction of his own family.",
+    image: "assets/images/heracles.jpg",
+    story: "Brother of Jocasta and uncle of Antigone. After the deaths of Eteocles and Polynices, Creon assumes the throne and decrees that Polynices, as a traitor, must remain unburied. When Antigone defies him, he sentences her to death, only to lose his son Haemon (betrothed to Antigone) and his wife Eurydice to suicide. Creon is not a simple villain; he genuinely believes he is defending the city against chaos. His tragedy is that the very rigidity that makes him a strong ruler destroys everything he loves. Sophocles uses him to explore the limits of human law when it conflicts with deeper obligations to the dead and the gods.",
+    sources: ["Sophocles, Antigone", "Sophocles, Oedipus Rex"],
+    variants: "In some earlier versions Creon is a more minor figure; Sophocles elevates him into one of the great tragic rulers. His fate after the play varies in later tradition.",
+    symbols: ["Crown", "Scepter"],
+    relations: [
+      { id: "antigone", label: "Niece and Opponent" },
+      { id: "jocasta", label: "Sister" },
+      { id: "oedipus", label: "Brother-in-law" }
+    ]
+  },
+  {
+    id: "eteocles-polynices",
+    name: "Eteocles and Polynices",
+    type: "Hero",
+    cycle: "The Theban Cycle",
+    epithet: "The Brothers Who Killed Each Other for the Throne of Thebes",
+    hook: "The sons of Oedipus whose fratricidal war fulfilled their father’s curse.",
+    image: "assets/images/heracles.jpg",
+    story: "The two sons of Oedipus and Jocasta. After their father’s fall, they agreed to rule Thebes in alternate years. When Eteocles refused to yield the throne, Polynices raised an army of seven champions (the Seven Against Thebes) and attacked the city. In the final battle the brothers killed each other at the seventh gate, fulfilling the curse Oedipus had laid upon them. Their bodies became the center of the conflict dramatized in Sophocles’ Antigone: one brother honored, the other left unburied. Aeschylus’s Seven Against Thebes and Euripides’ Phoenician Women give different emphases to the same doomed story. The Theban civil war is the dark mirror of the Trojan War — a city destroyed from within by its own royal house.",
+    sources: ["Aeschylus, Seven Against Thebes", "Sophocles, Antigone", "Euripides, Phoenician Women", "Apollodorus, Library 3.6"],
+    variants: "The exact terms of the brothers’ agreement and the identity of the seven champions vary. Some traditions give Polynices a stronger moral claim; others present both as cursed and doomed.",
+    symbols: ["Shield", "Gate"],
+    relations: [
+      { id: "oedipus", label: "Father" },
+      { id: "jocasta", label: "Mother" },
+      { id: "antigone", label: "Sister" },
+      { id: "creon", label: "Uncle" }
     ]
   },
 
@@ -425,7 +517,7 @@ const entries = [
     epithet: "God of Light, Music, Prophecy, and Healing",
     hook: "The most widely worshipped of the gods — beautiful, distant, and terrifyingly clear-sighted.",
     image: "assets/images/apollo.jpg",
-    story: "Son of Zeus and Leto, twin brother of Artemis. Apollo is associated with the sun, music, poetry, prophecy (especially at Delphi), healing, and sudden, pitiless punishment. He represents order, clarity, and the dangerous power of divine knowledge. His oracles were among the most important religious institutions in the Greek world, and his myths often explore the tension between divine certainty and human limitation.",
+    story: "Son of Zeus and Leto, twin brother of Artemis. Apollo is associated with the sun, music, poetry, prophecy (especially at Delphi), healing, and sudden, pitiless punishment. He represents order, clarity, and the dangerous power of divine knowledge. His oracles were among the most important religious institutions in the Greek world, and his myths often explore the tension between divine certainty and human limitation. He guided the arrow that killed Achilles and repeatedly intervened in the Trojan War on the side of the Trojans. His shrine at Delphi was the religious heart of the Greek world for centuries.",
     sources: ["Hesiod, Theogony", "Homeric Hymn to Apollo", "Euripides, Ion"],
     symbols: ["Lyre", "Laurel", "Bow", "Python"],
     relations: [
@@ -441,7 +533,7 @@ const entries = [
     epithet: "Goddess of the Hunt, Moon, and Wilderness",
     hook: "The virgin huntress who protects the young and punishes those who violate her sacred spaces.",
     image: "assets/images/artemis.jpg",
-    story: "Twin sister of Apollo and daughter of Zeus and Leto. Artemis roams the wild with her nymphs. She is fiercely protective of young animals and girls, but merciless to those who offend her chastity or sacred groves (most famously Actaeon). She represents the untamed aspects of nature and female independence in a world dominated by male gods and heroes.",
+    story: "Twin sister of Apollo and daughter of Zeus and Leto. Artemis roams the wild with her nymphs. She is fiercely protective of young animals and girls, but merciless to those who offend her chastity or sacred groves (most famously Actaeon). She represents the untamed aspects of nature and female independence in a world dominated by male gods and heroes. She demanded the sacrifice of Iphigenia at Aulis and was the divine power behind many of the most terrifying moments of the heroic age.",
     sources: ["Homeric Hymn to Artemis", "Callimachus, Hymn to Artemis"],
     symbols: ["Bow", "Deer", "Crescent Moon"],
     relations: [
@@ -456,7 +548,7 @@ const entries = [
     epithet: "Goddess of Grain and the Seasons",
     hook: "The mother whose grief brought winter to the world.",
     image: "assets/images/hera.jpg",
-    story: "Sister of Zeus and mother of Persephone. When Hades abducted her daughter, Demeter’s grief caused the earth to stop producing food. The resulting famine forced Zeus to negotiate Persephone’s partial return, establishing the cycle of the seasons. Her worship was central to the Eleusinian Mysteries, one of the most important religious cults in ancient Greece, which promised initiates a better fate after death.",
+    story: "Sister of Zeus and mother of Persephone. When Hades abducted her daughter, Demeter’s grief caused the earth to stop producing food. The resulting famine forced Zeus to negotiate Persephone’s partial return, establishing the cycle of the seasons. Her worship was central to the Eleusinian Mysteries, one of the most important religious cults in ancient Greece, which promised initiates a better fate after death. The Homeric Hymn to Demeter is one of the most beautiful and moving texts in Greek literature, telling the story from the mother’s perspective with extraordinary psychological depth.",
     sources: ["Homeric Hymn to Demeter"],
     symbols: ["Wheat", "Torch", "Poppy"],
     relations: [
@@ -472,45 +564,12 @@ const entries = [
     epithet: "Queen of the Underworld, Goddess of Spring",
     hook: "The maiden who became queen of the dead and brings life back to the earth each year.",
     image: "assets/images/athena.jpg",
-    story: "Daughter of Demeter and Zeus. Abducted by Hades while picking flowers, she became queen of the Underworld. Her annual return to the surface world brings spring and growth; her descent brings winter. She embodies the tension between life and death, and was worshipped alongside her mother in the Eleusinian Mysteries.",
+    story: "Daughter of Demeter and Zeus. Abducted by Hades while picking flowers, she became queen of the Underworld. Her annual return to the surface world brings spring and growth; her descent brings winter. She embodies the tension between life and death, and was worshipped alongside her mother in the Eleusinian Mysteries. In some traditions she is a terrifying queen of the dead; in others a gentle figure who mediates between the upper and lower worlds.",
     sources: ["Homeric Hymn to Demeter"],
     symbols: ["Pomegranate", "Torch"],
     relations: [
       { id: "demeter", label: "Mother" },
       { id: "hades", label: "Husband" }
-    ]
-  },
-  {
-    id: "oedipus",
-    name: "Oedipus",
-    type: "Hero",
-    cycle: "The Theban Cycle",
-    epithet: "The King Who Solved the Sphinx’s Riddle",
-    hook: "The man who unknowingly killed his father and married his mother, becoming a central figure in Greek tragedy.",
-    image: "assets/images/heracles.jpg",
-    story: "Son of Laius and Jocasta, rulers of Thebes. After being exposed as an infant due to a prophecy, he was raised in Corinth. Returning to Thebes, he killed his father at a crossroads and solved the Sphinx’s riddle, becoming king and unknowingly marrying his mother. His eventual discovery of the truth led to catastrophe. His story explores fate, free will, knowledge, and the limits of human understanding more powerfully than almost any other Greek myth.",
-    sources: ["Sophocles, Oedipus Rex", "Apollodorus"],
-    variants: "The details of how Oedipus discovered the truth and the extent of his self-punishment vary across sources. Some versions are more focused on his suffering, others on his guilt.",
-    symbols: ["Sphinx", "Staff"],
-    relations: [
-      { id: "jocasta", label: "Mother and Wife" },
-      { id: "antigone", label: "Daughter" }
-    ]
-  },
-  {
-    id: "antigone",
-    name: "Antigone",
-    type: "Hero",
-    cycle: "The Theban Cycle",
-    epithet: "The Woman Who Defied the King for the Sake of Family and the Gods",
-    hook: "The daughter of Oedipus who chose divine law over human law.",
-    image: "assets/images/athena.jpg",
-    story: "Daughter of Oedipus and Jocasta. After the deaths of her brothers Eteocles and Polynices, she defied King Creon’s order and buried Polynices, leading to her own death. Her story explores the conflict between family duty, divine law, and state authority, and remains one of the most powerful examinations of individual conscience versus political power in Western literature.",
-    sources: ["Sophocles, Antigone"],
-    symbols: ["Burial"],
-    relations: [
-      { id: "oedipus", label: "Father" },
-      { id: "creon", label: "Uncle and Opponent" }
     ]
   },
   {
@@ -521,7 +580,7 @@ const entries = [
     epithet: "Goddess of Love and Beauty",
     hook: "The goddess whose power over desire shapes both gods and mortals.",
     image: "assets/images/athena.jpg",
-    story: "Born from the sea foam near Cyprus (or as daughter of Zeus and Dione). She represents the overwhelming force of erotic desire and beauty. Her affairs (notably with Ares and Anchises) and her role in sparking the Trojan War through the Judgment of Paris demonstrate the disruptive and creative power of love and beauty in Greek myth. She is both irresistible and dangerous.",
+    story: "Born from the sea foam near Cyprus (or as daughter of Zeus and Dione). She represents the overwhelming force of erotic desire and beauty. Her affairs (notably with Ares and Anchises) and her role in sparking the Trojan War through the Judgment of Paris demonstrate the disruptive and creative power of love and beauty in Greek myth. She is both irresistible and dangerous. The Homeric Hymn to Aphrodite shows her power even over Zeus himself, and the story of her love for the mortal Anchises (parent of Aeneas) bridges the divine and heroic worlds.",
     sources: ["Hesiod, Theogony", "Homeric Hymn to Aphrodite"],
     symbols: ["Dove", "Myrtle", "Mirror"],
     relations: [
@@ -537,7 +596,7 @@ const entries = [
     epithet: "Messenger of the Gods, Guide of Souls, Trickster",
     hook: "The swift-footed god of boundaries, commerce, and cunning.",
     image: "assets/images/apollo.jpg",
-    story: "Son of Zeus and Maia. Hermes is the messenger of the gods, guide of the dead to the Underworld, patron of travelers, merchants, and thieves. From his earliest myths he displays remarkable cunning (stealing Apollo’s cattle as an infant). He represents movement across boundaries — between gods and mortals, life and death, truth and deception. He is also the god of communication and interpretation.",
+    story: "Son of Zeus and Maia. Hermes is the messenger of the gods, guide of the dead to the Underworld, patron of travelers, merchants, and thieves. From his earliest myths he displays remarkable cunning (stealing Apollo’s cattle as an infant). He represents movement across boundaries — between gods and mortals, life and death, truth and deception. He is also the god of communication and interpretation. In the Odyssey he gives Odysseus the moly that protects him from Circe; in the Homeric Hymn he is the charming, amoral infant trickster who becomes the herald of the gods.",
     sources: ["Homeric Hymn to Hermes", "Homer, Iliad and Odyssey"],
     symbols: ["Caduceus", "Winged Sandals", "Tortoise"],
     relations: [
@@ -553,7 +612,7 @@ const entries = [
     epithet: "God of Fire and Craftsmanship",
     hook: "The lame smith god who creates the most wondrous objects in the cosmos.",
     image: "assets/images/zeus.jpg",
-    story: "Son of Zeus and Hera (or, in some versions, of Hera alone). Thrown from Olympus because of his lameness, he became the master craftsman of the gods. He forged Zeus’s thunderbolts, Achilles’ armor, and many other divine artifacts. His marriage to Aphrodite and his revenge on her lovers (trapping them in a net) are among his most famous myths. He represents both the creative power of craft and the marginalization of the physically imperfect in a world that values beauty and strength.",
+    story: "Son of Zeus and Hera (or, in some versions, of Hera alone). Thrown from Olympus because of his lameness, he became the master craftsman of the gods. He forged Zeus’s thunderbolts, Achilles’ armor, and many other divine artifacts. His marriage to Aphrodite and his revenge on her lovers (trapping them in a net) are among his most famous myths. He represents both the creative power of craft and the marginalization of the physically imperfect in a world that values beauty and strength. In the Iliad his intervention on behalf of the Greeks (the great shield of Achilles) is one of the most moving celebrations of human artistry in the poem.",
     sources: ["Homer, Iliad", "Hesiod, Theogony"],
     symbols: ["Hammer", "Anvil", "Tongs"],
     relations: [
@@ -569,7 +628,7 @@ const entries = [
     epithet: "God of War and Violence",
     hook: "The most unpopular of the major gods — the embodiment of war’s brutality.",
     image: "assets/images/heracles.jpg",
-    story: "Son of Zeus and Hera. Ares represents the violent, chaotic, and bloodthirsty aspects of war, in contrast to Athena’s strategic warfare. He is frequently humiliated in myth (most famously caught in bed with Aphrodite by Hephaestus) and is generally portrayed negatively by Greek authors, reflecting Greek ambivalence toward mindless violence and the glorification of war for its own sake.",
+    story: "Son of Zeus and Hera. Ares represents the violent, chaotic, and bloodthirsty aspects of war, in contrast to Athena’s strategic warfare. He is frequently humiliated in myth (most famously caught in bed with Aphrodite by Hephaestus) and is generally portrayed negatively by Greek authors, reflecting Greek ambivalence toward mindless violence and the glorification of war for its own sake. In the Iliad he fights on both sides and is repeatedly wounded or driven off the field. His worship was more prominent in some regions (especially Thebes and parts of northern Greece) than in Athens.",
     sources: ["Homer, Iliad", "Hesiod, Theogony"],
     symbols: ["Spear", "Shield", "Helmet"],
     relations: [
@@ -585,7 +644,7 @@ const entries = [
     epithet: "Leader of the Argonauts",
     hook: "The hero who led the quest for the Golden Fleece and whose story explores the cost of heroism and broken oaths.",
     image: "assets/images/heracles.jpg",
-    story: "Son of Aeson, rightful king of Iolcus. Sent on an impossible quest by his uncle Pelias to retrieve the Golden Fleece, he assembled the greatest heroes of his age (the Argonauts) and succeeded with the help of Medea. His later betrayal of Medea and the destruction of his family make his story one of the most morally complex of the heroic age.",
+    story: "Son of Aeson, rightful king of Iolcus. Sent on an impossible quest by his uncle Pelias to retrieve the Golden Fleece, he assembled the greatest heroes of his age (the Argonauts) and succeeded with the help of Medea. His later betrayal of Medea and the destruction of his family make his story one of the most morally complex of the heroic age. Apollonius of Rhodes’ Argonautica gives the fullest surviving narrative, showing Jason as a leader who is often passive and reliant on the women around him. His abandonment of Medea for the daughter of the king of Corinth leads to the horrors dramatized in Euripides’ Medea.",
     sources: ["Apollonius of Rhodes, Argonautica", "Apollodorus"],
     symbols: ["Golden Fleece", "Argo"],
     relations: [
@@ -600,7 +659,7 @@ const entries = [
     epithet: "The Swift-Footed Huntress",
     hook: "One of the greatest female heroes, famous for her speed and participation in the Calydonian Boar hunt.",
     image: "assets/images/artemis.jpg",
-    story: "Raised in the wilderness and devoted to Artemis, Atalanta was one of the few women to join the hunt for the Calydonian Boar. She drew first blood and was awarded the hide, sparking a deadly quarrel. She later agreed to marry only the man who could beat her in a footrace, which Hippomenes won by using golden apples given by Aphrodite. Her story explores female independence, the tension between wilderness and civilization, and the power of desire.",
+    story: "Raised in the wilderness and devoted to Artemis, Atalanta was one of the few women to join the hunt for the Calydonian Boar. She drew first blood and was awarded the hide, sparking a deadly quarrel. She later agreed to marry only the man who could beat her in a footrace, which Hippomenes won by using golden apples given by Aphrodite. Her story explores female independence, the tension between wilderness and civilization, and the power of desire. She is one of the clearest examples of a woman who lives by heroic values in a world that rarely allows it.",
     sources: ["Apollodorus", "Ovid, Metamorphoses"],
     symbols: ["Bow", "Boar Hide"],
     relations: [
@@ -615,7 +674,7 @@ const entries = [
     epithet: "The Greatest Poet and Musician",
     hook: "The poet whose music could charm gods, beasts, and the dead themselves.",
     image: "assets/images/apollo.jpg",
-    story: "Son of Apollo (or Oeagrus) and the Muse Calliope. His music was so powerful it could move trees and stones and tame wild animals. He joined the Argonauts and later descended to the Underworld to retrieve his wife Eurydice, charming Hades and Persephone with his song. His failure to obey the condition not to look back at her until they reached the surface, and his subsequent death at the hands of the Maenads, make him one of the most tragic and culturally influential figures in Greek myth.",
+    story: "Son of Apollo (or Oeagrus) and the Muse Calliope. His music was so powerful it could move trees and stones and tame wild animals. He joined the Argonauts and later descended to the Underworld to retrieve his wife Eurydice, charming Hades and Persephone with his song. His failure to obey the condition not to look back at her until they reached the surface, and his subsequent death at the hands of the Maenads, make him one of the most tragic and culturally influential figures in Greek myth. His story became central to Orphic religion and to later Western ideas of the power and limits of art.",
     sources: ["Apollonius of Rhodes, Argonautica", "Virgil, Georgics", "Ovid, Metamorphoses"],
     symbols: ["Lyre"],
     relations: [
@@ -630,9 +689,9 @@ const entries = [
     epithet: "The Sorceress of Colchis",
     hook: "The powerful witch who helped Jason win the Golden Fleece and whose revenge became legendary.",
     image: "assets/images/athena.jpg",
-    story: "Daughter of King Aeëtes of Colchis and granddaughter of the sun god Helios. She fell in love with Jason and used her magic to help him complete the impossible tasks set by her father to win the Golden Fleece. After Jason later betrayed her for another woman, she murdered their children and his new bride in one of the most horrifying acts of vengeance in Greek myth. Her story explores the destructive power of passion, the limits of loyalty, and the terrifying capabilities of a woman scorned and armed with magic.",
+    story: "Daughter of King Aeëtes of Colchis and granddaughter of the sun god Helios. She fell in love with Jason and used her magic to help him complete the impossible tasks set by her father to win the Golden Fleece. After Jason later betrayed her for another woman, she murdered their children and his new bride in one of the most horrifying acts of vengeance in Greek myth. Her story explores the destructive power of passion, the limits of loyalty, and the terrifying capabilities of a woman scorned and armed with magic. Euripides’ Medea is one of the greatest and most disturbing tragedies ever written; Apollonius of Rhodes shows a younger, more vulnerable Medea before the catastrophe.",
     sources: ["Euripides, Medea", "Apollonius of Rhodes, Argonautica"],
-    variants: "Some versions emphasize her divine heritage and magical power more than others; the motivation for killing her children (jealousy vs. mercy) is debated in later interpretations.",
+    variants: "Some versions emphasize her divine heritage and magical power more than others; the motivation for killing her children (jealousy vs. mercy) is debated in later interpretations. Some traditions send her to Athens or back to Colchis after the events in Corinth.",
     symbols: ["Cauldron", "Poison"],
     relations: [
       { id: "jason", label: "Husband (later betrayed)" }
@@ -646,7 +705,7 @@ const entries = [
     epithet: "The Woman Who Gave Theseus the Thread",
     hook: "The daughter of Minos who saved Theseus and was later abandoned and found by Dionysus.",
     image: "assets/images/artemis.jpg",
-    story: "Daughter of King Minos of Crete. She fell in love with Theseus and gave him the thread that allowed him to navigate the Labyrinth and slay the Minotaur. After helping him escape, he abandoned her on the island of Naxos. She was later found by Dionysus, who made her his wife and immortal. Her story explores themes of love, betrayal, and divine redemption.",
+    story: "Daughter of King Minos of Crete. She fell in love with Theseus and gave him the thread that allowed him to navigate the Labyrinth and slay the Minotaur. After helping him escape, he abandoned her on the island of Naxos. She was later found by Dionysus, who made her his wife and immortal. Her story explores themes of love, betrayal, and divine redemption. In some versions she hangs herself in despair; in others she becomes a constellation or a goddess in her own right.",
     sources: ["Plutarch, Life of Theseus", "Ovid, Metamorphoses"],
     symbols: ["Thread"],
     relations: [
@@ -662,7 +721,7 @@ const entries = [
     epithet: "The Prophetess No One Believed",
     hook: "The Trojan princess cursed to see the future but never be believed.",
     image: "assets/images/athena.jpg",
-    story: "Daughter of Priam and Hecuba. Apollo gave her the gift of prophecy in exchange for her love, but when she refused him, he cursed her so that no one would believe her prophecies. She foretold the fall of Troy and Agamemnon’s murder but was ignored. After the war, she was taken as a concubine by Agamemnon and murdered alongside him by Clytemnestra.",
+    story: "Daughter of Priam and Hecuba. Apollo gave her the gift of prophecy in exchange for her love, but when she refused him, he cursed her so that no one would believe her prophecies. She foretold the fall of Troy and Agamemnon’s murder but was ignored. After the war, she was taken as a concubine by Agamemnon and murdered alongside him by Clytemnestra. Her story is one of the most bitter in the Trojan cycle: the truth-teller whom no one heeds. Aeschylus gives her the greatest scene in Agamemnon when she enters the palace foreseeing her own death and the history of the House of Atreus.",
     sources: ["Homer, Iliad", "Aeschylus, Agamemnon", "Euripides, Trojan Women"],
     symbols: ["Prophecy"],
     relations: [
@@ -677,7 +736,7 @@ const entries = [
     epithet: "Wife of Odysseus, Model of Fidelity",
     hook: "The queen who waited twenty years for her husband’s return while fending off suitors.",
     image: "assets/images/athena.jpg",
-    story: "Wife of Odysseus and mother of Telemachus. While Odysseus was away at Troy and on his long journey home, she remained faithful, cleverly delaying the suitors who wanted to marry her and claim the throne by weaving a shroud by day and unraveling it by night. Her reunion with Odysseus is one of the most moving scenes in the Odyssey and represents the enduring power of loyalty and home.",
+    story: "Wife of Odysseus and mother of Telemachus. While Odysseus was away at Troy and on his long journey home, she remained faithful, cleverly delaying the suitors who wanted to marry her and claim the throne by weaving a shroud by day and unraveling it by night. Her reunion with Odysseus is one of the most moving scenes in the Odyssey and represents the enduring power of loyalty and home. In later tradition she is sometimes portrayed as less faithful or as the mother of Pan by Hermes, but the Homeric Penelope remains the supreme example of steadfastness under pressure.",
     sources: ["Homer, Odyssey"],
     symbols: ["Loom"],
     relations: [
@@ -693,7 +752,7 @@ const entries = [
     epithet: "The Master Craftsman and Inventor",
     hook: "The greatest artisan of the mythic age, creator of the Labyrinth and the wings that led to tragedy.",
     image: "assets/images/zeus.jpg",
-    story: "Legendary Athenian craftsman and inventor. He designed the Labyrinth for King Minos to contain the Minotaur. Later, to escape Crete with his son Icarus, he crafted wings from feathers and wax. When Icarus flew too close to the sun and fell to his death, Daedalus’ ingenuity became both salvation and source of profound grief.",
+    story: "Legendary Athenian craftsman and inventor. He designed the Labyrinth for King Minos to contain the Minotaur. Later, to escape Crete with his son Icarus, he crafted wings from feathers and wax. When Icarus flew too close to the sun and fell to his death, Daedalus’ ingenuity became both salvation and source of profound grief. He is the archetype of the artist whose creations escape his control and bring both wonder and disaster.",
     sources: ["Ovid, Metamorphoses", "Apollodorus"],
     symbols: ["Wings", "Labyrinth"],
     relations: [
@@ -708,7 +767,7 @@ const entries = [
     epithet: "The Boy Who Flew Too Close to the Sun",
     hook: "The tragic youth whose flight ended in the first human death from hubris.",
     image: "assets/images/heracles.jpg",
-    story: "Son of Daedalus. Imprisoned with his father in Crete, he escaped using the wings his father crafted. Ignoring warnings not to fly too high, he soared toward the sun. The wax melted, the wings failed, and he fell into the sea and drowned. His story is one of the most famous warnings against overreaching human ambition.",
+    story: "Son of Daedalus. Imprisoned with his father in Crete, he escaped using the wings his father crafted. Ignoring warnings not to fly too high, he soared toward the sun. The wax melted, the wings failed, and he fell into the sea and drowned. His story is one of the most famous warnings against overreaching human ambition. In later tradition he becomes a symbol of artistic and scientific daring as well as of tragic failure.",
     sources: ["Ovid, Metamorphoses"],
     symbols: ["Wings"],
     relations: [
@@ -723,7 +782,7 @@ const entries = [
     epithet: "The Wise Counselor of the Greeks",
     hook: "The aged king whose experience and counsel guided the Greek leaders at Troy.",
     image: "assets/images/heracles.jpg",
-    story: "King of Pylos and the oldest of the Greek leaders at Troy. Though no longer able to fight in the front lines, his wisdom, diplomacy, and storytelling made him one of the most respected figures in the Greek camp. He often acts as a mediator between Agamemnon and Achilles and provides historical perspective that enriches the Iliad.",
+    story: "King of Pylos and the oldest of the Greek leaders at Troy. Though no longer able to fight in the front lines, his wisdom, diplomacy, and storytelling made him one of the most respected figures in the Greek camp. He often acts as a mediator between Agamemnon and Achilles and provides historical perspective that enriches the Iliad. His long speeches in the Iliad (Books 1, 11, 23) are full of memories of earlier heroic generations, giving the poem a sense of deep time and the continuity of heroic values.",
     sources: ["Homer, Iliad"],
     symbols: ["Scepter"],
     relations: [
@@ -738,11 +797,12 @@ const entries = [
     epithet: "The Greatest Greek Warrior After Achilles",
     hook: "The massive, unbreakable defender of the Greek ships at Troy.",
     image: "assets/images/heracles.jpg",
-    story: "Son of Telamon and one of the greatest Greek warriors at Troy, second only to Achilles in strength and prowess. He single-handedly defended the Greek ships when the Trojans broke through, and later competed with Odysseus for Achilles’ armor. His eventual suicide after losing the contest to Odysseus is one of the most tragic events following the main action of the Iliad.",
+    story: "Son of Telamon and one of the greatest Greek warriors at Troy, second only to Achilles in strength and prowess. He single-handedly defended the Greek ships when the Trojans broke through, and later competed with Odysseus for Achilles’ armor. His eventual suicide after losing the contest to Odysseus is one of the most tragic events following the main action of the Iliad. Sophocles’ Ajax dramatizes his madness, his recovery of sanity, and his decision to die rather than live dishonored. He represents the older, more straightforward heroic code that cannot survive the world of cunning and politics represented by Odysseus.",
     sources: ["Homer, Iliad", "Sophocles, Ajax"],
     symbols: ["Shield"],
     relations: [
-      { id: "achilles", label: "Rival for Armor" }
+      { id: "achilles", label: "Rival for Armor" },
+      { id: "odysseus", label: "Rival and Opponent" }
     ]
   },
   {
@@ -753,11 +813,81 @@ const entries = [
     epithet: "The Hero Who Wounded Gods",
     hook: "One of the greatest Greek warriors at Troy, famous for wounding Ares and Aphrodite.",
     image: "assets/images/heracles.jpg",
-    story: "Son of Tydeus and king of Argos. One of the most formidable Greek leaders at Troy, he wounded both Ares and Aphrodite in battle (a rare feat for a mortal). He also played a key role in the theft of the Palladium, a sacred statue whose removal helped doom Troy. His story shows the heights of mortal heroism while still respecting the limits set by the gods.",
+    story: "Son of Tydeus and king of Argos. One of the most formidable Greek leaders at Troy, he wounded both Ares and Aphrodite in battle (a rare feat for a mortal). He also played a key role in the theft of the Palladium, a sacred statue whose removal helped doom Troy. His story shows the heights of mortal heroism while still respecting the limits set by the gods. In Iliad Book 5 he is granted extraordinary strength by Athena and fights like a god until Apollo warns him back. After the war he returns home safely, unlike most of the Greek leaders, and appears in later tradition as a wise and pious ruler.",
     sources: ["Homer, Iliad"],
     symbols: ["Armor"],
     relations: [
       { id: "odysseus", label: "Companion in the Palladium Theft" }
+    ]
+  },
+
+  // NEW EXPANSIONS — AJAX THE LESSER, BRISEIS, PATROCLUS, ANDROMACHE
+  {
+    id: "ajax-lesser",
+    name: "Ajax the Lesser (Oilean Ajax)",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "The Swift and Violent Son of Oileus",
+    hook: "The Greek warrior whose sacrilege at Athena’s altar brought doom upon himself and the Greek fleet.",
+    image: "assets/images/heracles.jpg",
+    story: "Son of Oileus, king of the Locrians. A formidable fighter at Troy, he was known for his speed and his fierce, almost savage style of combat. After the fall of Troy he dragged Cassandra from the altar of Athena where she had sought sanctuary and raped her. This act of sacrilege against the goddess’s temple and suppliant provoked Athena’s wrath against the entire Greek fleet. On the return voyage Ajax was shipwrecked; Poseidon shattered his ship with a thunderbolt, and when Ajax boasted that he had escaped the gods’ power, Poseidon split the rock on which he clung and drowned him. His story is one of the clearest examples in Greek myth of the gods’ punishment for the violation of sacred space and the rights of suppliants. The Locrians later performed an annual penance for his crime.",
+    sources: ["Homer, Iliad 2.527-535, 13.1-205", "Odyssey 4.499-511", "Apollodorus, Epitome 5.22-23", "Virgil, Aeneid 1.39-45"],
+    variants: "Some sources say Athena herself killed him with a thunderbolt; others have Poseidon acting on her behalf. The precise nature of his crime against Cassandra (rape or merely dragging her from sanctuary) is emphasized differently across traditions.",
+    symbols: ["Spear", "Shield"],
+    relations: [
+      { id: "cassandra", label: "Violator of" },
+      { id: "athena", label: "Offender of" }
+    ]
+  },
+  {
+    id: "briseis",
+    name: "Briseis",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "The Captive Whose Loss Nearly Destroyed the Greek Cause",
+    hook: "The woman at the center of the quarrel between Achilles and Agamemnon that opens the Iliad.",
+    image: "assets/images/athena.jpg",
+    story: "Daughter of Brises and wife of Mynes, king of Lyrnessus. When Achilles sacked her city, she was taken as a prize of war and given to him. When Agamemnon was forced to return his own captive Chryseis to her father, he seized Briseis from Achilles in compensation. This act of dishonor caused Achilles to withdraw from battle, nearly costing the Greeks the war. In the Iliad Briseis is a quiet but emotionally powerful presence; when she is returned to Achilles after Patroclus’s death, she delivers a moving lament in which she reveals that Achilles had promised to marry her and make her his queen in Phthia. She is one of the most fully realized captive women in Greek literature, given dignity and a voice even within the brutal economy of war prizes.",
+    sources: ["Homer, Iliad 1.1-348, 9.328-343, 19.282-300", "Apollodorus, Library 3.13.7"],
+    variants: "Later authors sometimes expanded her story into a romance with Achilles. The Iliad itself treats her with remarkable sympathy and gives her one of the poem’s most poignant speeches.",
+    symbols: ["Captive’s Veil"],
+    relations: [
+      { id: "achilles", label: "Captor and Promised Husband" },
+      { id: "agamemnon", label: "Seizer" }
+    ]
+  },
+  {
+    id: "patroclus",
+    name: "Patroclus",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "The Beloved Companion Whose Death Awoke Achilles’ Wrath",
+    hook: "The man whose death turned the tide of the Trojan War and broke the greatest of the Greek heroes.",
+    image: "assets/images/heracles.jpg",
+    story: "Son of Menoetius and closest companion of Achilles. When the Greeks were suffering from Achilles’ absence, Patroclus begged to be allowed to lead the Myrmidons into battle wearing Achilles’ armor. Achilles consented, but warned him not to press the attack all the way to the walls of Troy. Patroclus fought brilliantly, killing many Trojans including Sarpedon, son of Zeus. But Apollo intervened, stripped him of his borrowed armor, and left him to be killed by Euphorbus and Hector. His death is the turning point of the Iliad. Achilles’ grief is so absolute that he refuses to eat or wash until he has killed Hector and desecrated his body. Patroclus’s funeral games in Book 23 are the most elaborate in the poem. The depth of Achilles’ love and grief for him has been interpreted in every age as the emotional heart of the Iliad.",
+    sources: ["Homer, Iliad 16.1-867, 18.1-147, 23.1-897", "Apollodorus, Library 3.13.8"],
+    variants: "The exact nature of the relationship between Achilles and Patroclus (friendship, erotic love, or both) was debated already in antiquity. Aeschylus and Plato treat it as a lover-beloved pair; the Iliad itself is more ambiguous and ultimately more moving for it.",
+    symbols: ["Achilles’ Armor"],
+    relations: [
+      { id: "achilles", label: "Closest Companion and Lover" },
+      { id: "hector", label: "Slayer" }
+    ]
+  },
+  {
+    id: "andromache",
+    name: "Andromache",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "Wife of Hector, Mother of Astyanax, Symbol of Troy’s Suffering",
+    hook: "The woman who lost everything when Troy fell and whose fate became the archetype of the captive widow.",
+    image: "assets/images/athena.jpg",
+    story: "Daughter of Eëtion, king of Thebe, and wife of Hector. In the Iliad her farewell to Hector on the walls of Troy (Book 6) is one of the most heartbreaking scenes in literature: she begs him not to fight, reminds him that he is all she has left after Achilles killed her father and brothers, and foresees the enslavement of herself and their son. After Hector’s death and the fall of Troy, her son Astyanax was thrown from the walls by the Greeks. She herself was given to Neoptolemus (Achilles’ son) and later became the wife of Helenus, Hector’s brother. Euripides’ Trojan Women and Andromache give her some of the most powerful laments in Greek tragedy. She is the human face of the cost of the heroic code.",
+    sources: ["Homer, Iliad 6.1-529, 22.1-515, 24.1-804", "Euripides, Trojan Women and Andromache"],
+    variants: "Some traditions make her the mother of Molossus by Neoptolemus and ancestress of the Molossian kings. The degree of her suffering and the fate of her son vary across sources.",
+    symbols: ["Veil", "Child"],
+    relations: [
+      { id: "hector", label: "Husband" },
+      { id: "astyanax", label: "Son" }
     ]
   }
 ];
