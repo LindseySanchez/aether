@@ -621,6 +621,99 @@ const entries = [
     relations: [
       { id: "eurydice", label: "Wife" }
     ]
+  },
+  {
+    id: "medea",
+    name: "Medea",
+    type: "Hero",
+    cycle: "The Heroic Age",
+    epithet: "The Sorceress of Colchis",
+    hook: "The powerful witch who helped Jason win the Golden Fleece and whose revenge became legendary.",
+    image: "assets/images/athena.jpg",
+    story: "Daughter of King Aeëtes of Colchis and granddaughter of the sun god Helios. She fell in love with Jason and used her magic to help him complete the impossible tasks set by her father to win the Golden Fleece. After Jason later betrayed her for another woman, she murdered their children and his new bride in one of the most horrifying acts of vengeance in Greek myth. Her story explores the destructive power of passion, the limits of loyalty, and the terrifying capabilities of a woman scorned and armed with magic.",
+    sources: ["Euripides, Medea", "Apollonius of Rhodes, Argonautica"],
+    variants: "Some versions emphasize her divine heritage and magical power more than others; the motivation for killing her children (jealousy vs. mercy) is debated in later interpretations.",
+    symbols: ["Cauldron", "Poison"],
+    relations: [
+      { id: "jason", label: "Husband (later betrayed)" }
+    ]
+  },
+  {
+    id: "ariadne",
+    name: "Ariadne",
+    type: "Hero",
+    cycle: "The Heroic Age",
+    epithet: "The Woman Who Gave Theseus the Thread",
+    hook: "The daughter of Minos who saved Theseus and was later abandoned and found by Dionysus.",
+    image: "assets/images/artemis.jpg",
+    story: "Daughter of King Minos of Crete. She fell in love with Theseus and gave him the thread that allowed him to navigate the Labyrinth and slay the Minotaur. After helping him escape, he abandoned her on the island of Naxos. She was later found by Dionysus, who made her his wife and immortal. Her story explores themes of love, betrayal, and divine redemption.",
+    sources: ["Plutarch, Life of Theseus", "Ovid, Metamorphoses"],
+    symbols: ["Thread"],
+    relations: [
+      { id: "theseus", label: "Lover (later abandoned)" },
+      { id: "dionysus", label: "Husband" }
+    ]
+  },
+  {
+    id: "cassandra",
+    name: "Cassandra",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "The Prophetess No One Believed",
+    hook: "The Trojan princess cursed to see the future but never be believed.",
+    image: "assets/images/athena.jpg",
+    story: "Daughter of Priam and Hecuba. Apollo gave her the gift of prophecy in exchange for her love, but when she refused him, he cursed her so that no one would believe her prophecies. She foretold the fall of Troy and Agamemnon’s murder but was ignored. After the war, she was taken as a concubine by Agamemnon and murdered alongside him by Clytemnestra.",
+    sources: ["Homer, Iliad", "Aeschylus, Agamemnon", "Euripides, Trojan Women"],
+    symbols: ["Prophecy"],
+    relations: [
+      { id: "agamemnon", label: "Captor / Concubine" }
+    ]
+  },
+  {
+    id: "penelope",
+    name: "Penelope",
+    type: "Hero",
+    cycle: "The Trojan War",
+    epithet: "Wife of Odysseus, Model of Fidelity",
+    hook: "The queen who waited twenty years for her husband’s return while fending off suitors.",
+    image: "assets/images/athena.jpg",
+    story: "Wife of Odysseus and mother of Telemachus. While Odysseus was away at Troy and on his long journey home, she remained faithful, cleverly delaying the suitors who wanted to marry her and claim the throne by weaving a shroud by day and unraveling it by night. Her reunion with Odysseus is one of the most moving scenes in the Odyssey and represents the enduring power of loyalty and home.",
+    sources: ["Homer, Odyssey"],
+    symbols: ["Loom"],
+    relations: [
+      { id: "odysseus", label: "Husband" },
+      { id: "telemachus", label: "Son" }
+    ]
+  },
+  {
+    id: "daedalus",
+    name: "Daedalus",
+    type: "Hero",
+    cycle: "The Heroic Age",
+    epithet: "The Master Craftsman and Inventor",
+    hook: "The greatest artisan of the mythic age, creator of the Labyrinth and the wings that led to tragedy.",
+    image: "assets/images/zeus.jpg",
+    story: "Legendary Athenian craftsman and inventor. He designed the Labyrinth for King Minos to contain the Minotaur. Later, to escape Crete with his son Icarus, he crafted wings from feathers and wax. When Icarus flew too close to the sun and fell to his death, Daedalus’ ingenuity became both salvation and source of profound grief.",
+    sources: ["Ovid, Metamorphoses", "Apollodorus"],
+    symbols: ["Wings", "Labyrinth"],
+    relations: [
+      { id: "icarus", label: "Son" }
+    ]
+  },
+  {
+    id: "icarus",
+    name: "Icarus",
+    type: "Hero",
+    cycle: "The Heroic Age",
+    epithet: "The Boy Who Flew Too Close to the Sun",
+    hook: "The tragic youth whose flight ended in the first human death from hubris.",
+    image: "assets/images/heracles.jpg",
+    story: "Son of Daedalus. Imprisoned with his father in Crete, he escaped using the wings his father crafted. Ignoring warnings not to fly too high, he soared toward the sun. The wax melted, the wings failed, and he fell into the sea and drowned. His story is one of the most famous warnings against overreaching human ambition.",
+    sources: ["Ovid, Metamorphoses"],
+    symbols: ["Wings"],
+    relations: [
+      { id: "daedalus", label: "Father" }
+    ]
   }
 ];
 
