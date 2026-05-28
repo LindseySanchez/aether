@@ -1,37 +1,64 @@
-**AETHER: A Scholarly Resource for the Study of Greek Mythology**
+# AETHER
+## An Interactive Encyclopedia of Greek Mythology
 
-**Target Audience:** Graduate students and researchers in Classics, Ancient History, Religious Studies, and related fields.
+**Session: "Outside the Box"**  
+Built to foster genuine wonder, curiosity, and a lifelong love of learning.
 
-### Purpose and Scope
+AETHER is not a dry reference site. It is a living, breathing tapestry of stories designed to be explored, not just read. Every god, hero, and monster is connected. Following one thread naturally leads to others.
 
-AETHER provides a structured, interactive interface to core Greek mythic traditions, with explicit attention to primary sources, variant accounts, and problems of transmission and interpretation. It is designed as a pedagogical and research-adjacent tool rather than a work of original scholarship.
+## What Makes It Special
 
-The resource emphasizes:
+- **The Living Tapestry** — Beautiful, filterable cards with poetic hooks. Click any to enter rich, inspiring entries.
+- **Follow the Threads** — Every modal contains clickable relations that open new entries. Exploration feels organic and rewarding.
+- **The Great Tree** — Interactive SVG genealogy of the gods. Click any node to dive deeper.
+- **The Oracle** — Receive random, profound pronouncements drawn from the spirit of Delphi. Each offers a suggested thread to follow.
+- **The Ages** — A horizontal timeline of mythic history from Chaos to the aftermath of Troy.
+- **The Trials** — An elegant 6-question quiz framed as sacred trials. No shaming — only deeper insight.
+- **Your Journey** — Automatically tracks what you’ve explored. Return to your personal path anytime.
+- **Modern Echoes** — Every entry connects ancient myths to contemporary questions of power, identity, justice, and humanity.
 
-- Distinction between different ancient authors, periods, and local traditions
-- Explicit citation of primary sources (Hesiod, Homer, Apollodorus, Pausanias, tragic fragments, etc.)
-- Awareness of the fragmentary and mediated nature of the evidence
-- Connections between mythic figures grounded in ancient testimony
+## Design Philosophy
 
-### Limitations
+- Dark, luxurious, reverent aesthetic (deep navy, warm gold, ivory)
+- Playfair Display + clean sans for timeless elegance
+- No gamification. No points. Only the quiet pleasure of discovery
+- Built to feel like an ancient illuminated manuscript awakened with modern interactivity
 
-This is a curated pedagogical interface, not a comprehensive database. Many entries synthesize multiple traditions; users should always consult the cited primary sources and current scholarship. The visual and interactive design prioritizes usability for teaching and rapid orientation over exhaustive philological apparatus.
+## Getting Started
 
-### Recommended Use
+Simply open `index.html` in any modern browser (double-click works).
 
-- Seminar preparation and graduate-level teaching support
-- Rapid orientation before deeper engagement with primary texts and commentaries
-- Exploration of genealogical and narrative interconnections
-- As a prompt for discussion of source criticism and reception
+No build step. No dependencies. Everything is self-contained.
 
-### Technical Note
+For the best experience:
+- Use a reasonably large screen (the design shines on desktop and tablets)
+- Allow the hero video to play (it sets the tone perfectly)
+- Click everything. The connections are the point.
 
-The project was developed during an exploratory "Outside the Box" session. The current version represents an initial scholarly reframing. Further development would benefit from integration with existing digital resources (e.g., the Perseus Digital Library, the Thesaurus Linguae Graecae, and standard commentaries).
+## Media Assets
 
-### Citation
+All custom imagery and the cinematic hero video were generated specifically for AETHER using advanced AI models to match the tone and spirit of the project.
 
-If you find this resource useful in teaching or research, please cite it appropriately and consult the primary sources directly.
+## Future Expansions (Ideas for "Outside the Box")
+
+- More entries (Dionysus, Theseus, Circe, the Sirens, Icarus, Orpheus)
+- A true constellation map view
+- "Choose Your Own Myth" branching narratives
+- Audio narration of key stories
+- Printable "illuminated manuscript" pages of favorite entries
+- The ability to add personal notes to entries (local only)
+
+## Credits & Reverence
+
+This project was created with deep respect for the original sources:
+- Hesiod’s *Theogony* and *Works and Days*
+- Homer’s *Iliad* and *Odyssey*
+- The rich scholarly work of Theoi.com and countless classicists
+
+The goal was never academic completeness, but emotional and intellectual ignition.
 
 ---
 
-*This resource is offered in a spirit of intellectual seriousness and with full awareness of its provisional character.*
+*"The myths were never meant to be forgotten."*
+
+Built with care during the "Outside the Box" session. May it inspire many returns to the stories that made us human.
