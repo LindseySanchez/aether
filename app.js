@@ -133,6 +133,40 @@ const entries = [
     relations: [
       { id: "zeus", label: "Father" }
     ]
+  },
+
+  // Additional core figures
+  {
+    id: "athena",
+    name: "Athena",
+    type: "Olympian",
+    cycle: "Cosmic Order",
+    epithet: "Goddess of Wisdom, Strategy, and Crafts",
+    hook: "The virgin goddess born fully armed from Zeus’s head.",
+    image: "assets/images/athena.jpg",
+    story: "Athena sprang fully grown and armored from Zeus’s forehead after he swallowed her mother Metis. She is the goddess of strategic warfare, wisdom, crafts, and the protector of cities (especially Athens). She represents intelligence and civilization over brute force.",
+    sources: ["Hesiod, Theogony", "Homer, Iliad and Odyssey"],
+    symbols: ["Owl", "Aegis", "Olive Tree", "Spear"],
+    relations: [
+      { id: "zeus", label: "Father" }
+    ]
+  },
+  {
+    id: "hades",
+    name: "Hades",
+    type: "Olympian",
+    cycle: "Cosmic Order",
+    epithet: "Lord of the Dead, The Unseen One",
+    hook: "The ruler of the Underworld who received the realm of the dead in the division of the cosmos.",
+    image: "assets/images/poseidon.jpg",
+    story: "After the Titanomachy, Hades drew the lot for the Underworld. He is not evil but stern and just, guarding the realm of the dead. His abduction of Persephone became one of the most important myths explaining the cycle of seasons.",
+    sources: ["Hesiod, Theogony", "Homeric Hymn to Demeter"],
+    symbols: ["Cerberus", "Helm of Invisibility"],
+    relations: [
+      { id: "zeus", label: "Brother" },
+      { id: "poseidon", label: "Brother" },
+      { id: "persephone", label: "Wife" }
+    ]
   }
 ];
 
@@ -144,6 +178,15 @@ const cycles = [
   "Transgression",
   "Ecstatic Traditions"
 ];
+
+// Cycle descriptions for better exploration experience
+const cycleDescriptions = {
+  "Cosmic Order": "The great succession myths — how the current world of the gods came into being through rebellion, marriage, and the establishment of hierarchy.",
+  "The Heroic Age": "The age of great heroes who performed impossible labors, slew monsters, and bridged the world of gods and mortals.",
+  "The Trojan War": "The greatest war of the mythic age, where the greatest heroes clashed and the old order began to crumble.",
+  "Transgression": "Stories of those who crossed divine boundaries — bringing fire, opening forbidden jars, or challenging the gods’ will.",
+  "Ecstatic Traditions": "The arrival of Dionysus and the dangerous, liberating power of ritual madness and the dissolution of the self."
+};
 
 // State
 let currentCycle = 'all';
@@ -194,7 +237,7 @@ function renderEntries(cycle = 'all', searchTerm = '') {
   });
 }
 
-// Setup cycle filters
+// Setup cycle filters with descriptions
 function setupCycleFilters() {
   const container = document.getElementById('cycle-filters');
   if (!container) return;
@@ -207,6 +250,7 @@ function setupCycleFilters() {
   allBtn.onclick = () => {
     currentCycle = 'all';
     updateActiveFilter(allBtn);
+    document.getElementById('cycle-description').innerHTML = '';
     renderEntries('all', document.getElementById('global-search')?.value || '');
   };
   container.appendChild(allBtn);
@@ -218,6 +262,8 @@ function setupCycleFilters() {
     btn.onclick = () => {
       currentCycle = cycle;
       updateActiveFilter(btn);
+      const desc = cycleDescriptions[cycle] || '';
+      document.getElementById('cycle-description').innerHTML = desc ? `<p class="text-sm text-[#F5F0E6]/70 mt-2 max-w-3xl">${desc}</p>` : '';
       renderEntries(cycle, document.getElementById('global-search')?.value || '');
     };
     container.appendChild(btn);
@@ -241,7 +287,6 @@ function openEntry(id) {
   viewedEntries.add(id);
   localStorage.setItem('aether_viewed', JSON.stringify([...viewedEntries]));
 
-  // Populate modal
   document.getElementById('modal-hero').innerHTML = `
     <img src="${entry.image}" class="absolute inset-0 w-full h-full object-cover opacity-95" onerror="this.src='assets/images/zeus.jpg'">
     <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-[#05080F]"></div>
